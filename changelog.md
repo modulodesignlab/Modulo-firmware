@@ -13,6 +13,19 @@ _No unreleased changes._
 
 ---
 
+## [0.1.0] — 2026-06-03
+
+### Base — v0.1.0
+
+#### Added
+
+- First functional firmware release for the Modulo Base.
+- Wi-Fi provisioning via BLE (NimBLE).
+- OTA firmware update support with dual OTA partitions and rollback.
+- WebSocket-based communication with the mobile app.
+- Module hot-swap detection and lifecycle management.
+- Power distribution and communication bus management.
+
 ## [0.0.1] — 2026-06-03
 
 ### Added
