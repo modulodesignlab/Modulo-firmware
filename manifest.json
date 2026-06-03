@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "firmwares": {
+    "base": {
+      "version": "0.0.1",
+      "url": "",
+      "sha256": ""
+    },
+    "bluetooth_speaker": {
+      "version": "0.0.1",
+      "minimum_base_version": "0.0.1",
+      "url": "",
+      "sha256": ""
+    },
+    "environmental_monitor": {
+      "version": "0.0.1",
+      "minimum_base_version": "0.0.1",
+      "url": "",
+      "sha256": ""
+    },
+    "smart_screen_128": {
+      "version": "0.0.1",
+      "minimum_base_version": "0.0.1",
+      "url": "",
+      "sha256": ""
+    },
+    "usb_c_charger": {
+      "version": "0.0.1",
+      "minimum_base_version": "0.0.1",
+      "url": "",
+      "sha256": ""
+    },
+    "wireless_charger": {
+      "version": "0.0.1",
+      "minimum_base_version": "0.0.1",
+      "url": "",
+      "sha256": ""
+    },
+    "led_tower": {
+      "version": "0.0.1",
+      "minimum_base_version": "0.0.1",
+      "url": "",
+      "sha256": ""
+    }
+  }
+}
