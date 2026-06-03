@@ -13,6 +13,15 @@ _No unreleased changes._
 
 ---
 
+## [0.1.1] — 2026-06-03
+
+### Changed
+
+- Bumped software version of Modulo Base (`base_app`) and Modulo Slave (`slave_app`) to `0.1.1`.
+- Updated version display and formatting in mobile app dashboard and update manager to correctly display semantic versions.
+
+---
+
 ## [0.1.0] — 2026-06-03
 
 ### Base — v0.1.0
