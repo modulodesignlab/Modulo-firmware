@@ -13,6 +13,17 @@ _No unreleased changes._
 
 ---
 
+## [0.1.6] — 2026-06-10
+
+### Base — v0.1.6
+
+#### Changed
+
+- Handled invalid VBUS ADC pin on Base gracefully to prevent initialization errors.
+- Set default Base VBUS voltage reporting to 5V (5000 mV) when the internal ADC is not available.
+
+---
+
 ## [0.1.5] — 2026-06-10
 
 ### Base — v0.1.5
