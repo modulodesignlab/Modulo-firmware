@@ -13,6 +13,22 @@ _No unreleased changes._
 
 ---
 
+## [0.1.11] — 2026-06-10
+
+### Base — v0.1.11
+
+#### Fixed
+
+- Bumped project version to coordinate with module update.
+
+### Modules — v0.1.4
+
+#### Fixed
+
+- Removed `s_module_type` loading from NVS to prevent stale/incorrect module type reports.
+
+---
+
 ## [0.1.10] — 2026-06-10
 
 ### Base — v0.1.10
