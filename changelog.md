@@ -13,6 +13,18 @@ _No unreleased changes._
 
 ---
 
+## [0.1.3] — 2026-06-10
+
+### Base — v0.1.3
+
+#### Added
+
+- Added real-time FOTA update progress tracking and detailed error reporting to the app dashboard.
+- Configured asynchronous background task for OTA updates to avoid blocking WebSockets.
+- Added default SSL CA certificate bundle (`esp_crt_bundle.h`) to verify HTTPS connections.
+
+---
+
 ## [0.1.2] — 2026-06-10
 
 ### Base — v0.1.2
