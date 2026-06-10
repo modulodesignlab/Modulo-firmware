@@ -13,6 +13,16 @@ _No unreleased changes._
 
 ---
 
+## [0.1.2] — 2026-06-10
+
+### Base — v0.1.2
+
+#### Added
+
+- Added VBUS voltage monitoring on serial output every 10 seconds.
+
+---
+
 ## [0.1.1] — 2026-06-03
 
 ### Changed
