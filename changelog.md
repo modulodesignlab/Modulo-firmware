@@ -13,6 +13,17 @@ _No unreleased changes._
 
 ---
 
+## [0.1.5] — 2026-06-10
+
+### Base — v0.1.5
+
+#### Added
+
+- Fixed HTTP client buffer overflow error during FOTA updates by increasing buffer size.
+- Fixed front-end JavaScript console exception when WebSocket connection is closed.
+
+---
+
 ## [0.1.4] — 2026-06-10
 
 ### Base — v0.1.4
