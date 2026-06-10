@@ -13,6 +13,25 @@ _No unreleased changes._
 
 ---
 
+## [0.1.12] — 2026-06-10
+
+### Base — v0.1.12
+
+#### Added
+
+- Implemented real I2C OTA firmware streaming protocol over I2C (BEGIN/DATA/END sub-commands).
+- Configured dynamic I2C response wait times depending on the specific sub-command.
+- Increased `module_ota_task` stack size to support full HTTPS download and streaming.
+
+### Modules — v0.1.5
+
+#### Added
+
+- Implemented real I2C OTA firmware streaming updates writing directly to dual OTA partitions using `esp_ota_ops`.
+- Switched partition table layout to two-OTA partitions.
+
+---
+
 ## [0.1.11] — 2026-06-10
 
 ### Base — v0.1.11
