@@ -13,6 +13,16 @@ _No unreleased changes._
 
 ---
 
+## [0.1.4] — 2026-06-10
+
+### Base — v0.1.4
+
+#### Changed
+
+- Incremented version to 0.1.4 for FOTA update flow verification.
+
+---
+
 ## [0.1.3] — 2026-06-10
 
 ### Base — v0.1.3
