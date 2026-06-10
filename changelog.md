@@ -13,6 +13,26 @@ _No unreleased changes._
 
 ---
 
+## [0.1.9] — 2026-06-10
+
+### Base — v0.1.9
+
+#### Changed
+
+- Increased CMD_FIRMWARE_UPDATE I2C response delay to 50ms to ensure slave NVS write completion.
+
+---
+
+## [0.1.2] — 2026-06-10
+
+### Modules — v0.1.2
+
+#### Changed
+
+- Deferred NVS flash writes in CMD_FIRMWARE_UPDATE response to prevent blocking the I2C transaction.
+
+---
+
 ## [0.1.8] — 2026-06-10
 
 ### Base — v0.1.8
