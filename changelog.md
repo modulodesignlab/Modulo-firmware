@@ -13,6 +13,17 @@ _No unreleased changes._
 
 ---
 
+## [0.1.7] — 2026-06-10
+
+### Base — v0.1.7
+
+#### Added
+
+- Added `CMD_GET_VBUS_VOLTAGE` I2C command to query VBUS voltage readings from connected modules.
+- Implemented module-assisted USB-PD power negotiation when the Base's internal ADC is unavailable.
+
+---
+
 ## [0.1.6] — 2026-06-10
 
 ### Base — v0.1.6
