@@ -13,6 +13,26 @@ _No unreleased changes._
 
 ---
 
+## [0.1.10] — 2026-06-10
+
+### Base — v0.1.10
+
+#### Added
+
+- Implemented CMD_GET_INFO (0x02) request in polling loop and post-OTA sequence to refresh module type and versions.
+
+---
+
+## [0.1.3] — 2026-06-10
+
+### Modules — v0.1.3
+
+#### Added
+
+- Implemented CMD_GET_INFO (0x02) command to return unique chip ID, module type, and hardware/software versions.
+
+---
+
 ## [0.1.9] — 2026-06-10
 
 ### Base — v0.1.9
