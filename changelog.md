@@ -13,6 +13,22 @@ _No unreleased changes._
 
 ---
 
+## [0.1.8] — 2026-06-10
+
+### Base — v0.1.8
+
+#### Added
+
+- Added support for asynchronous I2C module OTA progress and changelog rendering.
+- Resolved I2C response length validation issues for module firmware update command.
+
+#### Changed
+
+- Display specific module type and version in web application.
+- Changed default base IP to 192.168.1.178.
+
+---
+
 ## [0.1.7] — 2026-06-10
 
 ### Base — v0.1.7
