@@ -2,15 +2,15 @@
     "schema_version": 1,
     "firmwares": {
         "base": {
-            "version": "0.1.31",
-            "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.31/Modulo.bin",
-            "sha256": "af95ed01934b0bd91202c7e093e2467f9fe7c38cfc7650c95a968615bb56eb00"
+            "version": "0.1.32",
+            "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.32/Modulo.bin",
+            "sha256": "4b573fe941cfbab01025f60cfff402ea946d18195881a2c900d8b57a74a9103f"
         },
         "bluetooth_speaker": {
-            "version": "0.1.9",
+            "version": "0.1.10",
             "minimum_base_version": "0.1.20",
-            "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.9/bluetooth_speaker.bin",
-            "sha256": "3081e4f1525138ad8dee7e43e1cc783ba205aeeff0034af0fc92e8bd0ce20475"
+            "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.10/bluetooth_speaker.bin",
+            "sha256": "472cd6962d71b9b18081a4bb852fd3723f6e1cb0fc54cfd7aec6939869794b65"
         },
         "environmental_monitor": {
             "version": "0.1.6",
