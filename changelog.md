@@ -169,6 +169,16 @@ _No unreleased changes._
 
 ---
 
+## [0.1.11] — 2026-06-15
+
+### Bluetooth Speaker — v0.1.11
+
+#### Fixed
+
+- Implemented automatic I2C driver recovery to clear hardware bus lockups/hangs: distinguished driver/communication errors (negative return values) from standard idle timeouts. When an error is detected, the Slave automatically de-initializes and re-initializes its I2C driver to reset the hardware peripheral and release the SDA/SCL lines.
+
+---
+
 ## [0.1.10] — 2026-06-15
 
 ### Base — v0.1.10
