@@ -6,6 +6,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.37] — 2026-06-15
+- Implemented robust transmit-then-poll streaming protocol for module OTA updates over I2C, resolving communication NACK errors during slave flash write operations.
+
+### [0.1.36] — 2026-06-15
+- Paused I2C manager early in the module OTA task to avoid concurrent polling during the HTTP connection/handshake phase.
+
 ### [0.1.35] — 2026-06-15
 - Implemented dynamic I2C OTA phase-shift recovery: detects if the Slave sends a stale/misaligned response chunk index (due to a previous timeout) and performs a clean read transaction without transmitting, clearing the stale queue and restoring proper frame alignment.
 - Allowed `i2c_manager_send_frame` to perform read-only transactions (when `tx` is NULL) on both standard and no-offset addresses.
