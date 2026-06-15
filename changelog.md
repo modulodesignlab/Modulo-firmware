@@ -13,6 +13,17 @@ _No unreleased changes._
 
 ---
 
+## [0.1.35] — 2026-06-15
+
+### Base — v0.1.35
+
+#### Fixed
+
+- Implemented dynamic I2C OTA phase-shift recovery: detects if the Slave sends a stale/misaligned response chunk index (due to a previous timeout) and performs a clean read transaction without transmitting, clearing the stale queue and restoring proper frame alignment.
+- Allowed `i2c_manager_send_frame` to perform read-only transactions (when `tx` is NULL) on both standard and no-offset addresses.
+
+---
+
 ## [0.1.34] — 2026-06-15
 
 ### Base — v0.1.34
