@@ -164,22 +164,6 @@ _No unreleased changes._
 
 ---
 
-## [0.1.11] — 2026-06-10
-
-### Base — v0.1.11
-
-#### Fixed
-
-- Bumped project version to coordinate with module update.
-
-### Modules — v0.1.4
-
-#### Fixed
-
-- Removed `s_module_type` loading from NVS to prevent stale/incorrect module type reports.
-
----
-
 ## [0.1.11] — 2026-06-15
 
 ### Bluetooth Speaker — v0.1.11
@@ -187,6 +171,18 @@ _No unreleased changes._
 #### Fixed
 
 - Implemented automatic I2C driver recovery to clear hardware bus lockups/hangs: distinguished driver/communication errors (negative return values) from standard idle timeouts. When an error is detected, the Slave automatically de-initializes and re-initializes its I2C driver to reset the hardware peripheral and release the SDA/SCL lines.
+
+### Base — v0.1.11 (Historical)
+
+#### Fixed
+
+- Bumped project version to coordinate with module update.
+
+### Modules — v0.1.4 (Historical)
+
+#### Fixed
+
+- Removed `s_module_type` loading from NVS to prevent stale/incorrect module type reports.
 
 ---
 
