@@ -13,6 +13,127 @@ _No unreleased changes._
 
 ---
 
+## [0.1.34] — 2026-06-15
+
+### Base — v0.1.34
+
+#### Fixed
+
+- Refined I2C read length behavior: allowed reading extra bytes (`rx_len + 48`) during non-data commands (like `SUB_OTA_BEGIN` and `SUB_OTA_END`) to clear any stale frames (e.g. legacy `CMD_PING` responses) from the Slave's TX FIFO, while maintaining strict `rx_len` reads during `SUB_OTA_DATA` to prevent Slave FIFO underflows.
+
+---
+
+## [0.1.33] — 2026-06-15
+
+### Base — v0.1.33
+
+#### Changed
+
+- Added compatibility delay (220ms wait) for older Slave modules (versions below 20/0.1.10) to accommodate slower flash writes and LED refreshes during I2C streaming updates.
+
+---
+
+## [0.1.32] — 2026-06-15
+
+### Base — v0.1.32
+
+#### Added
+
+- Implemented I2C polling optimizations and WebSocket message handling for Bluetooth Speaker controls.
+
+---
+
+## [0.1.31] — 2026-06-15
+
+### Base — v0.1.31
+
+#### Changed
+
+- Minor internal updates.
+
+---
+
+## [0.1.20] — 2026-06-12
+
+### Base — v0.1.20
+
+#### Changed
+
+- Increased default I2C command response wait time to 50ms for improved communication stability.
+
+---
+
+## [0.1.19] — 2026-06-12
+
+### Base — v0.1.19
+
+#### Fixed
+
+- Fixed I2C OTA delay logic for legacy slave firmware.
+
+---
+
+## [0.1.18] — 2026-06-12
+
+### Base — v0.1.18
+
+#### Added
+
+- Implemented dynamic delay compatibility for slave modules running v0.1.6.
+
+---
+
+## [0.1.17] — 2026-06-12
+
+### Base — v0.1.17
+
+#### Changed
+
+- Optimized Base OTA_BEGIN wait time to 5000ms.
+
+---
+
+## [0.1.16] — 2026-06-12
+
+### Base — v0.1.16
+
+#### Fixed
+
+- Fixed I2C OTA Chunk 0 timeout: removed slave 200ms delay and increased master wait to 30ms.
+
+---
+
+## [0.1.15] — 2026-06-12
+
+### Base — v0.1.15
+
+#### Fixed
+
+- Increased HTTP client buffer size to 4096 bytes to support long redirect URLs from GitHub releases to AWS S3.
+- Implemented HTTP client redirection handling (up to 5 redirects).
+
+---
+
+## [0.1.14] — 2026-06-12
+
+### Base — v0.1.14
+
+#### Changed
+
+- Preparatory updates for HTTP client redirection.
+
+---
+
+## [0.1.13] — 2026-06-12
+
+### Base — v0.1.13
+
+#### Added
+
+- Initial release containing I2C polling pause during Slave OTA updates and orange blinking LED support.
+
+---
+
 ## [0.1.12] — 2026-06-10
 
 ### Base — v0.1.12
@@ -48,7 +169,7 @@ _No unreleased changes._
 
 ---
 
-## [0.1.10] — 2026-06-10
+## [0.1.10] — 2026-06-15
 
 ### Base — v0.1.10
 
@@ -56,19 +177,16 @@ _No unreleased changes._
 
 - Implemented CMD_GET_INFO (0x02) request in polling loop and post-OTA sequence to refresh module type and versions.
 
----
-
-## [0.1.3] — 2026-06-10
-
-### Modules — v0.1.3
+### Bluetooth Speaker — v0.1.10
 
 #### Added
 
-- Implemented CMD_GET_INFO (0x02) command to return unique chip ID, module type, and hardware/software versions.
+- Implemented Bluetooth volume control (0-100), song titles, progress tracking, and listening states.
+- Optimized I2C OTA updates by throttling LED status strip refresh rate (once every 500ms) to eliminate high latency and avoid blocking I2C transactions.
 
 ---
 
-## [0.1.9] — 2026-06-10
+## [0.1.9] — 2026-06-15
 
 ### Base — v0.1.9
 
@@ -76,15 +194,11 @@ _No unreleased changes._
 
 - Increased CMD_FIRMWARE_UPDATE I2C response delay to 50ms to ensure slave NVS write completion.
 
----
+### Bluetooth Speaker — v0.1.9
 
-## [0.1.2] — 2026-06-10
+#### Added
 
-### Modules — v0.1.2
-
-#### Changed
-
-- Deferred NVS flash writes in CMD_FIRMWARE_UPDATE response to prevent blocking the I2C transaction.
+- Skeletons and commands for bluetooth controls (play, pause, next, prev, volume up/down).
 
 ---
 
@@ -101,6 +215,42 @@ _No unreleased changes._
 
 - Display specific module type and version in web application.
 - Changed default base IP to 192.168.1.178.
+
+### Bluetooth Speaker — v0.1.8
+
+#### Added
+
+- Skeletons for bluetooth controls.
+
+---
+
+## [0.1.7] — 2026-06-10
+
+### Bluetooth Speaker — v0.1.7
+
+#### Added
+
+- Skeletons and build configurations.
+
+---
+
+## [0.1.3] — 2026-06-10
+
+### Modules — v0.1.3
+
+#### Added
+
+- Implemented CMD_GET_INFO (0x02) command to return unique chip ID, module type, and hardware/software versions.
+
+---
+
+## [0.1.2] — 2026-06-10
+
+### Modules — v0.1.2
+
+#### Changed
+
+- Deferred NVS flash writes in CMD_FIRMWARE_UPDATE response to prevent blocking the I2C transaction.
 
 ---
 
