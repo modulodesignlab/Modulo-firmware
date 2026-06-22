@@ -116,6 +116,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Bluetooth Speaker
 
+### [0.1.13] — 2026-06-22
+- Test release for FOTA update verification with 3-byte SemVer protocol.
+
 ### [0.1.12] — 2026-06-22
 - Implemented direct Wi-Fi FOTA update capability: connects to Wi-Fi STA and executes HTTPS OTA in a background task, keeping the I2C bus responsive.
 
