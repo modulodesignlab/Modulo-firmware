@@ -6,6 +6,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.38] — 2026-06-22
+- Rearchitected module firmware update process: replaced I2C chunk streaming with direct Wi-Fi FOTA updates, transmitting Wi-Fi credentials and firmware URLs to target slaves.
+- Implemented status polling loop and WebSocket broadcast to update the frontend UI.
+
 ### [0.1.37] — 2026-06-15
 - Implemented robust transmit-then-poll streaming protocol for module OTA updates over I2C, resolving communication NACK errors during slave flash write operations.
 
@@ -111,6 +115,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Bluetooth Speaker
+
+### [0.1.12] — 2026-06-22
+- Implemented direct Wi-Fi FOTA update capability: connects to Wi-Fi STA and executes HTTPS OTA in a background task, keeping the I2C bus responsive.
 
 ### [0.1.11] — 2026-06-15
 - Implemented automatic I2C driver recovery to clear hardware bus lockups/hangs: distinguished driver/communication errors (negative return values) from standard idle timeouts. When an error is detected, the Slave automatically de-initializes and re-initializes its I2C driver to reset the hardware peripheral and release the SDA/SCL lines.
