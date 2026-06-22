@@ -10,7 +10,7 @@
                                                 "version":  "0.1.12",
                                                 "minimum_base_version":  "0.1.12",
                                                 "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.12/bluetooth_speaker.bin",
-                                                "sha256":  "1ee619f5e0bf069eb2427733618b8e640a59e42d0b9c1afcfe4930bfae3062db"
+                                                "sha256":  "cb135b788e091e303716f6807f6bcb5d666de562f6a35ed0915308d291c292a5"
                                             },
                       "environmental_monitor":  {
                                                     "version":  "0.1.6",
