@@ -6,6 +6,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.39] — 2026-06-24
+- Implemented polling and WebSocket forwarding for Bluetooth A2DP/AVRCP track metadata (title, artist, album) from the speaker slave module.
+
 ### [0.1.38] — 2026-06-22
 - Rearchitected module firmware update process: replaced I2C chunk streaming with direct Wi-Fi FOTA updates, transmitting Wi-Fi credentials and firmware URLs to target slaves.
 - Implemented status polling loop and WebSocket broadcast to update the frontend UI.
@@ -115,6 +118,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Bluetooth Speaker
+
+### [0.1.14] — 2026-06-24
+- Implemented full Bluetooth Classic A2DP Sink and AVRCP Controller stack.
+- Configured software-based volume control using Q8 fixed-point quadratic curve.
+- Enabled track metadata transmission via new `CMD_SPK_GET_METADATA` command.
+- Integrated aggressive compile-size and IRAM optimizations to prevent memory segment overflow.
 
 ### [0.1.13] — 2026-06-22
 - Test release for FOTA update verification with 3-byte SemVer protocol.
