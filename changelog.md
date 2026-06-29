@@ -6,6 +6,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.40] — 2026-06-29
+- Fixed FOTA status polling task lockup: added checking for `OTA_STATE_IDLE` to break from the `module_ota_task` loop. This prevents the Master from getting stuck polling the Slave's OTA status, which paused regular I2C manager polling and blocked all manual player controls and metadata updates.
+- Improved web player UI layout to display Title, Artist, and Album separately.
+
 ### [0.1.39] — 2026-06-24
 - Implemented polling and WebSocket forwarding for Bluetooth A2DP/AVRCP track metadata (title, artist, album) from the speaker slave module.
 
@@ -118,6 +122,21 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Bluetooth Speaker
+
+### [0.1.23] — 2026-06-29
+- Implemented classic Bluetooth AVRCP play status polling (position and duration queries) and exposed progress and remaining track time values over I2C status packet.
+
+### [0.1.22] — 2026-06-29
+- Freed Bluetooth and I2S resources during OTA to prevent Out-Of-Memory (OOM) heap segment allocation freeze at 4% progress.
+
+### [0.1.21] — 2026-06-29
+- Migrated legacy I2C Slave driver to the new ESP-IDF v5.x driver (`driver/i2c_slave.h`).
+
+### [0.1.20] — 2026-06-29
+- Cleaned up Bluetooth compiler warnings.
+
+### [0.1.15] — 2026-06-24
+- Reset Slave OTA state to IDLE upon receiving SSID.
 
 ### [0.1.14] — 2026-06-24
 - Implemented full Bluetooth Classic A2DP Sink and AVRCP Controller stack.
