@@ -6,6 +6,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.41] — 2026-06-29
+- Reduced I2C discovery and status polling interval to 1.0 second for smoother dashboard updates.
+
 ### [0.1.40] — 2026-06-29
 - Fixed FOTA status polling task lockup: added checking for `OTA_STATE_IDLE` to break from the `module_ota_task` loop. This prevents the Master from getting stuck polling the Slave's OTA status, which paused regular I2C manager polling and blocked all manual player controls and metadata updates.
 - Improved web player UI layout to display Title, Artist, and Album separately.
@@ -122,6 +125,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Bluetooth Speaker
+
+### [0.1.24] — 2026-06-29
+- Reduced periodic AVRCP play status query interval to 1.0 second for smoother real-time track progress.
 
 ### [0.1.23] — 2026-06-29
 - Implemented classic Bluetooth AVRCP play status polling (position and duration queries) and exposed progress and remaining track time values over I2C status packet.
