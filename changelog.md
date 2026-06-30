@@ -6,6 +6,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.43] — 2026-06-30
+- Reverted I2C polling interval to 2.0s and WebSocket broker interval to 1.0s to prevent I2C bus timeouts and collisions.
+- Implemented client-side progress interpolation in the web player for smooth 1-second track updates.
+- Embedded changelog in the web client as a fallback to resolve fetch errors when loaded via HTTP.
+
 ### [0.1.42] — 2026-06-29
 - Reduced I2C polling and WebSocket data broker intervals to 500ms for near real-time dashboard updates.
 
@@ -128,6 +133,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Bluetooth Speaker
+
+### [0.1.26] — 2026-06-30
+- Reverted periodic Bluetooth AVRCP status query interval to 1.0 second to ensure system stability and avoid bus conflicts.
 
 ### [0.1.25] — 2026-06-29
 - Reduced AVRCP play status query interval to 500ms for near real-time track progress updates.
