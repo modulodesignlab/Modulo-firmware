@@ -6,6 +6,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.45] — 2026-07-01
+- Reduced I2C polling interval to 1.0 second and optimized discovery routine to run only once every 5 seconds, resulting in immediate metadata and song updates.
+- Refined remaining track time interpolation to compute it based on total duration, eliminating fluctuations.
+
 ### [0.1.44] — 2026-07-01
 - Redesigned progression interpolation to filter out stale/lagging AVRCP play position packets and prevent the progress bar from jumping back and forth.
 
