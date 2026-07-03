@@ -144,6 +144,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Bluetooth Speaker
 
+### [0.1.28] — 2026-07-03
+- Migrated default pinout mappings for ESP32 target (SDA=27, SCL=14, ADC=36, LED=19, I2S standard pins) to align with the new hardware revision schematic.
+
 ### [0.1.27] — 2026-07-01
 - Filtered out 0xFFFFFFFF play status query payloads from the phone to prevent tracking errors.
 
