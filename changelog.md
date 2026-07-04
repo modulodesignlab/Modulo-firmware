@@ -6,6 +6,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.47] — 2026-07-04
+- Added I2C polling support for LED Tower module type (0x08).
+- Implemented serialization of LED Tower brightness state to the WebSocket status packet payload.
+
 ### [0.1.46] — 2026-07-02
 - Resolved clangd warnings in data_broker.c by fixing float-precision casts and removing unused crt header.
 
