@@ -144,6 +144,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Bluetooth Speaker
 
+### [0.1.29] — 2026-07-04
+- Spared and bumped version to 0.1.29 to keep aligned with LED Tower release.
+
 ### [0.1.28] — 2026-07-03
 - Migrated default pinout mappings for ESP32 target (SDA=27, SCL=14, ADC=36, LED=19, I2S standard pins) to align with the new hardware revision schematic.
 
@@ -301,6 +304,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo LED Tower
+
+### [0.1.29] — 2026-07-04
+- Implemented LEDC (PWM) controller on GPIO 19 (EXT_LEDOUT) to allow dimmer control (0-100% duty cycle).
+- Added I2C commands handler for CMD_SET_STATE (to set dimmer brightness) and CMD_GET_STATUS (to retrieve current brightness).
 
 ### [0.1.6] — 2026-06-15
 - Skeletons and build configurations.
