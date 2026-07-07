@@ -237,6 +237,14 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.30] — 2026-07-07
+- Implemented real-time AQI and eCO2 reading from ENS160 registers and removed simulated sensor fallback.
+- Added e-Paper graphic drawing sections for real-time AQI levels and the list of detected gases (VOCs, Toluene, Hydrogen, Ethanol, NO2, Ozone).
+- Integrated dual I2C address detection (auto-scanning addresses 0x53 and 0x52) for ENS160.
+- Disabled SPI DMA to support safe stack-allocated transactions and resolved e-Paper boot display issue.
+- Updated base station serialization and web dashboard interface to display AQI, eCO2, and monitored gas details.
+- Removed deprecated atmospheric pressure fields.
+
 ### [0.1.29] — 2026-07-07
 - Implemented first software release of environmental monitor telemetry and display interface.
 - Configured local I2C Master bus on GPIO 21 (SDA) and GPIO 22 (SCL) to read data from ENS160 (TVOC/eCO2) and AHT21 (Temp/Hum) sensors, with automated simulation fallback.
