@@ -243,6 +243,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.33] — 2026-07-07
+- Fixed FOTA crash/abort on standard ESP32: automatically pauses/deletes the heavy environmental sensor and e-Paper drawing tasks before starting Wi-Fi STA and HTTPS OTA, reclaiming 8KB of task stack and preventing Out-Of-Memory (OOM) failures.
+- Displays a dedicated "AGGIORNAMENTO FIRMWARE..." message on the e-Paper display during the update process.
+
 ### [0.1.32] — 2026-07-07
 - Added I2C and EPD error flags (AHT21 connection, ENS160 connection, ENS160 data validity, EPD busy timeout) to the protocol payload.
 
