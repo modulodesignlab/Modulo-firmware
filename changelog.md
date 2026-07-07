@@ -6,6 +6,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.50] — 2026-07-07
+- Added support for reading and forwarding I2C and EPD error telemetry in cJSON WebSocket packet.
+
+### [0.1.49] — 2026-07-07
+- Added AQI (Air Quality Index) field serialization to environmental sensor WebSocket JSON.
+
 ### [0.1.48] — 2026-07-07
 - Added I2C polling support for Environmental Monitor module type (0x05).
 - Implemented serialization of environmental telemetry (temperature, humidity, TVOC, eCO2, and pressure) to the WebSocket status packet payload.
@@ -236,6 +242,14 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Environmental Monitor
+
+### [0.1.32] — 2026-07-07
+- Added I2C and EPD error flags (AHT21 connection, ENS160 connection, ENS160 data validity, EPD busy timeout) to the protocol payload.
+
+### [0.1.31] — 2026-07-07
+- Added a 50ms boot delay after ENS160 I2C reset command to avoid register lockups.
+- Improved e-Paper (SSD1680) driver: implemented proper reset sequence (HIGH-LOW-HIGH), pre-initialized pin levels to prevent startup glitches, and reduced SPI clock to 2MHz for high stability.
+- Alternates between fast partial refreshes and periodic full refreshes (once per minute) to avoid screen damage and flickering.
 
 ### [0.1.30] — 2026-07-07
 - Implemented real-time AQI and eCO2 reading from ENS160 registers and removed simulated sensor fallback.
