@@ -6,6 +6,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.48] — 2026-07-07
+- Added I2C polling support for Environmental Monitor module type (0x05).
+- Implemented serialization of environmental telemetry (temperature, humidity, TVOC, eCO2, and pressure) to the WebSocket status packet payload.
+
 ### [0.1.47] — 2026-07-04
 - Added I2C polling support for LED Tower module type (0x08).
 - Implemented serialization of LED Tower brightness state to the WebSocket status packet payload.
@@ -232,6 +236,13 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Environmental Monitor
+
+### [0.1.29] — 2026-07-07
+- Implemented first software release of environmental monitor telemetry and display interface.
+- Configured local I2C Master bus on GPIO 21 (SDA) and GPIO 22 (SCL) to read data from ENS160 (TVOC/eCO2) and AHT21 (Temp/Hum) sensors, with automated simulation fallback.
+- Configured VSPI bus on GPIO 23 (DIN), GPIO 18 (CLK), GPIO 5 (CS), GPIO 25 (DC), GPIO 26 (RST), and GPIO 32 (BUSY) to drive Waveshare 2.9" portrait e-Paper display.
+- Implemented graphics drawing library (with customized thermometer, droplet, wind, and CO2 cloud icons) and progressive TVOC bar graph.
+- Exposed telemetry packet structured data (env_sensor_data_t) to Base station via CMD_GET_STATUS (0x03) over I2C Slave interface.
 
 ### [0.1.6] — 2026-06-15
 - Skeletons and build configurations.
