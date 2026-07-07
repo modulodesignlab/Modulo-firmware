@@ -10,13 +10,13 @@
                                                 "version":  "0.1.29",
                                                 "minimum_base_version":  "0.1.29",
                                                 "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.29/bluetooth_speaker.bin",
-                                                "sha256":  "8754fd988fd0d1b4462c4fbca1a81d093a8ed23b4e7c89acd906485f8be11597"
+                                                "sha256":  "8f77bf806d8874493ea4513b49b12b75ef6784f2abcf46cb45e18b16ac5f51d7"
                                             },
                       "environmental_monitor":  {
                                                     "version":  "0.1.29",
                                                     "minimum_base_version":  "0.1.29",
                                                     "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.29/environmental_monitor.bin",
-                                                    "sha256":  "454da77cd0ae16216495a3e0af3bf91bc002a831ac0d2b3e45ffb6acbaeab8de"
+                                                    "sha256":  "260fed4d6f33a9114cb43276a1de101b897ee6c661222f8ee22663f977494235"
                                                 },
                       "smart_screen_128":  {
                                                "version":  "0.1.6",
@@ -40,7 +40,7 @@
                                         "version":  "0.1.29",
                                         "minimum_base_version":  "0.1.29",
                                         "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/tower-v0.1.29/led_tower.bin",
-                                        "sha256":  "58bce555573e81cc2a8d1d739ec9442122d8223fc3d986d3faaeaf5a839b996f"
+                                        "sha256":  "25eab348535a89f08561897bd0c375a11b5c98070ef72c3d2f85e4fbb3cf49a6"
                                     }
                   }
 }
