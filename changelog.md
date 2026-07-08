@@ -243,6 +243,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.39] — 2026-07-08
+- **Added hardware diagnostics and raw data logging**: Added an EPD RST-to-BUSY pin loopback test at startup to verify physical connections and power. Added pre-init register dump for the ENS160 gas sensor, along with raw reading logs for both AHT21 (temp/humidity) and ENS160 (TVOC/eCO2 bytes) to isolate and diagnose sensor and display activity.
+
 ### [0.1.38] — 2026-07-08
 - **Fixed OTA abort/reset crash**: Added a 300ms delay after deleting `env_sensor_task` at the start of FOTA. This gives the FreeRTOS idle task time to actually deallocate the 8KB task stack before starting the heavy Wi-Fi driver, avoiding Out-Of-Memory (OOM) allocations.
 
