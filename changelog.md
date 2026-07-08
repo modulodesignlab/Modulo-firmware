@@ -243,6 +243,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.35] — 2026-07-08
+- Added verbose diagnostics for ENS160 (logs PART_ID, OPMODE, and status registers on every measurement cycle).
+- Added return code verification and error logs for e-Paper initialization (`epd_init`) in the main sensor task.
+
 ### [0.1.34] — 2026-07-08
 - Fixed E-Paper false-positive "restored" logs: corrected EPD error telemetry status so the busy timeout flag persists until a refresh command completes successfully.
 - Added detailed telemetry debugging to trace startup/refresh GPIO levels of the busy pin.
