@@ -243,6 +243,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.36] — 2026-07-08
+- **Fixed ENS160 measurement engine not starting**: Added mandatory COMMAND register writes (NOP 0x00 + CLRGPR 0xCC to register 0x12) during sensor initialization. Without these commands, the sensor accepts OPMODE=STANDARD but never activates its internal heater/measurement engine (STATAS bit stays 0), resulting in perpetual TVOC=0, eCO2=0, AQI=0 readings.
+- **Fixed e-Paper display not refreshing**: Corrected Display Update Control 2 values to match official Waveshare V2 driver (0xC7 for full refresh, 0x0F for partial). Previous values (0xF7/0xFF) caused the SSD1680 controller to use invalid waveform sequences. Also added 10ms delay after SW reset per datasheet requirements, and RAM address counter initialization (0x4E/0x4F) at end of init sequence.
+
 ### [0.1.35] — 2026-07-08
 - Added verbose diagnostics for ENS160 (logs PART_ID, OPMODE, and status registers on every measurement cycle).
 - Added return code verification and error logs for e-Paper initialization (`epd_init`) in the main sensor task.
