@@ -243,6 +243,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.42] — 2026-07-08
+- **Added sensor power stabilization delay**: Added a 150ms delay at the very beginning of `sensor_mgr_init` before performing any I2C communication. This allows the 3.3V power rail and the ENS160 internal boot logic to stabilize on cold power-on, preventing the sensor from getting locked in its bootloader state by premature I2C transactions.
+
 ### [0.1.41] — 2026-07-08
 - **Fixed ENS160 mode transition lock**: Added a NOP (0x00) command write to the `COMMAND` register (0x12) after version retrieval and before setting STANDARD mode. The ENS160 internal command handler requires the register to return to NOP to allow the OPMODE transition from IDLE to STANDARD.
 
