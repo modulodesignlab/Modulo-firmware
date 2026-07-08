@@ -243,6 +243,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.38] — 2026-07-08
+- **Fixed OTA abort/reset crash**: Added a 300ms delay after deleting `env_sensor_task` at the start of FOTA. This gives the FreeRTOS idle task time to actually deallocate the 8KB task stack before starting the heavy Wi-Fi driver, avoiding Out-Of-Memory (OOM) allocations.
+
 ### [0.1.37] — 2026-07-08
 - **Fixed ENS160 boot ready lock**: Implemented the official ScioSense startup handshake loop (NOP 0x00 + CLRGPR 0xCC, reading GPR_READ_4..6 (0x4C) until they are all 0) to ensure the internal MCU bootloader is ready before transitioning the chip into continuous measurement mode. Also guaranteed the mandatory transition from IDLE to STANDARD mode during automatic register checks/restores.
 - **Fixed e-Paper blank screen**: Added the official Waveshare V2 Look-Up Table (LUT) loading sequence for both full (WS_20_30) and partial (_WF_PARTIAL_2IN9) refresh modes, enabling the SSD1680 controller to generate proper driving voltages.
