@@ -243,6 +243,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.34] — 2026-07-08
+- Fixed E-Paper false-positive "restored" logs: corrected EPD error telemetry status so the busy timeout flag persists until a refresh command completes successfully.
+- Added detailed telemetry debugging to trace startup/refresh GPIO levels of the busy pin.
+- Optimized hardware reset timing for WaveShare SSD1680 displays (toggled RST pin with 200ms intervals).
+
 ### [0.1.33] — 2026-07-07
 - Fixed FOTA crash/abort on standard ESP32: automatically pauses/deletes the heavy environmental sensor and e-Paper drawing tasks before starting Wi-Fi STA and HTTPS OTA, reclaiming 8KB of task stack and preventing Out-Of-Memory (OOM) failures.
 - Displays a dedicated "AGGIORNAMENTO FIRMWARE..." message on the e-Paper display during the update process.
