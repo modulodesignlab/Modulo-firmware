@@ -243,6 +243,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.40] — 2026-07-08
+- **Fixed ENS160 boot ready detection**: Changed bootloader ready wait logic to issue the official `GET_APPVER` command (0x0E) and verify the version returns a non-zero value, ensuring we wait until the sensor has fully loaded its internal firmware before starting standard mode.
+
 ### [0.1.39] — 2026-07-08
 - **Added hardware diagnostics and raw data logging**: Added an EPD RST-to-BUSY pin loopback test at startup to verify physical connections and power. Added pre-init register dump for the ENS160 gas sensor, along with raw reading logs for both AHT21 (temp/humidity) and ENS160 (TVOC/eCO2 bytes) to isolate and diagnose sensor and display activity.
 
