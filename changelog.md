@@ -6,6 +6,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.51] — 2026-07-09
+- Added support for routing SET_BASS and SET_TREBLE commands to Bluetooth Speaker over I2C.
+- Included bass and treble values in the speaker status cJSON WebSocket packet.
+
 ### [0.1.50] — 2026-07-07
 - Added support for reading and forwarding I2C and EPD error telemetry in cJSON WebSocket packet.
 
@@ -157,6 +161,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Bluetooth Speaker
+
+### [0.1.30] — 2026-07-09
+- Implemented software equalization (Direct Form I Biquad filters) for low-shelf (Bass) and high-shelf (Treble) filters.
+- Handled CMD_SPK_SET_BASS and CMD_SPK_SET_TREBLE I2C commands.
+- Updated CMD_SPK_GET_STATUS I2C payload to report current Bass and Treble settings.
 
 ### [0.1.29] — 2026-07-04
 - Spared and bumped version to 0.1.29 to keep aligned with LED Tower release.

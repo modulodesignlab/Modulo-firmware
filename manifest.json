@@ -2,21 +2,21 @@
     "schema_version":  1,
     "firmwares":  {
                       "base":  {
-                                   "version":  "0.1.50",
-                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.50/Modulo.bin",
-                                   "sha256":  "9b372a540daa3ce939f590ed664df21e9e2c3fe49f5645b889a867c400530dd6"
+                                   "version":  "0.1.51",
+                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.51/Modulo.bin",
+                                   "sha256":  "219529b40d09b18a934ea9a88c23a01d0f6bc217c9b012a456e6a62def044196"
                                },
                       "bluetooth_speaker":  {
-                                                "version":  "0.1.29",
-                                                "minimum_base_version":  "0.1.29",
-                                                "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.29/bluetooth_speaker.bin",
-                                                "sha256":  "8f77bf806d8874493ea4513b49b12b75ef6784f2abcf46cb45e18b16ac5f51d7"
+                                                "version":  "0.1.30",
+                                                "minimum_base_version":  "0.1.51",
+                                                "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.30/bluetooth_speaker.bin",
+                                                "sha256":  "f97c2421b4330cd16979bb1303bd9e41f23d2742c2ba54bc083b1cd2357c1ba0"
                                             },
                       "environmental_monitor":  {
-                                                    "version":  "0.1.42",
-                                                    "minimum_base_version":  "0.1.42",
-                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.42/environmental_monitor.bin",
-                                                    "sha256":  "2908a9980c954bf9a48535fde8fa0cce2dcd0af7d5638439438fbf40bdf2c434"
+                                                    "version":  "0.1.45",
+                                                    "minimum_base_version":  "0.1.45",
+                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.45/environmental_monitor.bin",
+                                                    "sha256":  "98c89b8b5badbf8c8be0ece696d29030fadee47544ea8e53b959143c632013e4"
                                                 },
                       "smart_screen_128":  {
                                                "version":  "0.1.6",
