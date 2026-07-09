@@ -6,6 +6,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.52] — 2026-07-09
+- Added user account email lock pairing persisted in Base NVS flash memory.
+- Handled REGISTER_USER and UNREGISTER_USER WebSocket commands for secure pairing/unpairing.
+- Serialized active registered email into Base WebSocket status JSON.
+
 ### [0.1.51] — 2026-07-09
 - Added support for routing SET_BASS and SET_TREBLE commands to Bluetooth Speaker over I2C.
 - Included bass and treble values in the speaker status cJSON WebSocket packet.
