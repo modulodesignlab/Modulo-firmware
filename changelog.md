@@ -6,6 +6,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.53] — 2026-07-10
+- Enabled complete erasure of stored Wi-Fi credentials when the Base is decoupled/unpaired from the app.
+- Triggered automated ESP32 reboot 1 second after decoupling to return the device to its virgin/provisioning state.
+
 ### [0.1.52] — 2026-07-09
 - Added user account email lock pairing persisted in Base NVS flash memory.
 - Handled REGISTER_USER and UNREGISTER_USER WebSocket commands for secure pairing/unpairing.
