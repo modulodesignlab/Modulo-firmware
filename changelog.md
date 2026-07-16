@@ -6,6 +6,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.56] — 2026-07-16
+- **Real-time module telemetry diagnostics logging**: Added automatic console (UART/TCP) diagnostic logs when any connected module reports hardware warnings or errors (such as AHT21 errors, ENS160 connection failure, or E-Paper timeout).
+- **Log module validity and warm-up state changes**: Added real-time tracking and logging of ENS160 gas sensor state changes (Warm-up, Start-up, Invalid output, or normal operations) to simplify remote diagnostics when the sensor is burning-in.
+
 ### [0.1.55] — 2026-07-16
 - Added TCP remote log server on port 1234: all ESP_LOG output is forwarded in real-time to any connected TCP client (e.g. `telnet <base-ip> 1234` or `read_log.ps1`).
 - UART output is preserved in parallel — no functionality change if no client is connected.
