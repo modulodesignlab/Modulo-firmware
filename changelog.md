@@ -273,6 +273,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.47] — 2026-07-16
+- **Version bump**: Bumps software version to 0.1.47 to trigger a clean over-the-air (FOTA) update cycle on the Environmental Monitor and clear cached registry versions on the Base.
+
 ### [0.1.46] — 2026-07-16
 - **Improved ENS160 boot recovery and reliability**: Added software reset (`0xF0`) to OPMODE register (`0x10`) and boot delay during address probing (`0x53` and `0x52`) to match official ScioSense initialization sequence, ensuring clean state recovery even after hot-plugging or soft resets.
 - **Made sensor initialization independent**: Refactored the driver to initialize and poll the AHT21 (temperature/humidity) and the ENS160 (air quality) sensors independently. A failure or absence of one sensor no longer locks the other sensor or causes the entire board initialization to fail.
