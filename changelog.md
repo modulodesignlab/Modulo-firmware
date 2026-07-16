@@ -273,6 +273,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.48] — 2026-07-16
+- **Fixed ENS160 permanent warm-up**: The ENS160 gas sensor requires external temperature and humidity compensation data (registers `TEMP_IN` 0x13 and `RH_IN` 0x15) to complete its initialization and exit the warm-up phase. Without these writes, the sensor stays at validity=0 (warm-up) indefinitely and returns all-zero readings for TVOC, eCO2, and AQI. Now, every sensor polling cycle writes the real AHT21 temperature and humidity values (or reasonable defaults of 25°C/50% if AHT21 is unavailable) to the ENS160 compensation registers using the ScioSense format: `TEMP_IN = (T°C + 273.15) × 64`, `RH_IN = RH% × 512`, LSB-first.
+- **Fixed E-Paper "Healthy" status when display is disconnected**: The existing RST→BUSY diagnostic test (3 cycles of toggling RST and reading BUSY) was running but its results were never used to set error flags. Since GPIO 32 (BUSY) has an internal pull-down, an absent display reads as always-LOW, never triggering the `epd_wait_busy()` timeout. Now, if the BUSY pin never goes HIGH during any of the 3 diagnostic cycles, the `EPD_ERR_BUSY_TIMEOUT` flag is immediately set, correctly reporting the display as absent.
+
 ### [0.1.47] — 2026-07-16
 - **Version bump**: Bumps software version to 0.1.47 to trigger a clean over-the-air (FOTA) update cycle on the Environmental Monitor and clear cached registry versions on the Base.
 
