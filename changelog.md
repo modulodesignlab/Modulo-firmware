@@ -6,6 +6,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.55] — 2026-07-16
+- Added TCP remote log server on port 1234: all ESP_LOG output is forwarded in real-time to any connected TCP client (e.g. `telnet <base-ip> 1234` or `read_log.ps1`).
+- UART output is preserved in parallel — no functionality change if no client is connected.
+- Server starts automatically after Wi-Fi connection is established; handles one client at a time with automatic reconnection support.
+
 ### [0.1.54] — 2026-07-16
 - Disabled Wi-Fi power saving mode (WIFI_PS_NONE) on startup to ensure instant connection responses and eliminate WebSocket timeouts during discovery/scan.
 
