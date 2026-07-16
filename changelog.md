@@ -6,6 +6,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.54] — 2026-07-16
+- Disabled Wi-Fi power saving mode (WIFI_PS_NONE) on startup to ensure instant connection responses and eliminate WebSocket timeouts during discovery/scan.
+
 ### [0.1.53] — 2026-07-10
 - Enabled complete erasure of stored Wi-Fi credentials when the Base is decoupled/unpaired from the app.
 - Triggered automated ESP32 reboot 1 second after decoupling to return the device to its virgin/provisioning state.

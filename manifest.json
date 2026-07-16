@@ -2,9 +2,9 @@
     "schema_version":  1,
     "firmwares":  {
                       "base":  {
-                                   "version":  "0.1.53",
-                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.53/Modulo.bin",
-                                   "sha256":  "3a4eeff5c0212bc80870eb4d588736c9ef1cadbe88f7f521395e3f8464061930"
+                                   "version":  "0.1.54",
+                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.54/Modulo.bin",
+                                   "sha256":  "0c51dd4d12e476a299db8a0a57741bd62266044099cc6302ee0b6a53df0ae812"
                                },
                       "bluetooth_speaker":  {
                                                 "version":  "0.1.30",
