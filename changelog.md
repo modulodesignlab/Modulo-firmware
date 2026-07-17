@@ -273,6 +273,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.56] — 2026-07-17
+- **Fixed E-Paper blank screen issue**: Resolved incompatibility with newer Waveshare 2.9" rev2.1 displays mounting the SSD1680Z chip. Switched the full display update control option from `0xC7` to `0xF7` which triggers automatic internal LUT loading and temperature compensation directly from the OTP memory. Added writing the frame data to both memory banks (0x24 BW RAM and 0x26 Previous RAM) as required by the SSD1680Z differential refresh controller. Removed manual/static LUT loading on full updates.
+- **Fixed ENS160 zero-readings during warm-up**: Refactored the reading routine to check the `NEWDAT` flag (bit 1 of STATUS register 0x20) and `Validity` bits (bits 2-3) before reading data registers. Stored last valid measurements in static variables to return them during the 3-minute warm-up phase (Validity = 1 or 2) and when no new samples are available, preventing the values from dropping to zero in the UI.
+
 ### [0.1.55] — 2026-07-17
 - **Glitch Filter for E-Paper and Release Bump**: Bumps version to 0.1.55 to trigger FOTA cleanly, integrating the EPD busy pin glitch filter that prevents false Healthy status on unpowered/disconnected displays.
 
