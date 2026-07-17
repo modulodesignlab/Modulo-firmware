@@ -273,6 +273,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.53] — 2026-07-17
+- **FOTA Version Bump**: Bumps the Environmental Monitor firmware to 0.1.53 to trigger a clean FOTA update cycle for remote register diagnostics.
+
 ### [0.1.52] — 2026-07-17
 - **Added Remote Sensor Diagnostics packing**: Packed the raw ENS160 `OPMODE` register (bits 6-7) and `STATUS` register (bits 8-15) directly into the unused upper bits of the 16-bit `error_flags` field. This enables remote diagnostics of the sensor state over WebSocket/TCP without requiring physical UART serial access to the slave board.
 
