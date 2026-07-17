@@ -273,6 +273,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.51] — 2026-07-17
+- **Implemented Passive E-Paper Presence Detection**: Replaced the timing-sensitive active startup reset checks with a reliable passive detection strategy. The EPD driver now starts with the assumption that the screen is connected, allowing SPI commands to execute without block. It tracks if the BUSY pin goes HIGH at any point during operation (such as during the mandatory screen refresh at boot). If after boot the BUSY pin is never observed HIGH, the `EPD_ERR_BUSY_TIMEOUT` is raised, correctly flagging a disconnected screen without false timeout alerts on working screens.
+
 ### [0.1.50] — 2026-07-17
 - **Fixed E-Paper false busy-timeout alert**: Fixed an issue where a correctly connected and powered E-Paper screen was reported with a Busy Timeout. The hardware reset timing was too slow for a simple check, causing the presence check to miss the brief high state of the BUSY pin. The initialization routine now checks display presence by sending a digital Software Reset (0x12) command and polling the BUSY pin at 100-microsecond intervals for up to 10 milliseconds, catching the busy pulse reliably.
 
