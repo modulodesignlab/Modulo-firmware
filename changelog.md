@@ -273,6 +273,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.52] — 2026-07-17
+- **Added Remote Sensor Diagnostics packing**: Packed the raw ENS160 `OPMODE` register (bits 6-7) and `STATUS` register (bits 8-15) directly into the unused upper bits of the 16-bit `error_flags` field. This enables remote diagnostics of the sensor state over WebSocket/TCP without requiring physical UART serial access to the slave board.
+
 ### [0.1.51] — 2026-07-17
 - **Implemented Passive E-Paper Presence Detection**: Replaced the timing-sensitive active startup reset checks with a reliable passive detection strategy. The EPD driver now starts with the assumption that the screen is connected, allowing SPI commands to execute without block. It tracks if the BUSY pin goes HIGH at any point during operation (such as during the mandatory screen refresh at boot). If after boot the BUSY pin is never observed HIGH, the `EPD_ERR_BUSY_TIMEOUT` is raised, correctly flagging a disconnected screen without false timeout alerts on working screens.
 
