@@ -273,6 +273,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.55] — 2026-07-17
+- **Glitch Filter for E-Paper and Release Bump**: Bumps version to 0.1.55 to trigger FOTA cleanly, integrating the EPD busy pin glitch filter that prevents false Healthy status on unpowered/disconnected displays.
+
 ### [0.1.54] — 2026-07-17
 - **Fixed ENS160 Reset and Initialization Delays**: Increased the software reset wait from 20ms to 100ms, and the STANDARD mode transition wait from 10ms to 100ms, adhering strictly to ScioSense communication guidelines. This guarantees the sensor's bootloader completes execution and stabilizing before active sensing writes are sent.
 
