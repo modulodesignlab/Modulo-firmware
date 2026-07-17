@@ -273,6 +273,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.50] — 2026-07-17
+- **Fixed E-Paper false busy-timeout alert**: Fixed an issue where a correctly connected and powered E-Paper screen was reported with a Busy Timeout. The hardware reset timing was too slow for a simple check, causing the presence check to miss the brief high state of the BUSY pin. The initialization routine now checks display presence by sending a digital Software Reset (0x12) command and polling the BUSY pin at 100-microsecond intervals for up to 10 milliseconds, catching the busy pulse reliably.
+
 ### [0.1.49] — 2026-07-17
 - **Fixed ENS160 data initialization lock**: Fixed an issue where the ENS160 digital gas sensor would remain in a command-executing state after reading its firmware version (which registers as Validity 0 but outputs all zeros for TVOC/eCO2). The command register (0x12) is now correctly reset to NOP (0x00) following the app version retrieval, allowing the sensor to execute normal sensing algorithms in STANDARD mode.
 - **Fixed E-Paper disconnection masking**: Fixed a bug where EPD busy wait routine (`epd_wait_busy`) would clear the `EPD_ERR_BUSY_TIMEOUT` flag if it didn't hit a timeout, which masked disconnected/unpowered displays. The driver now tracks physical display presence (`s_epd_present`) established during initialization loopback test and maintains the error flag if absent.
