@@ -14,7 +14,7 @@
                                             },
                       "environmental_monitor":  {
                                                     "version":  "0.1.57",
-                                                    "minimum_base_version":  "0.1.57",
+                                                    "minimum_base_version":  "0.1.56",
                                                     "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.57/environmental_monitor.bin",
                                                     "sha256":  "9500817e31296d2c7584ab9bf311132883cb55935b7c5245e131093963c4be28"
                                                 },
