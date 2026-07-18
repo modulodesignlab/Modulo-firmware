@@ -6,6 +6,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.58] — 2026-07-18
+- **FOTA Updating Color Customization**: Added support for customizing the LED blink color during FOTA firmware updates (both Base and modules) via the newly extended `SET_LED_CONFIG` JSON payload.
+
 ### [0.1.57] — 2026-07-18
 - **Base LED Customization & NVS Persistence**: Added support for setting global solid colors with brightness/intensity controls and advanced state-specific colors (Provisioning, WiFi Connected, Ready, and Error states) via WebSocket `SET_LED_CONFIG` command. Configurations are persisted in NVS and restored automatically upon boot.
 
