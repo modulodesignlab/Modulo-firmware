@@ -6,6 +6,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.57] — 2026-07-18
+- **Base LED Customization & NVS Persistence**: Added support for setting global solid colors with brightness/intensity controls and advanced state-specific colors (Provisioning, WiFi Connected, Ready, and Error states) via WebSocket `SET_LED_CONFIG` command. Configurations are persisted in NVS and restored automatically upon boot.
+
 ### [0.1.56] — 2026-07-16
 - **Real-time module telemetry diagnostics logging**: Added automatic console (UART/TCP) diagnostic logs when any connected module reports hardware warnings or errors (such as AHT21 errors, ENS160 connection failure, or E-Paper timeout).
 - **Log module validity and warm-up state changes**: Added real-time tracking and logging of ENS160 gas sensor state changes (Warm-up, Start-up, Invalid output, or normal operations) to simplify remote diagnostics when the sensor is burning-in.
