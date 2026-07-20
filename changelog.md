@@ -6,6 +6,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.59] — 2026-07-20
+- **Updated Default FOTA Color**: Bumped default FOTA update LED indicators to bright orange (`R=255, G=100, B=0`), making it stand out clearly in the UI.
+
 ### [0.1.58] — 2026-07-18
 - **FOTA Updating Color Customization**: Added support for customizing the LED blink color during FOTA firmware updates (both Base and modules) via the newly extended `SET_LED_CONFIG` JSON payload.
 
@@ -278,6 +281,19 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Environmental Monitor
+
+### [0.1.61] — 2026-07-20
+- **Minimal Test Hello World Screen**: Simplified the env_sensor_task to bypass all sensor initialization/reads and loop with a minimal "Hello World!" drawing sequence, showing an incrementing refresh counter on screen. Used full refreshes to verify basic screen functionality and isolate hardware/bus issues.
+
+### [0.1.60] — 2026-07-20
+- **Stable Reset Timing and SPI DMA**: Adjusted the hardware reset sequence to use 20ms, 20ms, and 200ms delays to guarantee the SSD1680 display chip completes its internal power startup. Enabled SPI DMA (auto-allocated channel) and updated bulk data writes to use a single high-speed SPI transaction, ensuring gapless clock transitions. Stack-buffered the LUT data transfer to bypass ESP32 DMA flash reading limits.
+
+### [0.1.59] — 2026-07-20
+- **SPI Chip Select CS Transmission Fix**: Optimized the SPI transmission flow to maintain `CS` low during the entire write transaction of the 4736-byte framebuffer (0x24 and 0x26) and 153-byte LUT. This matches the exact SPI communication timing of the GxEPD2 library, resolving a critical issue where pulling CS high/low on every byte would cause the SSD1680 controller to reset its internal registers and remain blank.
+- **PCB Pinout Restored as Default**: Configured the standard PCB layout (DC=25, RST=26, BUSY=32, I2C SDA=21, SCL=22) as the default compilation configuration.
+
+### [0.1.58] — 2026-07-20
+- **Configurable Pinouts & Kconfig Compatibility**: Added Kconfig configuration options for all local Environmental Monitor peripherals, including E-Paper pins (CLK, DIN, CS, DC, RST, BUSY) and local I2C Master pins (SDA, SCL).
 
 ### [0.1.57] — 2026-07-18
 - **Fixed E-Paper initialization freeze**: Adjusted the hardware reset pulse duration to exactly **2ms** (using precise `esp_rom_delay_us`), matching the exact configuration used by the working GxEPD2 Arduino library (`display.init(115200, true, 2, false)`). Preceded the pulse by a 10ms VCC power stabilization delay (RST HIGH) and followed it by a 15ms stabilization delay. This prevents the Waveshare "clever" power-transistor reset circuit from cutting off VCC power to the display panel, which was causing the display chip to enter brownout or fail to initialize when using long (200ms) reset pulses.
