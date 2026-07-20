@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.62] — 2026-07-20
+- **SPI DMA Disabled**: Disabled SPI DMA (using `SPI_DMA_DISABLED`) to eliminate strict 4-byte buffer alignment requirements and stack-allocation constraints for the transaction buffers. This resolves the black/blank screen issue caused by SPI transfer failures on ESP32 when sending stack-allocated LUTs and unaligned framebuffers.
+
 ### [0.1.61] — 2026-07-20
 - **Minimal Test Hello World Screen**: Simplified the env_sensor_task to bypass all sensor initialization/reads and loop with a minimal "Hello World!" drawing sequence, showing an incrementing refresh counter on screen. Used full refreshes to verify basic screen functionality and isolate hardware/bus issues.
 
