@@ -279,6 +279,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.58] — 2026-07-20
+- **Configurable Pinouts & Breadboard Compatibility**: Added Kconfig configuration options for all local Environmental Monitor peripherals, including E-Paper pins (CLK, DIN, CS, DC, RST, BUSY) and local I2C Master pins (SDA, SCL). Enabled breadboard-suggested pinouts (`CONFIG_SLAVE_DEVICE_BREADBOARD_PINOUT=y`) by default in the Environmental Monitor firmware, resolving a critical mismatch where the firmware drove PCB pins (DC=25, RST=26, BUSY=32) while the breadboard was wired with the Arduino suggested pinout (DC=17, RST=16, BUSY=4).
+
 ### [0.1.57] — 2026-07-18
 - **Fixed E-Paper initialization freeze**: Adjusted the hardware reset pulse duration to exactly **2ms** (using precise `esp_rom_delay_us`), matching the exact configuration used by the working GxEPD2 Arduino library (`display.init(115200, true, 2, false)`). Preceded the pulse by a 10ms VCC power stabilization delay (RST HIGH) and followed it by a 15ms stabilization delay. This prevents the Waveshare "clever" power-transistor reset circuit from cutting off VCC power to the display panel, which was causing the display chip to enter brownout or fail to initialize when using long (200ms) reset pulses.
 
