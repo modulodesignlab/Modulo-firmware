@@ -282,6 +282,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.64] — 2026-07-20
+- **Breadboard Pinout Selection**: Enabled the breadboard/Arduino pinout (`CONFIG_SLAVE_DEVICE_BREADBOARD_PINOUT=y`) by default to use `DC=17`, `RST=16`, and `BUSY=4`, matching Mauro's prototype wiring.
+- **Busy wait margin and display update fix**: Added 1ms delay in `epd_wait_busy()` to allow the SSD1680 controller to pull the BUSY pin HIGH before reading it. Corrected the partial update display command parameter to `0xCC` (matches GxEPD2).
+
 ### [0.1.63] — 2026-07-20
 - **Waveshare Reset timing Fix**: Restored the 2ms short reset pulse duration (`esp_rom_delay_us(2000)`) in `epd_reset()`. The Waveshare "clever" power-transistor reset circuit cuts off VCC power to the display if RST is held low for too long (e.g. 20ms), which caused the display to brown out and fail to initialize. This matches the exact timing in Mauro's working GxEPD2 Arduino sketch.
 
