@@ -2,9 +2,9 @@
     "schema_version":  1,
     "firmwares":  {
                       "base":  {
-                                   "version":  "0.1.58",
-                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.58/Modulo.bin",
-                                   "sha256":  "adb9570109b9bb8b5815081a185bdac94607f2b174cb20400bc543394ac4f054"
+                                   "version":  "0.1.59",
+                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.59/Modulo.bin",
+                                   "sha256":  "57f6e07d4165cfca853dae615e77d26e14065d0fda3b52a31867b9d08c6e213d"
                                },
                       "bluetooth_speaker":  {
                                                 "version":  "0.1.30",
@@ -13,10 +13,10 @@
                                                 "sha256":  "f97c2421b4330cd16979bb1303bd9e41f23d2742c2ba54bc083b1cd2357c1ba0"
                                             },
                       "environmental_monitor":  {
-                                                    "version":  "0.1.57",
+                                                    "version":  "0.1.60",
                                                     "minimum_base_version":  "0.1.56",
-                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.57/environmental_monitor.bin",
-                                                    "sha256":  "9500817e31296d2c7584ab9bf311132883cb55935b7c5245e131093963c4be28"
+                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.60/environmental_monitor.bin",
+                                                    "sha256":  "435bcc28f4d3f2b2f03f77e415498a64504e50d0ade7fa741ee50855a6e78d44"
                                                 },
                       "smart_screen_128":  {
                                                "version":  "0.1.6",
