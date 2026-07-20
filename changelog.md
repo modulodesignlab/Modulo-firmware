@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.63] — 2026-07-20
+- **Waveshare Reset timing Fix**: Restored the 2ms short reset pulse duration (`esp_rom_delay_us(2000)`) in `epd_reset()`. The Waveshare "clever" power-transistor reset circuit cuts off VCC power to the display if RST is held low for too long (e.g. 20ms), which caused the display to brown out and fail to initialize. This matches the exact timing in Mauro's working GxEPD2 Arduino sketch.
+
 ### [0.1.62] — 2026-07-20
 - **SPI DMA Disabled**: Disabled SPI DMA (using `SPI_DMA_DISABLED`) to eliminate strict 4-byte buffer alignment requirements and stack-allocation constraints for the transaction buffers. This resolves the black/blank screen issue caused by SPI transfer failures on ESP32 when sending stack-allocated LUTs and unaligned framebuffers.
 
