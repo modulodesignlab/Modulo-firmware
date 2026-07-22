@@ -282,6 +282,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.67] — 2026-07-22
+- **Restored Real Sensor Readings**: Bypassed the Hello World debug loop in `env_sensor_task` and re-enabled full initialization and reads of the physical AHT21 and ENS160 sensors. Updates the local e-Paper dashboard and transmits real telemetries to the Base.
+- **E-Paper Alignment with GxEPD2**: Activated SPI DMA (`SPI_DMA_CH_AUTO`) and aligned the framebuffer and LUT buffer structures in memory (4-byte alignment). Rewrote the `epd_update_display()` sequence to configure the RAM windows (`0x44` and `0x45`) and reset RAM counters (`0x4E` and `0x4F`) before every data transmission. Writes to `0x26` before `0x24` to match GxEPD2's exact SSD1680 controller update logic and fix the blank screen on production PCBs.
+
 ### [0.1.66] — 2026-07-22
 - **Wi-Fi FOTA Connection Reliability Improvements**: Added an automatic Wi-Fi reconnect retry mechanism (up to 5 attempts) in the Slave's `wifi_event_handler` on disconnection events. Configured PMF (Protected Management Frames) settings (`pmf_cfg.capable = true`, `pmf_cfg.required = false`) for seamless connection to WPA3/WPA2 Mixed mode APs, removed strict authorization thresholds, and increased the connection wait timeout from 15 to 30 seconds. This resolves transient connection timeouts and failures during the initialization phase of FOTA.
 
