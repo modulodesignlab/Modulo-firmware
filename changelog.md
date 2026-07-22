@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.70] — 2026-07-22
+- **Aligned E-Paper Driver with GxEPD2 Logic**: Removed pull-down resistor from BUSY pin config (`pull_down_en = 0`), keeping it as a floating/high-impedance INPUT. Replaced BUSY pin polling during reset/SWRESET with static 10ms delays, mirroring GxEPD2's startup sequence. Trimmed partial update LUT (`_WF_PARTIAL_2IN9`) to 153 bytes and limited `epd_write_lut` to only write those 153 bytes, avoiding corrupting analog voltage registers (VBorder, Gate, Source, VCOM) that were overloading the display charge pump and sagging the 3.3V rail.
+
 ### [0.1.69] — 2026-07-22
 - **Removed SPI DMA and Implemented Chunking**: Disabled SPI DMA (`SPI_DMA_DISABLED`) to eliminate bus-matrix memory conflicts and voltage/noise sags on the 3.3V rail. Rewrote `epd_write_data_buffer` to automatically split transmissions into max 64-byte chunks (matching the ESP32 hardware FIFO limit) while keeping the CS line LOW to present a single seamless transaction to the display. This resolves both the E-Paper busy timeouts and the ENS160 I2C master failures.
 - **Combined Error Flags**: Merged the sensor manager's error flags (`sensor_mgr_get_error_flags()`) with the E-Paper's flags (`epd_get_error_flags()`) so that the Base can correctly diagnose and display the state of both subsystems.
