@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.65] — 2026-07-22
+- **Restored Production Pinout**: Reverted EPD pins back to the production PCB pinout (`CONFIG_SLAVE_DEVICE_BREADBOARD_PINOUT=n`, which uses `DC=25`, `RST=26`, and `BUSY=32`), as confirmed correct by the user. Kept the software timing fixes (1ms busy wait delay, 2ms reset duration, and 0xCC refresh sequence) to solve the black screen issue on the production hardware.
+
 ### [0.1.64] — 2026-07-20
 - **Breadboard Pinout Selection**: Enabled the breadboard/Arduino pinout (`CONFIG_SLAVE_DEVICE_BREADBOARD_PINOUT=y`) by default to use `DC=17`, `RST=16`, and `BUSY=4`, matching Mauro's prototype wiring.
 - **Busy wait margin and display update fix**: Added 1ms delay in `epd_wait_busy()` to allow the SSD1680 controller to pull the BUSY pin HIGH before reading it. Corrected the partial update display command parameter to `0xCC` (matches GxEPD2).
