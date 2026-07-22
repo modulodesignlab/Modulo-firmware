@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.73] — 2026-07-22
+- **Fixed ENS160 Zero Readings and Polling**: Consolidated three separate I2C register reads (AQI, TVOC, eCO2) into a single 6-byte burst-read transaction starting from register `0x21` (matching Adafruit's standard library approach). Removed the unreliable `NEWDAT` bit checks in the status register which frequently remained low and blocked all telemetry updates.
+
 ### [0.1.72] — 2026-07-22
 - **Fixed E-Paper Blank Screen and restored DC Line State**: Restored the Data/Command (DC) line state to HIGH (DATA) immediately after command transmission completes, matching GxEPD2's exact hardware driver signaling. Leaving the line LOW placed the SSD1680 controller in a perpetual command listening state, rendering the display unresponsive. Increased the SPI clock frequency to 4 MHz to align with GxEPD2 defaults.
 
