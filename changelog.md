@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.68] — 2026-07-22
+- **Wi-Fi FOTA Sequence and Timing Fixes**: Fixed recurrent FOTA connection failures by initializing network interfaces (`esp_netif_init` and `esp_event_loop_create_default`) once at boot in `app_main` to prevent duplicate initialization crashes. Reordered `slave_ota_task` execution to terminate the sensor task and free memory stack before refreshing the display, and added a 5-second stabilization delay before starting the Wi-Fi interface. This guarantees the e-Paper's high-voltage refresh cycle completes and its current draw drops to zero before the Wi-Fi radio powers on, preventing power sags and RF connection failures.
+
 ### [0.1.67] — 2026-07-22
 - **Restored Real Sensor Readings**: Bypassed the Hello World debug loop in `env_sensor_task` and re-enabled full initialization and reads of the physical AHT21 and ENS160 sensors. Updates the local e-Paper dashboard and transmits real telemetries to the Base.
 - **E-Paper Alignment with GxEPD2**: Activated SPI DMA (`SPI_DMA_CH_AUTO`) and aligned the framebuffer and LUT buffer structures in memory (4-byte alignment). Rewrote the `epd_update_display()` sequence to configure the RAM windows (`0x44` and `0x45`) and reset RAM counters (`0x4E` and `0x4F`) before every data transmission. Writes to `0x26` before `0x24` to match GxEPD2's exact SSD1680 controller update logic and fix the blank screen on production PCBs.
