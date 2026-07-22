@@ -282,6 +282,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.69] — 2026-07-22
+- **Removed SPI DMA and Implemented Chunking**: Disabled SPI DMA (`SPI_DMA_DISABLED`) to eliminate bus-matrix memory conflicts and voltage/noise sags on the 3.3V rail. Rewrote `epd_write_data_buffer` to automatically split transmissions into max 64-byte chunks (matching the ESP32 hardware FIFO limit) while keeping the CS line LOW to present a single seamless transaction to the display. This resolves both the E-Paper busy timeouts and the ENS160 I2C master failures.
+- **Combined Error Flags**: Merged the sensor manager's error flags (`sensor_mgr_get_error_flags()`) with the E-Paper's flags (`epd_get_error_flags()`) so that the Base can correctly diagnose and display the state of both subsystems.
+
 ### [0.1.68] — 2026-07-22
 - **Wi-Fi FOTA Sequence and Timing Fixes**: Fixed recurrent FOTA connection failures by initializing network interfaces (`esp_netif_init` and `esp_event_loop_create_default`) once at boot in `app_main` to prevent duplicate initialization crashes. Reordered `slave_ota_task` execution to terminate the sensor task and free memory stack before refreshing the display, and added a 5-second stabilization delay before starting the Wi-Fi interface. This guarantees the e-Paper's high-voltage refresh cycle completes and its current draw drops to zero before the Wi-Fi radio powers on, preventing power sags and RF connection failures.
 
