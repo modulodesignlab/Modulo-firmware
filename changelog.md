@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.71] — 2026-07-22
+- **Fixed FOTA Loop and Retry Failures**: Resolved recurrent FOTA retry failures where subsequent FOTA attempts failed immediately. Fixed the issue by preserving the default event loop (removed `esp_event_loop_delete_default()` from FOTA task cleanup, which broke global event dispatching) and properly unregistering event instances instead.
+
 ### [0.1.70] — 2026-07-22
 - **Aligned E-Paper Driver with GxEPD2 Logic**: Removed pull-down resistor from BUSY pin config (`pull_down_en = 0`), keeping it as a floating/high-impedance INPUT. Replaced BUSY pin polling during reset/SWRESET with static 10ms delays, mirroring GxEPD2's startup sequence. Trimmed partial update LUT (`_WF_PARTIAL_2IN9`) to 153 bytes and limited `epd_write_lut` to only write those 153 bytes, avoiding corrupting analog voltage registers (VBorder, Gate, Source, VCOM) that were overloading the display charge pump and sagging the 3.3V rail.
 
