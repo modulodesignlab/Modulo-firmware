@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.72] — 2026-07-22
+- **Fixed E-Paper Blank Screen and restored DC Line State**: Restored the Data/Command (DC) line state to HIGH (DATA) immediately after command transmission completes, matching GxEPD2's exact hardware driver signaling. Leaving the line LOW placed the SSD1680 controller in a perpetual command listening state, rendering the display unresponsive. Increased the SPI clock frequency to 4 MHz to align with GxEPD2 defaults.
+
 ### [0.1.71] — 2026-07-22
 - **Fixed FOTA Loop and Retry Failures**: Resolved recurrent FOTA retry failures where subsequent FOTA attempts failed immediately. Fixed the issue by preserving the default event loop (removed `esp_event_loop_delete_default()` from FOTA task cleanup, which broke global event dispatching) and properly unregistering event instances instead.
 
