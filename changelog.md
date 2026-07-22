@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.66] — 2026-07-22
+- **Wi-Fi FOTA Connection Reliability Improvements**: Added an automatic Wi-Fi reconnect retry mechanism (up to 5 attempts) in the Slave's `wifi_event_handler` on disconnection events. Configured PMF (Protected Management Frames) settings (`pmf_cfg.capable = true`, `pmf_cfg.required = false`) for seamless connection to WPA3/WPA2 Mixed mode APs, removed strict authorization thresholds, and increased the connection wait timeout from 15 to 30 seconds. This resolves transient connection timeouts and failures during the initialization phase of FOTA.
+
 ### [0.1.65] — 2026-07-22
 - **Restored Production Pinout**: Reverted EPD pins back to the production PCB pinout (`CONFIG_SLAVE_DEVICE_BREADBOARD_PINOUT=n`, which uses `DC=25`, `RST=26`, and `BUSY=32`), as confirmed correct by the user. Kept the software timing fixes (1ms busy wait delay, 2ms reset duration, and 0xCC refresh sequence) to solve the black screen issue on the production hardware.
 
