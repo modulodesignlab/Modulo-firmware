@@ -282,6 +282,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Environmental Monitor
 
+### [0.1.74] — 2026-07-23
+- **Restored HTTPS Certificate Bundle for FOTA**: Restored `.crt_bundle_attach = esp_crt_bundle_attach` in `slave_ota_task`'s HTTP configuration. This was accidentally omitted in `0.1.71` during buffer configurations, which caused HTTPS handshakes with the GitHub release server to fail and abort all FOTA updates.
+
 ### [0.1.73] — 2026-07-22
 - **Fixed ENS160 Zero Readings and Polling**: Consolidated three separate I2C register reads (AQI, TVOC, eCO2) into a single 6-byte burst-read transaction starting from register `0x21` (matching Adafruit's standard library approach). Removed the unreliable `NEWDAT` bit checks in the status register which frequently remained low and blocked all telemetry updates.
 
