@@ -1,4 +1,4 @@
-{
+﻿{
     "schema_version":  1,
     "firmwares":  {
                       "base":  {
@@ -10,7 +10,7 @@
                                                 "version":  "0.1.31",
                                                 "minimum_base_version":  "0.1.51",
                                                 "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.31/speaker.bin",
-                                                "sha256":  "d00b65db7be28f33b687ea370c016fb614710cd181a399e9c2e3f75e4904b68e"
+                                                "sha256":  "79987ebcc55ba147eff6b863a075c5b2535292d75d8a53e031fa55bf0447a25d"
                                             },
                       "environmental_monitor":  {
                                                     "version":  "0.1.82",
