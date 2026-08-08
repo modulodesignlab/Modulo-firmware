@@ -6,6 +6,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.62] — 2026-08-08
+- **Isolamento DP/DM in Alta Impedenza (High-Z)**: Configurato GPIO 18 (`USB_DN`) e GPIO 19 (`USB_DP`) dell'ESP32-S3 come ingressi fluttuanti a tri-state (High-Z) durante l'inizializzazione del gestore alimentazione. Questo rimuove l'interferenza dell'interfaccia USB dell'ESP32-S3 sui pin DP/DM del chip CH224K, impedendogli di bloccarsi in modalità legacy BC1.2/QC 5V e sbloccando la negoziazione USB-PD 20V sui pin CC.
+
+### [0.1.61] — 2026-08-08
+- **Estesa Finestra Temporale di Negoziazione PD (2.0s)**: Aggiunta un ciclo di polling a campionamento continuo (10 letture ogni 200ms) durante ogni step di tensione (20V/15V/12V/9V) per concedere agli alimentatori USB-PD 67W / GaN il tempo necessario (1.0-1.5s) per eseguire la negoziazione sui cavi CC ed erogare i 20V.
+
 ### [0.1.60] — 2026-08-08
 - **Lettura VBUS via Modulo Assistito**: Quando l'ADC locale della Base è disabilitato (GPIO 34 non è un canale ADC su ESP32-S3), la Base interroga via I2C lo Speaker/modulo collegato (`CMD_GET_VBUS_VOLTAGE`) per mostrare il VBUS reale nei log e sul cruscotto dell'App.
 - **Reset Automatico della Negoziazione PD**: Modificato lo stato di negoziazione USB-PD (`s_pd_negotiation_done = false`) in caso di fallimento o ricollegamento del modulo, permettendo alla Base di ritentare l'aggancio ai 20V non appena lo Speaker aggiornato viene rilevato.

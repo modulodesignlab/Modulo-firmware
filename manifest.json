@@ -1,46 +1,46 @@
 {
-  "schema_version": 1,
-  "firmwares": {
-    "base": {
-      "version": "0.1.61",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.61/Modulo.bin",
-      "sha256": "7d08a619ebb32cb7c151b315c4701de81b245bdbbfa389c4da2aeae7b4c907e6"
-    },
-    "bluetooth_speaker": {
-      "version": "0.1.31",
-      "minimum_base_version": "0.1.51",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.31/speaker.bin",
-      "sha256": "79987ebcc55ba147eff6b863a075c5b2535292d75d8a53e031fa55bf0447a25d"
-    },
-    "environmental_monitor": {
-      "version": "0.1.82",
-      "minimum_base_version": "0.1.56",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.82/environmental_monitor.bin",
-      "sha256": "4630c93f7df6396df68a7542cdd926a2d9e092ebaa1a1821a64179d4340d1eb4"
-    },
-    "smart_screen_128": {
-      "version": "0.1.6",
-      "minimum_base_version": "0.1.6",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/screen-v0.1.6/smart_screen_128.bin",
-      "sha256": "2ec9f3be05ffd64de9199c9b611ea994f6f462f79e13446c9b589119fe05bfad"
-    },
-    "usb_c_charger": {
-      "version": "0.1.6",
-      "minimum_base_version": "0.1.6",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/charger-v0.1.6/usb_c_charger.bin",
-      "sha256": "cfe2515acb3ffb5e392b0bf96f5bb1aea801ed157255d1ef7190f752c2a494b0"
-    },
-    "wireless_charger": {
-      "version": "0.1.6",
-      "minimum_base_version": "0.1.6",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/wcharge-v0.1.6/wireless_charger.bin",
-      "sha256": "16ee80e366d8f902c13e4c35dc7445c902008db29a5c0758d0239f2a06a9395f"
-    },
-    "led_tower": {
-      "version": "0.1.30",
-      "minimum_base_version": "0.1.29",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/tower-v0.1.30/led_tower.bin",
-      "sha256": "TODO_SHA256"
-    }
-  }
+    "schema_version":  1,
+    "firmwares":  {
+                      "base":  {
+                                   "version":  "0.1.62",
+                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.62/Modulo.bin",
+                                   "sha256":  "e86ec47566032766c37652d1b000ea4129d1fbba0bbf3c4460a7b2386fd84eea"
+                               },
+                      "bluetooth_speaker":  {
+                                                "version":  "0.1.31",
+                                                "minimum_base_version":  "0.1.51",
+                                                "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.31/speaker.bin",
+                                                "sha256":  "79987ebcc55ba147eff6b863a075c5b2535292d75d8a53e031fa55bf0447a25d"
+                                            },
+                      "environmental_monitor":  {
+                                                    "version":  "0.1.82",
+                                                    "minimum_base_version":  "0.1.56",
+                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.82/environmental_monitor.bin",
+                                                    "sha256":  "4630c93f7df6396df68a7542cdd926a2d9e092ebaa1a1821a64179d4340d1eb4"
+                                                },
+                      "smart_screen_128":  {
+                                               "version":  "0.1.6",
+                                               "minimum_base_version":  "0.1.6",
+                                               "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/screen-v0.1.6/smart_screen_128.bin",
+                                               "sha256":  "2ec9f3be05ffd64de9199c9b611ea994f6f462f79e13446c9b589119fe05bfad"
+                                           },
+                      "usb_c_charger":  {
+                                            "version":  "0.1.6",
+                                            "minimum_base_version":  "0.1.6",
+                                            "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/charger-v0.1.6/usb_c_charger.bin",
+                                            "sha256":  "cfe2515acb3ffb5e392b0bf96f5bb1aea801ed157255d1ef7190f752c2a494b0"
+                                        },
+                      "wireless_charger":  {
+                                               "version":  "0.1.6",
+                                               "minimum_base_version":  "0.1.6",
+                                               "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/wcharge-v0.1.6/wireless_charger.bin",
+                                               "sha256":  "16ee80e366d8f902c13e4c35dc7445c902008db29a5c0758d0239f2a06a9395f"
+                                           },
+                      "led_tower":  {
+                                        "version":  "0.1.30",
+                                        "minimum_base_version":  "0.1.29",
+                                        "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/tower-v0.1.30/led_tower.bin",
+                                        "sha256":  "TODO_SHA256"
+                                    }
+                  }
 }
