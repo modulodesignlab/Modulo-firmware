@@ -6,6 +6,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.60] — 2026-08-08
+- **Lettura VBUS via Modulo Assistito**: Quando l'ADC locale della Base è disabilitato (GPIO 34 non è un canale ADC su ESP32-S3), la Base interroga via I2C lo Speaker/modulo collegato (`CMD_GET_VBUS_VOLTAGE`) per mostrare il VBUS reale nei log e sul cruscotto dell'App.
+- **Reset Automatico della Negoziazione PD**: Modificato lo stato di negoziazione USB-PD (`s_pd_negotiation_done = false`) in caso di fallimento o ricollegamento del modulo, permettendo alla Base di ritentare l'aggancio ai 20V non appena lo Speaker aggiornato viene rilevato.
+- **Supporto Redirect HTTP 302 FOTA**: Aggiunto `.max_redirection_count = 5` al client HTTPS di `ota_manager.c` per supportare i redirect 302 di GitHub Releases ed S3.
+
 ### [0.1.59] — 2026-07-20
 - **Updated Default FOTA Color**: Bumped default FOTA update LED indicators to bright orange (`R=255, G=100, B=0`), making it stand out clearly in the UI.
 
@@ -191,6 +196,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Bluetooth Speaker
+
+### [0.1.31] — 2026-08-08
+- **Calibrazione ADC VBUS e GPIO 36**: Riconfigurato il pin di lettura ADC VBUS sul GPIO 36 (`SENSOR_VP`, Pin 4) con divisore resistivo ricalibrato (`(18k + 2.7k) / 2.7k = 7.6667f`).
+- **Supporto Redirect HTTP 302 FOTA**: Aggiunto `.max_redirection_count = 5` alla configurazione dell'HTTPS Client per permettere lo scaricamento da GitHub Releases / AWS S3.
+- **Fix Asset URL Manifest**: Corretto il nome del file binario in `manifest.json` in `speaker.bin`.
 
 ### [0.1.30] — 2026-07-09
 - Implemented software equalization (Direct Form I Biquad filters) for low-shelf (Bass) and high-shelf (Treble) filters.
