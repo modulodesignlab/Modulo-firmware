@@ -1,4 +1,4 @@
-{
+﻿{
     "schema_version":  1,
     "firmwares":  {
                       "base":  {
@@ -7,16 +7,16 @@
                                    "sha256":  "57f6e07d4165cfca853dae615e77d26e14065d0fda3b52a31867b9d08c6e213d"
                                },
                       "bluetooth_speaker":  {
-                                                "version":  "0.1.30",
+                                                "version":  "0.1.31",
                                                 "minimum_base_version":  "0.1.51",
-                                                "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.30/bluetooth_speaker.bin",
-                                                "sha256":  "f97c2421b4330cd16979bb1303bd9e41f23d2742c2ba54bc083b1cd2357c1ba0"
+                                                "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.31/bluetooth_speaker.bin",
+                                                "sha256":  "d00b65db7be28f33b687ea370c016fb614710cd181a399e9c2e3f75e4904b68e"
                                             },
                       "environmental_monitor":  {
-                                                    "version":  "0.1.75",
+                                                    "version":  "0.1.82",
                                                     "minimum_base_version":  "0.1.56",
-                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.75/environmental_monitor.bin",
-                                                    "sha256":  "71cfdfa767361082cb6d1052b008320371c53e60adfcc239ddec5185994b72a4"
+                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.82/environmental_monitor.bin",
+                                                    "sha256":  "4630c93f7df6396df68a7542cdd926a2d9e092ebaa1a1821a64179d4340d1eb4"
                                                 },
                       "smart_screen_128":  {
                                                "version":  "0.1.6",
@@ -37,10 +37,10 @@
                                                "sha256":  "16ee80e366d8f902c13e4c35dc7445c902008db29a5c0758d0239f2a06a9395f"
                                            },
                       "led_tower":  {
-                                        "version":  "0.1.29",
+                                        "version":  "0.1.30",
                                         "minimum_base_version":  "0.1.29",
-                                        "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/tower-v0.1.29/led_tower.bin",
-                                        "sha256":  "25eab348535a89f08561897bd0c375a11b5c98070ef72c3d2f85e4fbb3cf49a6"
+                                        "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/tower-v0.1.30/led_tower.bin",
+                                        "sha256":  "TODO_SHA256"
                                     }
                   }
 }
