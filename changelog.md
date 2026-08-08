@@ -6,6 +6,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo Base
 
+### [0.1.63] — 2026-08-08
+- **Pilotaggio Open-Drain (OD) dei pin CFG e Reset Pulse 5V**: Configurato il driver GPIO dei pin `CFG1` (GPIO 15), `CFG2` (GPIO 16), `CFG3` (GPIO 17) in modalità Open-Drain con pull-up interno abilitato per consentire il perfetto rilascio (floating) delle linee del CH224K. Aggiunta l'emissione di un impulso di reset transitorio a 5V (`CFG1=1` per 150ms) prima della richiesta 20V per forzare l'hardware del CH224K ad avviare un nuovo ciclo di negoziazione USB-PD sui pin CC.
+
 ### [0.1.62] — 2026-08-08
 - **Isolamento DP/DM in Alta Impedenza (High-Z)**: Configurato GPIO 18 (`USB_DN`) e GPIO 19 (`USB_DP`) dell'ESP32-S3 come ingressi fluttuanti a tri-state (High-Z) durante l'inizializzazione del gestore alimentazione. Questo rimuove l'interferenza dell'interfaccia USB dell'ESP32-S3 sui pin DP/DM del chip CH224K, impedendogli di bloccarsi in modalità legacy BC1.2/QC 5V e sbloccando la negoziazione USB-PD 20V sui pin CC.
 
