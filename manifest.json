@@ -7,10 +7,10 @@
                                    "sha256":  "ab0012ae8a05cf9dc0c6f238cd0786682c6dda272ab43797a0cafde98a33449c"
                                },
                       "bluetooth_speaker":  {
-                                                "version":  "0.1.32",
+                                                "version":  "0.1.33",
                                                 "minimum_base_version":  "0.1.51",
-                                                "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.32/speaker.bin",
-                                                "sha256":  "84e00e52f30005a0761dd5c4aa7af5825df0343f663c0067a35b1d96a19edcb9"
+                                                "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/speaker-v0.1.33/speaker.bin",
+                                                "sha256":  "b394493e6e609fa9f87c8a131936d78cff5cc3f4af6fa7a9abc295ea99fb0d3b"
                                             },
                       "environmental_monitor":  {
                                                     "version":  "0.1.82",
