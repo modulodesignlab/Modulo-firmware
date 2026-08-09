@@ -37,10 +37,10 @@
                                                "sha256":  "16ee80e366d8f902c13e4c35dc7445c902008db29a5c0758d0239f2a06a9395f"
                                            },
                       "led_tower":  {
-                                        "version":  "0.1.30",
+                                        "version":  "0.1.31",
                                         "minimum_base_version":  "0.1.29",
-                                        "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/tower-v0.1.30/led_tower.bin",
-                                        "sha256":  "TODO_SHA256"
+                                        "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/light-v0.1.31/light.bin",
+                                        "sha256":  "662d62c88a61a27020f4cb3cb1da389d1e8037d48503661ae649141ec0017236"
                                     }
                   }
 }
