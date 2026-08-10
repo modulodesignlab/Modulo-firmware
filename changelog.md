@@ -5,6 +5,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.70] - Fix Definitivo Oscillazione Tensione PD CH224K (Lock Senza Re-setting CFG)
+- Eliminati tutti i cambi intermedi dei pin CFG durante e dopo la negoziazione 20V/Max.
+- In modalità 20V (`CFG1=0, CFG2=1, CFG3=0`), il CH224K negozia e mantiene la tensione massima erogabile dal caricatore (es. 12V/15V/20V) senza eseguire re-setting sui pin CC, eliminando completamente qualsiasi oscillazione tra 5V e 12V.
 ### [0.1.69] - Fix Oscillazione VBUS PD e Locking CFG
 - Risolto il bug hardware-loop introdotto nella 0.1.68 che causava la disconnessione e oscillazione continua della tensione VBUS tra 5V e 12V/15V.
 - Ora i pin CFG vengono bloccati correttamente sulla tensione massima effettivamente erogata dal caricatore, prevenendo il timeout del CH224K.
