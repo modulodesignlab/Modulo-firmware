@@ -5,6 +5,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.72] - Fix Oscillazione VBUS nell'App (Cache Lettura I2C)
+- Root cause identificata: la base ESP32-S3 non ha ADC sul GPIO 34 (pin inesistente), quindi legge VBUS via I2C dallo slave. Quando la query I2C falliva (bus occupato), il fallback restituiva 5000 mV fisso causando l'oscillazione 5V ↔ 12V nell'app.
+- Aggiunta cache `s_last_valid_vbus_mv`: se l'I2C fallisce, restituisce l'ultimo valore valido invece di tornare a 5V di default.
+- Anche le letture ADC locali ora cachano il valore per resilienza agli errori transitori.
+
 ### [0.1.71] - Fix Assoluto Oscillazione VBUS CH224K (Lock 20V/Max in bootup permanente)
 - Impostati i pin CFG1=0, CFG2=1, CFG3=0 (20V/Max PD) direttamente all'inizializzazione dell'hardware di alimentazione.
 - Eliminata qualunque chiamata a `set_cfg_pins(1, 0, 0)` di fallback che provocava il drop a 5V e l'oscillazione durante la lettura I2C dei moduli slave.
