@@ -1,10 +1,13 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to Modulo firmware will be documented in this file, structured by software component.
 
 ---
 
 ## Modulo Base
+### [0.1.69] - Fix Oscillazione VBUS PD e Locking CFG
+- Risolto il bug hardware-loop introdotto nella 0.1.68 che causava la disconnessione e oscillazione continua della tensione VBUS tra 5V e 12V/15V.
+- Ora i pin CFG vengono bloccati correttamente sulla tensione massima effettivamente erogata dal caricatore, prevenendo il timeout del CH224K.
 ### [0.1.68] - Stabilizzazione Negoziazione PD CH224K (Stop Fallback 5V)
 - Rimosso il cambio superfluo dei pin CFG a 12V dopo la risposta dell'alimentatore alla richiesta 20V. La commutazione faceva resettare il chip CH224K a 5V.
 - Mantenuto il lock permanente sui 12V/15V agganciati per garantire stabilitÃ  elettrica continua.
