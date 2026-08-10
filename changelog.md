@@ -5,6 +5,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.71] - Fix Assoluto Oscillazione VBUS CH224K (Lock 20V/Max in bootup permanente)
+- Impostati i pin CFG1=0, CFG2=1, CFG3=0 (20V/Max PD) direttamente all'inizializzazione dell'hardware di alimentazione.
+- Eliminata qualunque chiamata a `set_cfg_pins(1, 0, 0)` di fallback che provocava il drop a 5V e l'oscillazione durante la lettura I2C dei moduli slave.
+- Garanzia totale di tensione fissa e continua erogata al valore massimo dell'alimentatore (es. 12V/20V) dal primo istante di boot.
 ### [0.1.70] - Fix Definitivo Oscillazione Tensione PD CH224K (Lock Senza Re-setting CFG)
 - Eliminati tutti i cambi intermedi dei pin CFG durante e dopo la negoziazione 20V/Max.
 - In modalità 20V (`CFG1=0, CFG2=1, CFG3=0`), il CH224K negozia e mantiene la tensione massima erogabile dal caricatore (es. 12V/15V/20V) senza eseguire re-setting sui pin CC, eliminando completamente qualsiasi oscillazione tra 5V e 12V.
