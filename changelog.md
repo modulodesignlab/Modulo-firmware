@@ -1,15 +1,18 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to Modulo firmware will be documented in this file, structured by software component.
 
 ---
 
 ## Modulo Base
+### [0.1.67] - Fix Negoziazione PD Assistita (12V/15V/20V) e Telemetria VBUS
+- Risolto il bug che bloccava prematuramente la negoziazione a 5V prima del rilevamento dei moduli I2C
+- Abilitata la negoziazione PD assistita dai moduli per agganciare automaticamente il massimo profilo erogabile dall'alimentatore (es. 12V/15V/20V)
+- Serializzata la misura di tensione `vbus_mv` (bus 20V) nei pacchetti di stato WebSocket per il badge PD dell'App
+
 ### [0.1.65] - Accettazione 12V/15V e Stop Loop Re-negoziazione
 - Accetta e stabilizza la tensione massima fornita dal caricatore PD (es. 12V/15V/9V) senza resettare a 5V
 - Elimina i loop infiniti di ri-negoziazione PD su I2C
-
-### [0.1.63] â€” 2026-08-08
 - **Pilotaggio Open-Drain (OD) dei pin CFG e Reset Pulse 5V**: Configurato il driver GPIO dei pin `CFG1` (GPIO 15), `CFG2` (GPIO 16), `CFG3` (GPIO 17) in modalitÃ  Open-Drain con pull-up interno abilitato per consentire il perfetto rilascio (floating) delle linee del CH224K. Aggiunta l'emissione di un impulso di reset transitorio a 5V (`CFG1=1` per 150ms) prima della richiesta 20V per forzare l'hardware del CH224K ad avviare un nuovo ciclo di negoziazione USB-PD sui pin CC.
 
 ### [0.1.62] â€” 2026-08-08
@@ -534,7 +537,16 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ## Modulo LED Tower
 
-### [0.1.29] â€” 2026-07-04
+### [0.1.33] - 2026-08-10
+- **Fix Affidabilità OTA**: Eliminazione del task `led_btn_task` (TTP223) e disattivazione del timer PWM LEDC prima dell'avvio Wi-Fi per liberare heap SRAM ed evitare picchi di corrente.
+
+### [0.1.32] - 2026-08-09
+- **Fix Dimmer PWM**: Ridotta la frequenza PWM da 5 kHz a 1 kHz con risoluzione a 10 bit (0-1023) per la commutazione lineare dei MOSFET di potenza dall'1% al 100%.
+
+### [0.1.31] - 2026-08-09
+- **Bottone Capacitivo TTP223 su GPIO 32**: Abilitato il pulsante capacitivo per il controllo touch on/off e la memoria dell'ultimo livello di luminosità impostato.
+
+### [0.1.29] — 2026-07-04
 - Implemented LEDC (PWM) controller on GPIO 19 (EXT_LEDOUT) to allow dimmer control (0-100% duty cycle).
 - Added I2C commands handler for CMD_SET_STATE (to set dimmer brightness) and CMD_GET_STATUS (to retrieve current brightness).
 
