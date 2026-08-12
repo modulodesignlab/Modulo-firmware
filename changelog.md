@@ -5,6 +5,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.76] - Tolleranza Pings I2C Aumentata a 6 per StabilitÃ  Moduli
+- Aumentata la soglia di tolleranza disconnessione MODULE_OFFLINE_THRESHOLD a 6 pings falliti consecutivi per prevenire cali di tensione 5V/12V a fronte di piccoli ritardi I2C.
+
 ### [0.1.75] - Fix Spegnimento LED dopo Animazione WIPE Connessione Modulo
 - Aggiunta la variabile s_force_refresh in led_manager.c per forzare il ripristino del colore dei LED di stato al termine delle animazioni dinamiche (WIPE / BLINK), impedendo ai LED di rimanere spenti/neri.
 
@@ -600,6 +603,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
