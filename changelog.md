@@ -518,6 +518,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.10] - Test Backlight Blink e Fix I2C
+- Aggiunto test del Backlight (blink ogni 2 secondi) per debugging hardware.
+- Silenziato il log I2C di CMD_GET_VBUS_VOLTAGE per stabilizzare la negoziazione Base-Slave.
 ### [0.1.9] - Fix SPI Clock a 20MHz e Colori LVGL Swap
 - Ridotto clock SPI a 20MHz per garantire l'accensione dell'LCD.
 - Aggiunto LV_COLOR_16_SWAP per correggere l'endianness dei colori RGB565 sul display GC9A01.
@@ -609,6 +612,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
