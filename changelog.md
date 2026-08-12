@@ -5,6 +5,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.74] - Fix GitHub FOTA Redirects e Reporting Tensione 5V Idle
+- Aggiunta la gestione delle ridirezioni HTTP (max_redirection_count = 5) nel client FOTA per consentire il download completo dei binari da GitHub Releases.
+- Corretto il fallback di lettura tensione a 5000mV in assenza di moduli attivi (eliminata la segnalazione erronea di 12V in idle).
+
 ### [0.1.73] - Ripristino Negoziazione Dinamica 20V e Fix Surriscaldamento LED Idle
 - Ripristinata partenza a 5V e negoziazione assistita a cascata (20V/15V/12V/9V/5V) al collegamento dei moduli.
 - Corretto il reporting di tensione all'App via I2C dallo Slave per ovviare alla mancanza di ADC su PIN 34 (ESP32-S3).
@@ -593,6 +597,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
