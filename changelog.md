@@ -10,6 +10,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 - Corretto il reporting di tensione all'App via I2C dallo Slave per ovviare alla mancanza di ADC su PIN 34 (ESP32-S3).
 - Ottimizzata la gestione dei LED WS2812C (4 RMT + 2 SPI): rimosso il refresh continuo a 20Hz per colori statici, eliminando l'overheating dell'ESP32-S3 in idle.
 
+### [0.1.73] - Ripristino Negoziazione Dinamica 20V e Fix Surriscaldamento LED Idle
+- Ripristinata partenza a 5V e negoziazione assistita a cascata (20V/15V/12V/9V/5V) al collegamento dei moduli.
+- Corretto il reporting di tensione all'App via I2C dallo Slave per ovviare alla mancanza di ADC su PIN 34 (ESP32-S3).
+- Ottimizzata la gestione dei LED WS2812C (4 RMT + 2 SPI): rimosso il refresh continuo a 20Hz per colori statici, eliminando l'overheating dell'ESP32-S3 in idle.
+
 ### [0.1.72] - Fix Oscillazione VBUS nell'App (Cache Lettura I2C)
 - Root cause identificata: la base ESP32-S3 non ha ADC sul GPIO 34 (pin inesistente), quindi legge VBUS via I2C dallo slave. Quando la query I2C falliva (bus occupato), il fallback restituiva 5000 mV fisso causando l'oscillazione 5V â†” 12V nell'app.
 - Aggiunta cache `s_last_valid_vbus_mv`: se l'I2C fallisce, restituisce l'ultimo valore valido invece di tornare a 5V di default.
@@ -588,6 +593,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
