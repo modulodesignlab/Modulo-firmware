@@ -22,7 +22,7 @@
                                                "version":  "0.1.9",
                                                "minimum_base_version":  "0.1.6",
                                                "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/screen-v0.1.9/smart_screen_128.bin",
-                                               "sha256":  "a17f29fe5a1d4954ad4ee5606eca80cb77c68820a3f48896c0abf93b7ee34ddd"
+                                               "sha256":  "c4dc473eaaacaf40367e5708f16e46fd539b183327872003a82bd238c25fedf2"
                                            },
                       "usb_c_charger":  {
                                             "version":  "0.1.6",
