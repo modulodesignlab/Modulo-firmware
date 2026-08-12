@@ -5,6 +5,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.75] - Fix Spegnimento LED dopo Animazione WIPE Connessione Modulo
+- Aggiunta la variabile s_force_refresh in led_manager.c per forzare il ripristino del colore dei LED di stato al termine delle animazioni dinamiche (WIPE / BLINK), impedendo ai LED di rimanere spenti/neri.
+
 ### [0.1.74] - Fix GitHub FOTA Redirects e Reporting Tensione 5V Idle
 - Aggiunta la gestione delle ridirezioni HTTP (max_redirection_count = 5) nel client FOTA per consentire il download completo dei binari da GitHub Releases.
 - Corretto il fallback di lettura tensione a 5000mV in assenza di moduli attivi (eliminata la segnalazione erronea di 12V in idle).
@@ -597,6 +600,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
