@@ -5,6 +5,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.77] - Negoziazione Diretta 12V PD & Refresh Periodico LED 1Hz
+- Stabilizzata la tensione di bus: richiesta diretta a 12V (CFG1=0, CFG2=0, CFG3=1) ed eliminati i cicli di caduta a 5V per prevenire sfarfallii e instabilitÃ .
+- Aggiunto auto-refresh lento a 1Hz per le strisce LED WS2812 dei Pogo Pin, ripristinando all'istante eventuali spegnimenti accidentali da inserimento modulo.
+
 ### [0.1.76] - Tolleranza Pings I2C Aumentata a 6 per StabilitÃ  Moduli
 - Aumentata la soglia di tolleranza disconnessione MODULE_OFFLINE_THRESHOLD a 6 pings falliti consecutivi per prevenire cali di tensione 5V/12V a fronte di piccoli ritardi I2C.
 
@@ -612,6 +616,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
