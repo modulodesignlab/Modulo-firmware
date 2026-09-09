@@ -522,6 +522,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.13] - Rotazione Schermo 180 Gradi Hardware
+- Ruotato l'orientamento dello schermo di 180Â° tramite mirror hardware (X e Y) sul controller GC9A01.
+- Schermo orientato correttamente secondo l'alloggiamento fisico sul PCB Modulo.
 ### [0.1.12] - Fix Retroilluminazione Fissa, Font Montserrat e Sincronizzazione DMA
 - Rimosso il blink di test del backlight: ora retroilluminazione fissa e stabile su GPIO 21.
 - Abilitati e integrati i font Montserrat in LVGL: scritte perfettamente nitide e leggibili.
@@ -626,6 +629,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
