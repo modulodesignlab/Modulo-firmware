@@ -5,6 +5,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.79] - Supporto SET_DISPLAY_MEDIA e Copertine Dinamiche
+- Aggiunto supporto al comando SET_DISPLAY_MEDIA via WebSocket per il controllo diretto o da App dei metadati della vista Now Playing dello Smart Screen.
+- Ottimizzata la prioritÃ  automatica tra streaming AVRCP dello Speaker Bluetooth e metadati inviati da applicazione.
+
 ### [0.1.78] - Copertine Album Dinamiche e Sincronizzazione Smart Screen
 - Introdotto cover_manager per il fetch asincrono delle copertine da iTunes Search API e streaming a pacchetti I2C verso lo Smart Screen.
 - Implementata la sincronizzazione live dei metadati brano (titolo, artista, stato, avanzamento) dello Speaker Bluetooth verso la vista Now Playing.
@@ -656,6 +660,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
