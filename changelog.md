@@ -5,6 +5,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.78] - Copertine Album Dinamiche e Sincronizzazione Smart Screen
+- Introdotto cover_manager per il fetch asincrono delle copertine da iTunes Search API e streaming a pacchetti I2C verso lo Smart Screen.
+- Implementata la sincronizzazione live dei metadati brano (titolo, artista, stato, avanzamento) dello Speaker Bluetooth verso la vista Now Playing.
+- Aggiunti comandi I2C per la gestione delle viste dello Smart Screen (CMD_SCREEN_SET_VIEW, CMD_SCREEN_LOAD_COVER).
+
 ### [0.1.77] - Negoziazione Diretta 12V PD & Refresh Periodico LED 1Hz
 - Stabilizzata la tensione di bus: richiesta diretta a 12V (CFG1=0, CFG2=0, CFG3=1) ed eliminati i cicli di caduta a 5V per prevenire sfarfallii e instabilitÃ .
 - Aggiunto auto-refresh lento a 1Hz per le strisce LED WS2812 dei Pogo Pin, ripristinando all'istante eventuali spegnimenti accidentali da inserimento modulo.
@@ -651,6 +656,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
