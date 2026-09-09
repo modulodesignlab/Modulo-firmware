@@ -522,6 +522,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.19] - Supporto Copertina Album Dinamica e Decompressione TJPGD
+- Aggiunta ricezione streaming I2C e decompressione JPEG in memoria tramite decoder ROM TJPGD per copertine dinamiche 120x120.
+- Aggiornato layout vista "Now Playing" con card copertina arrotondata (radius 16), corona circolare 360Â° e metadati dinamici.
+- Aggiunto comando I2C CMD_SCREEN_LOAD_COVER (0x53) con supporto sotto-comandi START, CHUNK, FINISH, RESET.
 ### [0.1.18] - Implementazione Vista Now Playing e Gestione Viste I2C
 - Aggiunta vista "Now Playing" con copertina album 240x240, corona di avanzamento circolare verde fluo e stato play/pause.
 - Aggiunti comandi I2C per selezione vista (CMD_SCREEN_SET_VIEW, CMD_SCREEN_GET_VIEW, CMD_SCREEN_SET_MEDIA).
@@ -647,6 +651,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
