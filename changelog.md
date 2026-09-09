@@ -522,6 +522,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.17] - Correzione Specchio Orizzontale (mirror_x = true)
+- Abilitato mirror_x per compensare il cablaggio interno delle colonne del pannello GC9A01.
+- Testi e grafica perfettamente leggibili da sinistra a destra (non piÃ¹ specchiati).
 ### [0.1.16] - Correzione Orientamento Display Diritto e Non Specchiato
 - Disattivata l'inversione software 180Â° che causava l'effetto capovolto/specchiato.
 - Il display ora visualizza grafica e scritte perfettamente dritte e orientate normalmente da sinistra a destra.
@@ -640,6 +643,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
