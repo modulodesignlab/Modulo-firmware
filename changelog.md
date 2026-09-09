@@ -522,6 +522,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.14] - Fix OTA Wi-Fi / HTTPS & Ottimizzazione RAM
+- Risolto crash/errore di out-of-memory durante il download OTA Wi-Fi HTTPS liberando 28 KB di RAM interna (task GUI e buffer DMA) prima dell'aggiornamento.
+- Abilitati i buffer dinamici MbedTLS per ridurre il consumo di memoria durante l'handshake TLS.
+- Aggiunta schermata di stato LCD "MODULO - AGGIORNAMENTO FIRMWARE... Attendere riavvio".
+- Mantenuta la rotazione hardware dello schermo a 180Â°.
 ### [0.1.13] - Rotazione Schermo 180 Gradi Hardware
 - Ruotato l'orientamento dello schermo di 180Â° tramite mirror hardware (X e Y) sul controller GC9A01.
 - Schermo orientato correttamente secondo l'alloggiamento fisico sul PCB Modulo.
@@ -629,6 +634,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
