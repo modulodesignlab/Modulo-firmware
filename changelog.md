@@ -522,6 +522,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.15] - Rotazione Software LVGL 180Â° & Discovery I2C Immediata
+- Implementata la rotazione a 180Â° tramite software rotation nativa di LVGL (sw_rotate = 1 e rotated = LV_DISP_ROT_180).
+- Risolto il mancato riconoscimento del modulo sulla Base: il modulo parte sempre su indirizzo 0x30 e risponde tempestivamente al discovery del Master.
 ### [0.1.14] - Fix OTA Wi-Fi / HTTPS & Ottimizzazione RAM
 - Risolto crash/errore di out-of-memory durante il download OTA Wi-Fi HTTPS liberando 28 KB di RAM interna (task GUI e buffer DMA) prima dell'aggiornamento.
 - Abilitati i buffer dinamici MbedTLS per ridurre il consumo di memoria durante l'handshake TLS.
@@ -634,6 +637,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
