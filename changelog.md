@@ -522,6 +522,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.18] - Implementazione Vista Now Playing e Gestione Viste I2C
+- Aggiunta vista "Now Playing" con copertina album 240x240, corona di avanzamento circolare verde fluo e stato play/pause.
+- Aggiunti comandi I2C per selezione vista (CMD_SCREEN_SET_VIEW, CMD_SCREEN_GET_VIEW, CMD_SCREEN_SET_MEDIA).
+- Integrazione con Base Master per sincronizzazione automatica metadati dallo Speaker Bluetooth.
 ### [0.1.17] - Correzione Specchio Orizzontale (mirror_x = true)
 - Abilitato mirror_x per compensare il cablaggio interno delle colonne del pannello GC9A01.
 - Testi e grafica perfettamente leggibili da sinistra a destra (non piÃ¹ specchiati).
@@ -643,6 +647,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
