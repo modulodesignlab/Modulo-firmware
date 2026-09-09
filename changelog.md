@@ -522,6 +522,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.11] - Fix Retroilluminazione Fissa, Font Montserrat e Sincronizzazione DMA
+- Rimosso il blink di test del backlight: ora retroilluminazione fissa e stabile su GPIO 21.
+- Abilitati e integrati i font Montserrat in LVGL: scritte perfettamente nitide e leggibili.
+- Sincronizzazione corretta del flush LVGL con il completamento delle transazioni SPI DMA (double-buffering a 20 linee).
+- Centratura e layout raffinato per il display circolare GC9A01 240x240.
 ### [0.1.10] - Test Backlight Blink e Fix I2C
 - Aggiunto test del Backlight (blink ogni 2 secondi) per debugging hardware.
 - Silenziato il log I2C di CMD_GET_VBUS_VOLTAGE per stabilizzare la negoziazione Base-Slave.
@@ -616,6 +621,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
