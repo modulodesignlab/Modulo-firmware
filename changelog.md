@@ -12,6 +12,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.87] - Multi-View Display Routing & State Synchronization
+- Sincronizzazione ed esportazione delle viste display (01 Now Playing, 02 Orologio/Meteo, 06 Notifiche, 08 OTA, 00 Brand) tramite Data Broker e WebSocket.
+- Parsing robusto di target_id nel comando SET_DISPLAY_VIEW.
+
 ### [0.1.86] - Motore Copertine Album Robusto e Sincronizzazione Schermo Idle
 - Implementata sanitizzazione avanzata query iTunes (rimozione suffissi rumorosi come feat, Remix, Remaster, Live).
 - Query media=music con limit=3 e fallback automatico a ricerca per solo titolo.
@@ -719,6 +723,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
