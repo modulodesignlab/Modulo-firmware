@@ -541,6 +541,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.22] - Ottimizzazione Coda I2C a 64 Frame e Rimozione Latenza UART
+- Raddoppiata la coda di ricezione I2C a 64 slot per prevenire overflow.
+- Ridotta la verbositÃ  UART in ricezione frame per elaborazione istantanea senza jitter.
+- Aggiunto conteggio chunk ricevuti alla telemetria CMD_GET_STATUS.
 ### [0.1.21] - Fix Decompressione TJPGD 4:2:0 & Telemetria Copertina Dinamica
 - Espanso il buffer di lavoro TJPGD a 4096 byte per supportare immagini JPEG 4:2:0 da iTunes.
 - Aggiunta validazione dei chunk I2C accumulati e telemetria diagnostica estesa in CMD_GET_STATUS.
@@ -678,6 +682,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
