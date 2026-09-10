@@ -5,6 +5,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.84] - Fix LED State CONNECTED_WIFI
+- Corretto bug race condition: i LED ora mostrano correttamente il verde (CONNECTED_WIFI) dopo la connessione Wi-Fi, invece di restare su READY (bianco tenue).
+
 ### [0.1.83] - Supporto Copertine Alta Risoluzione 180x180
 - Aggiornato il download da iTunes a 180x180bb.jpg per copertine ad altissima nitidezza.
 
@@ -692,6 +695,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
