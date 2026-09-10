@@ -1,4 +1,15 @@
-﻿## [0.1.90] - Base - 2026-09-10
+## [0.1.91] - Base - 2026-09-10
+### Fixed
+- Risolto blocco dello schermo sulla schermata FOTA: ripristino automatico della vista display prima del riavvio Base e auto-recovery su polling.
+- Corretta gestione invio frame CMD_SCREEN_SET_VIEW eliminando l'attesa di risposta non prevista dallo slave.
+
+## [0.1.28] - Smart Screen 128 - 2026-09-10
+### Fixed
+- Timer di sicurezza e auto-revert (4s su completamento 100%, 25s di timeout) sulla Vista 08 (FOTA) per evitare display bloccato.
+- Gestione corretta dell'aggiornamento dinamico di data, ora e meteo in tempo reale su Vista 02.
+- Sostituzione delle notifiche statiche con pop-up overlay temporanei universali su lv_layer_top.
+
+## [0.1.90] - Base - 2026-09-10
 ### Fixed
 - Corretto bug del ciclo di sincronizzazione dell'orologio e meteo su Vista 02 del display.
 - Aggiunto comando SET_DISPLAY_DATETIME per sincronizzazione istantanea da smartphone.
