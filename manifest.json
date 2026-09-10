@@ -2,9 +2,9 @@
     "schema_version":  1,
     "firmwares":  {
                       "base":  {
-                                   "version":  "0.1.87",
-                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.87/Modulo.bin",
-                                   "sha256":  "321f8cf791bfa22c0500d8711a9b3527b4d737275aec2593ca723ec78bb6c57e"
+                                   "version":  "0.1.88",
+                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.88/Modulo.bin",
+                                   "sha256":  "d36db7d678c41c349aefcdd24668200b1bccb821580214be117175096fa463ed"
                                },
                       "bluetooth_speaker":  {
                                                 "version":  "0.1.37",
@@ -19,10 +19,10 @@
                                                     "sha256":  "32b5f18b5359c138eec79aa02ee8b44b4e7e8be2c98aa4963be8fbb8dc6dd46f"
                                                 },
                       "smart_screen_128":  {
-                                               "version":  "0.1.25",
+                                               "version":  "0.1.26",
                                                "minimum_base_version":  "0.1.6",
-                                               "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/screen-v0.1.25/smart_screen_128.bin",
-                                               "sha256":  "fee31a79cb24c157839fd5e9be8a386199cb9d37b60e8c7d798119eb48e8175a"
+                                               "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/screen-v0.1.26/smart_screen_128.bin",
+                                               "sha256":  "c1b7088f2847462c5696969d225535dbe8a5175236bcb185ff98d394d357c552"
                                            },
                       "usb_c_charger":  {
                                             "version":  "0.1.6",

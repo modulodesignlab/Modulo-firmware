@@ -1,4 +1,13 @@
-﻿## [0.1.25] - Smart Screen 128 - 2026-09-10
+﻿## [0.1.26] - Smart Screen 128 - 2026-09-10
+### Fixed
+- Auto-ripristino e riavvio dopo fallimento FOTA per ripristinare la normale schermata display.
+- Integrazione completa viste 02, 06, 08.
+
+## [0.1.88] - Base - 2026-09-10
+### Added
+- Allineamento esatto motore copertine iTunes con Smart Filter dell'App.
+
+## [0.1.25] - Smart Screen 128 - 2026-09-10
 ### Added
 - Schermata 02: Orologio + Meteo (Ora 48px, Data, icona Sole #F4C95D, temp 18Â°, Soleggiato, 12Â°/22Â°, Torino).
 - Schermata 06: Notifiche (WhatsApp, Gmail, Calendario con badge colorati, testi, orari e paginazione).
@@ -723,6 +732,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
