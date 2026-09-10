@@ -5,6 +5,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.80] - Streaming I2C Ottimizzato Copertine Dinamiche e Demo Sync
+- Migliorato il parsing della risposta iTunes API con lettura completa dello stream HTTP.
+- Ottimizzato il pacing di trasmissione I2C dei chunk JPEG verso lo Smart Screen per eliminare drop di pacchetti.
+- Aggiunta richiesta automatica della copertina album per la traccia di default all'avvio.
+
 ### [0.1.79] - Supporto SET_DISPLAY_MEDIA e Copertine Dinamiche
 - Aggiunto supporto al comando SET_DISPLAY_MEDIA via WebSocket per il controllo diretto o da App dei metadati della vista Now Playing dello Smart Screen.
 - Ottimizzata la prioritÃ  automatica tra streaming AVRCP dello Speaker Bluetooth e metadati inviati da applicazione.
@@ -664,6 +669,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
