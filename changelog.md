@@ -554,6 +554,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.24] - Corona a Bordo Display, Schermo Nero Idle e Inversione Play/Pause
+- Posizionata la corona di avanzamento sul perimetro esterno del display circolare (240x240 px).
+- Invertito l'indicatore Play/Pause come visualizzatore di stato (â–¶ in riproduzione, â¸ in pausa).
+- Implementato schermo nero e ghiera verde continua a riposo con dicitura 'Nothing playing'.
+- Rimossa l'immagine vintage TV e gestito l'azzeramento istantaneo su cambio canzone.
+- Esteso il buffer di ricezione copertine JPEG fino a 32 KB.
 ### [0.1.23] - Copertina Album ad Alta Risoluzione 180x180 px
 - Aumentata la risoluzione della copertina album dinamica a 180x180 pixel (+125% di pixel).
 - Ottimizzato lo scaling LVGL a 1.33x per una resa visiva ultra definita su LCD circolare 240x240.
@@ -698,6 +704,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
