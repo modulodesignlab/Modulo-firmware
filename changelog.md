@@ -5,6 +5,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.82] - Pacing I2C 22ms e Telemetria Chunks
+- Pacing I2C aumentato a 22ms per zero-drop chunk streaming verso Smart Screen.
+- Integrata la metrica cover_chunks nel JSON di stato WebSocket.
+
 ### [0.1.81] - Thread-safe I2C Mutex & Protezione Bus durante Streaming Copertine
 - Aggiunto mutex di protezione su bus I2C master per serializzare tutte le transazioni I2C.
 - Bloccate letture VBUS concorrenti durante lo streaming copertina con fallback a valore cached.
@@ -682,6 +686,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
