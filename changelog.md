@@ -1,4 +1,10 @@
-﻿## [0.1.27] - Smart Screen 128 - 2026-09-10
+﻿## [0.1.90] - Base - 2026-09-10
+### Fixed
+- Corretto bug del ciclo di sincronizzazione dell'orologio e meteo su Vista 02 del display.
+- Aggiunto comando SET_DISPLAY_DATETIME per sincronizzazione istantanea da smartphone.
+- Cache persistente meteo su Base per aggiornamento display affidabile e continuo.
+
+## [0.1.27] - Smart Screen 128 - 2026-09-10
 ### Added
 - Vista 02 Orologio + Meteo con dati reali e sincronizzazione automatica NTP.
 - Pop-up notifiche interattive su overlay (lv_layer_top) con badge applicativi (WhatsApp, Gmail, ecc.).
@@ -746,6 +752,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
