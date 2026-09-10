@@ -5,6 +5,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.81] - Thread-safe I2C Mutex & Protezione Bus durante Streaming Copertine
+- Aggiunto mutex di protezione su bus I2C master per serializzare tutte le transazioni I2C.
+- Bloccate letture VBUS concorrenti durante lo streaming copertina con fallback a valore cached.
+- Aggiunti retry su chunk I2C della copertina e telemetria estesa stato display.
+
 ### [0.1.80] - Streaming I2C Ottimizzato Copertine Dinamiche e Demo Sync
 - Migliorato il parsing della risposta iTunes API con lettura completa dello stream HTTP.
 - Ottimizzato il pacing di trasmissione I2C dei chunk JPEG verso lo Smart Screen per eliminare drop di pacchetti.
@@ -673,6 +678,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
