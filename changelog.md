@@ -536,6 +536,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.21] - Fix Decompressione TJPGD 4:2:0 & Telemetria Copertina Dinamica
+- Espanso il buffer di lavoro TJPGD a 4096 byte per supportare immagini JPEG 4:2:0 da iTunes.
+- Aggiunta validazione dei chunk I2C accumulati e telemetria diagnostica estesa in CMD_GET_STATUS.
+- Invalidazione cache immagine LVGL prima del render a schermo.
 ### [0.1.20] - Ottimizzazione Ricezione Streaming e Centramento Copertina Dinamica
 - Ampliata la coda I2C a 32 frame per prevenire la perdita di pacchetti durante lo streaming della copertina.
 - Ottimizzata la decompressione TJPGD in memoria e corretto il calcolo del pivot e centramento LVGL su display 240x240.
@@ -669,6 +673,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
