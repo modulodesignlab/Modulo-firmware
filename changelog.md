@@ -5,6 +5,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.83] - Supporto Copertine Alta Risoluzione 180x180
+- Aggiornato il download da iTunes a 180x180bb.jpg per copertine ad altissima nitidezza.
+
 ### [0.1.82] - Pacing I2C 22ms e Telemetria Chunks
 - Pacing I2C aumentato a 22ms per zero-drop chunk streaming verso Smart Screen.
 - Integrata la metrica cover_chunks nel JSON di stato WebSocket.
@@ -689,6 +692,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
