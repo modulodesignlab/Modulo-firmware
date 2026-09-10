@@ -1,4 +1,18 @@
-﻿## [0.1.26] - Smart Screen 128 - 2026-09-10
+﻿## [0.1.27] - Smart Screen 128 - 2026-09-10
+### Added
+- Vista 02 Orologio + Meteo con dati reali e sincronizzazione automatica NTP.
+- Pop-up notifiche interattive su overlay (lv_layer_top) con badge applicativi (WhatsApp, Gmail, ecc.).
+- Gestione dedicata Vista 08 per FOTA con avanzamento progressivo e ripristino automatico.
+### Changed
+- Ristrette le schermate selezionabili da utente esclusivamente alle Viste 01 e 02.
+
+## [0.1.89] - Base - 2026-09-10
+### Added
+- SNTP Client con timezone Roma per sincronizzazione orologio schermo in tempo reale.
+- Gestione comandi WebSocket SET_DISPLAY_WEATHER e SEND_POPUP_NOTIFICATION.
+- Coordinamento automatico della Vista 08 (FOTA) su display durante gli aggiornamenti firmware.
+
+## [0.1.26] - Smart Screen 128 - 2026-09-10
 ### Fixed
 - Auto-ripristino e riavvio dopo fallimento FOTA per ripristinare la normale schermata display.
 - Integrazione completa viste 02, 06, 08.
@@ -732,6 +746,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
