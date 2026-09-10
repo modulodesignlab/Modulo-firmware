@@ -531,6 +531,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.20] - Ottimizzazione Ricezione Streaming e Centramento Copertina Dinamica
+- Ampliata la coda I2C a 32 frame per prevenire la perdita di pacchetti durante lo streaming della copertina.
+- Ottimizzata la decompressione TJPGD in memoria e corretto il calcolo del pivot e centramento LVGL su display 240x240.
+- Aggiunta ricostruzione reattiva della schermata Now Playing al completamento del caricamento copertina.
 ### [0.1.19] - Supporto Copertina Album Dinamica e Decompressione TJPGD
 - Aggiunta ricezione streaming I2C e decompressione JPEG in memoria tramite decoder ROM TJPGD per copertine dinamiche 120x120.
 - Aggiornato layout vista "Now Playing" con card copertina arrotondata (radius 16), corona circolare 360Â° e metadati dinamici.
@@ -660,6 +664,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
