@@ -1,10 +1,18 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to Modulo firmware will be documented in this file, structured by software component.
 
 ---
 
 ## Modulo Base
+### [0.1.86] - Motore Copertine Album Robusto e Sincronizzazione Schermo Idle
+- Implementata sanitizzazione avanzata query iTunes (rimozione suffissi rumorosi come feat, Remix, Remaster, Live).
+- Query media=music con limit=3 e fallback automatico a ricerca per solo titolo.
+- Sostituzione URL dinamica basata sull'ultimo slash a 180x180bb.jpg (garantisce sempre formato JPEG nativo compatibile con ROM TJPGD).
+- Supporto stream HTTP chunked e buffer immagini esteso fino a 32 KB con validazione SOI header.
+- Gestione I2C protetta con abort sicuro (SUB_COVER_RESET) e retry automatico in caso di chunk drop.
+- Sincronizzazione dello stato idle (nessun brano) verso lo Smart Screen eliminando i placeholder demo.
+
 ### [0.1.85] - Fix LED State CONNECTED_WIFI
 - Corretto bug race condition: i LED ora mostrano correttamente il verde (CONNECTED_WIFI) dopo la connessione Wi-Fi.
 
