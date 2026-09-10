@@ -545,6 +545,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.23] - Copertina Album ad Alta Risoluzione 180x180 px
+- Aumentata la risoluzione della copertina album dinamica a 180x180 pixel (+125% di pixel).
+- Ottimizzato lo scaling LVGL a 1.33x per una resa visiva ultra definita su LCD circolare 240x240.
 ### [0.1.22] - Ottimizzazione Coda I2C a 64 Frame e Rimozione Latenza UART
 - Raddoppiata la coda di ricezione I2C a 64 slot per prevenire overflow.
 - Ridotta la verbositÃ  UART in ricezione frame per elaborazione istantanea senza jitter.
@@ -686,6 +689,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
