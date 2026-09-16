@@ -1,10 +1,10 @@
-{
+﻿{
     "schema_version":  1,
     "firmwares":  {
                       "base":  {
-                                   "version":  "0.1.91",
-                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.91/Modulo.bin",
-                                   "sha256":  "4240c03d8f283bc4a0a6d93b9b33ed7399f8beee1ac58d4f37e451eb5d5918db"
+                                   "version":  "0.1.92",
+                                   "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.92/Modulo.bin",
+                                   "sha256":  "2a7e913ac39e0027954b8e11fd30f18d0bb0ef9b34551abb3c1ef5d2f57d9dab"
                                },
                       "bluetooth_speaker":  {
                                                 "version":  "0.1.37",
@@ -13,10 +13,10 @@
                                                 "sha256":  "59a5f8384fab8bc99e0820a2f0bb1975dfbdfa18135e499bbc8e4fe6f62853cf"
                                             },
                       "environmental_monitor":  {
-                                                    "version":  "0.1.83",
+                                                    "version":  "0.1.84",
                                                     "minimum_base_version":  "0.1.56",
-                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.83/environmental_monitor.bin",
-                                                    "sha256":  "32b5f18b5359c138eec79aa02ee8b44b4e7e8be2c98aa4963be8fbb8dc6dd46f"
+                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.84/environmental_monitor.bin",
+                                                    "sha256":  "6a4bcb90dec435e1c7d1464f12696548e87869be6d08f1b2ef4272b328d24f60"
                                                 },
                       "smart_screen_128":  {
                                                "version":  "0.1.28",
