@@ -1,4 +1,11 @@
-﻿## [0.1.98] - Base - 2026-09-17
+﻿## [0.1.36] - Smart Screen 128 - 2026-09-17
+### Added
+- Watchdog multimediale (20s) per intercettare fine o interruzione streaming.
+- Fallback di sicurezza assoluto (5 min) per ritorno garantito da Vista Musica a Vista Orologio.
+- Ripristino Vista Orologio dopo 30s di assenza comunicazioni master I2C.
+- Preservazione persistente indirizzo I2C e NVS per prevenire disconnessioni dello slave.
+
+## [0.1.98] - Base - 2026-09-17
 ### Fixed
 - Recupero automatico moduli slave orfani (Smart Screen) tramite scansione periodica CMD_GET_INFO con PROTO_BROADCAST_ID.
 - Aumentato timeout di offline nel registry a 24h per evitare drop dei moduli dopo reboot della Base.
@@ -828,6 +835,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
