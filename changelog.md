@@ -1,4 +1,9 @@
-﻿## [0.1.32] - Smart Screen 128 - 2026-09-17
+﻿## [0.1.33] - Smart Screen 128 - 2026-09-17
+### Changed
+- Rimozione totale di qualsiasi etichetta testuale di stato e dicitura dai processi di download FOTA: presente unicamente la corona circolare con percentuale al centro su sfondo #08080E.
+- Reset NVS assigned ID su timeout di comunicazione con il master.
+
+## [0.1.32] - Smart Screen 128 - 2026-09-17
 ### Changed
 - Rimozione del testo di stato durante il download FOTA: interfaccia essenziale con sola corona circolare e percentuale centrata.
 
@@ -796,6 +801,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
