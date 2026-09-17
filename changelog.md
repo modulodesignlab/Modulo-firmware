@@ -1,4 +1,10 @@
-﻿## [0.1.35] - Smart Screen 128 - 2026-09-17
+﻿## [0.1.96] - Base - 2026-09-17
+### Added
+- Commutazione automatica a Vista Musica all'avvio della riproduzione audio con switch configurabile via App.
+- Ritorno automatico a Vista Orologio dopo 5 minuti di inattivita musicale.
+- Salvataggio impostazione auto_switch_music su NVS.
+
+## [0.1.35] - Smart Screen 128 - 2026-09-17
 ### Added
 - Timeout automatico di inattivita 5 minuti per ritorno da Vista Musica a Vista Orologio.
 
@@ -809,6 +815,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
