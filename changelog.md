@@ -1,4 +1,11 @@
-﻿## [0.1.29] - Smart Screen 128 - 2026-09-17
+﻿## [0.1.30] - Smart Screen 128 - 2026-09-17
+### Added
+- Motore di micro-animazioni grafiche per le condizioni meteo (respiro zoom del sole, deriva fluttuante della nuvola, caduta ritmica pioggia, scarica lampo temporale, danza neve).
+- Orologio con respiro d'opacitÃ  del separatore ":" a ritmo di 1s.
+- Standby a respiro perimetrale e avanzamento fluido traccia su Music View.
+- Entrata a molla ("overshoot drop") dei popup di notifica.
+
+## [0.1.29] - Smart Screen 128 - 2026-09-17
 ### Added
 - Set completo di icone meteo grafiche standard 24x24 px su LVGL: Sole dorato, Nuvola volumetrica, Pioggia con gocce azzurre, Temporale con fulmine giallo, Neve con fiocchi bianchi.
 - Eliminato il sole colorato di grigio in caso di cielo nuvoloso.
@@ -776,6 +783,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
