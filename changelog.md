@@ -1,4 +1,8 @@
-﻿## [0.1.34] - Smart Screen 128 - 2026-09-17
+﻿## [0.1.35] - Smart Screen 128 - 2026-09-17
+### Added
+- Timeout automatico di inattivita 5 minuti per ritorno da Vista Musica a Vista Orologio.
+
+## [0.1.34] - Smart Screen 128 - 2026-09-17
 ### Changed
 - Schermata di default impostata su Vista 02 (Orologio + Meteo) all'avvio, al ripristino post-FOTA e come fallback predefinito del sistema.
 
@@ -805,6 +809,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
