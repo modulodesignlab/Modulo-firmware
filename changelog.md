@@ -72,6 +72,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.93] - Fix I2C Discovery Legacy CRC Fallback & Unknown Module Display Mapping
+- Risolto il blocco della discovery I2C per slave con firmware legacy: la Base ora valida anche frame con CRC calcolato su header (0x69).
+- Modulo slave con ID 0x00 ora mappato correttamente su Display (Smart Screen) per consentire FOTA.
 ### [0.1.87] - Multi-View Display Routing & State Synchronization
 - Sincronizzazione ed esportazione delle viste display (01 Now Playing, 02 Orologio/Meteo, 06 Notifiche, 08 OTA, 00 Brand) tramite Data Broker e WebSocket.
 - Parsing robusto di target_id nel comando SET_DISPLAY_VIEW.
@@ -783,6 +786,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
