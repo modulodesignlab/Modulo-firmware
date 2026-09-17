@@ -1,4 +1,10 @@
-﻿## [0.1.30] - Smart Screen 128 - 2026-09-17
+﻿## [0.1.31] - Smart Screen 128 - 2026-09-17
+### Fixed
+- Risolto problema dello sfondo grigio sulle animazioni meteo grazie al passaggio al formato con canale alpha nativo LV_IMG_CF_TRUE_COLOR_ALPHA.
+- Risolto mancato avanzamento percentuale sullo schermo durante il FOTA del modulo Smart Screen: avanzamento in tempo reale direttamente dal task di download.
+- Ottimizzazione memoria: deallocazione dinamica del buffer copertina (+64.8 KB di heap interno libero).
+
+## [0.1.30] - Smart Screen 128 - 2026-09-17
 ### Added
 - Motore di micro-animazioni grafiche per le condizioni meteo (respiro zoom del sole, deriva fluttuante della nuvola, caduta ritmica pioggia, scarica lampo temporale, danza neve).
 - Orologio con respiro d'opacitÃ  del separatore ":" a ritmo di 1s.
@@ -786,6 +792,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
