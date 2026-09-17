@@ -1,4 +1,11 @@
-﻿## [0.1.97] - Base - 2026-09-17
+﻿## [0.1.98] - Base - 2026-09-17
+### Fixed
+- Recupero automatico moduli slave orfani (Smart Screen) tramite scansione periodica CMD_GET_INFO con PROTO_BROADCAST_ID.
+- Aumentato timeout di offline nel registry a 24h per evitare drop dei moduli dopo reboot della Base.
+- Sincronizzazione timing I2C master/slave con retry read per accomodare la latenza di rendering LVGL.
+- Scansione diagnostica hardware periodica (i2c_master_probe).
+
+## [0.1.97] - Base - 2026-09-17
 ### Fixed
 - Recupero automatico moduli slave orfani (Smart Screen) gia presenti sul bus I2C tramite scansione periodica CMD_GET_INFO.
 - Aumentato timeout di offline nel registry a 24h per evitare drop dei moduli dopo reboot della Base.
@@ -821,6 +828,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
