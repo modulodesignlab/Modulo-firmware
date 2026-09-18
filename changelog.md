@@ -1,4 +1,10 @@
-﻿## [0.1.86] - Environmental Monitor - 2026-09-18
+﻿## [0.1.88] - Environmental Monitor - 2026-09-18
+### Fixed
+- Risolto conflitto e mappatura pin GPIO per display e-paper e sensori ambientali: ripristinati i pin hardware corretti (BUSY=4, RST=16, DC=17, CS=5, CLK=18, DIN=23, SDA=21, SCL=22).
+- Corretto stato pull-down sul pin BUSY (GPIO 4) eliminando i timeout di refresh.
+- 6 Schermate ufficiali Arduino Test_2in9_G.ino attive e cicliche ogni 60s.
+
+## [0.1.86] - Environmental Monitor - 2026-09-18
 ### Fixed
 - Corretta la polarita' del pin BUSY per il pannello Waveshare 2.9" (G) (LOW=Occupato, HIGH=Pronto).
 - Aggiunta la sequenza completa di registri di configurazione hardware e risoluzione 128x296 (comando 0x61).
@@ -874,6 +880,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
