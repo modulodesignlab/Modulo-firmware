@@ -1,4 +1,9 @@
-﻿## [0.1.37] - Smart Screen 128 - 2026-09-18
+﻿## [0.1.38] - Smart Screen 128 - 2026-09-18
+### Changed
+- Uniformata la schermata di aggiornamento firmware al design brand Modulo (deep blue #002B70).
+- Rimossa logica di auto-revert locale per consentire selezione permanente della vista dall'app.
+
+## [0.1.37] - Smart Screen 128 - 2026-09-18
 ### Added
 - Nuova Vista 03: Orologio Analogico Minimal di lusso.
 - Lancetta dei secondi a scorrimento ultra-fluido (40 FPS, sweep continuo).
@@ -843,6 +848,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
