@@ -1,4 +1,10 @@
-﻿## [0.1.85] - Environmental Monitor - 2026-09-18
+﻿## [0.1.86] - Environmental Monitor - 2026-09-18
+### Fixed
+- Corretta la polarita' del pin BUSY per il pannello Waveshare 2.9" (G) (LOW=Occupato, HIGH=Pronto).
+- Aggiunta la sequenza completa di registri di configurazione hardware e risoluzione 128x296 (comando 0x61).
+- Implementato driver SPI bit-banging con massima forza di pilotaggio (GPIO_DRIVE_CAP_3) attraverso connettore FPC 15 pin.
+
+## [0.1.85] - Environmental Monitor - 2026-09-18
 ### Added
 - Driver hardware e-Paper Waveshare 2.9" (G) 4-colori (Nero, Bianco, Giallo, Rosso e retinatura ottica per il verde).
 - 5 Viste E-Paper integrate: Home, Air Quality, Comfort, Detailed e Screensaver (pianta vettoriale).
@@ -868,6 +874,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
