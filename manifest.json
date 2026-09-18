@@ -19,10 +19,10 @@
             "sha256": "818485fd4ead9f7a8538811b16cf39c9111e282f2af97f991485866d0724750d"
         },
         "smart_screen_128": {
-            "version": "0.1.39",
+            "version": "0.1.40",
             "minimum_base_version": "0.1.6",
-            "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/screen-v0.1.39/smart_screen_128.bin",
-            "sha256": "25e7dea9e45d7452fa1f679531beeec6a6586578fd69808e8e3781c31b50eb03"
+            "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/screen-v0.1.40/smart_screen_128.bin",
+            "sha256": "d85e7eb31a3ebd1967e6255400cb0f11e9e47faca11eb2d291bdd19342465e62"
         },
         "usb_c_charger": {
             "version": "0.1.6",
