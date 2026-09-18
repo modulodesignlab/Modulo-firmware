@@ -1,4 +1,8 @@
-﻿## [0.1.39] - Smart Screen 128 - 2026-09-18
+﻿## [0.1.100] - Base Module - 2026-09-18
+### Changed
+- Memorizzazione e ripristino della specifica vista orologio scelta dall'utente (Digitale o Analogico) dopo la fine della riproduzione musicale.
+
+## [0.1.39] - Smart Screen 128 - 2026-09-18
 ### Changed
 - Rimosso watchdog 30s locale che riportava forzatamente su orologio digitale.
 - Salvataggio vista orologio preferita in NVS (Digitale o Analogico).
@@ -857,6 +861,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
