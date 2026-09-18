@@ -1,4 +1,9 @@
-﻿## [0.1.99] - Base Module - 2026-09-18
+﻿## [0.1.39] - Smart Screen 128 - 2026-09-18
+### Changed
+- Rimosso watchdog 30s locale che riportava forzatamente su orologio digitale.
+- Salvataggio vista orologio preferita in NVS (Digitale o Analogico).
+
+## [0.1.99] - Base Module - 2026-09-18
 ### Changed
 - Implementata persistenza vista display: quando l'utente seleziona manualmente una vista dall'app, il display rimane stabilmente su quella vista senza forzare il ritorno all'orologio dopo inattivitÃ  audio.
 
@@ -852,6 +857,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
