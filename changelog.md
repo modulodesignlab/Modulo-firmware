@@ -1,4 +1,12 @@
-﻿## [0.1.36] - Smart Screen 128 - 2026-09-17
+﻿## [0.1.37] - Smart Screen 128 - 2026-09-18
+### Added
+- Nuova Vista 03: Orologio Analogico Minimal di lusso.
+- Lancetta dei secondi a scorrimento ultra-fluido (40 FPS, sweep continuo).
+- Tacche perimetrali a 60 divisioni senza numeri numerici.
+- Widget data maiuscola, meteo compatto e 3 badge notifiche (WhatsApp, Gmail, Telegram).
+- Posizione GPS in basso e rimozione indicatori di paginazione.
+
+## [0.1.36] - Smart Screen 128 - 2026-09-17
 ### Added
 - Watchdog multimediale (20s) per intercettare fine o interruzione streaming.
 - Fallback di sicurezza assoluto (5 min) per ritorno garantito da Vista Musica a Vista Orologio.
@@ -835,6 +843,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
