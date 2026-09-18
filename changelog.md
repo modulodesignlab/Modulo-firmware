@@ -1,4 +1,11 @@
-﻿## [0.1.100] - Base Module - 2026-09-18
+﻿## [0.1.85] - Environmental Monitor - 2026-09-18
+### Added
+- Driver hardware e-Paper Waveshare 2.9" (G) 4-colori (Nero, Bianco, Giallo, Rosso e retinatura ottica per il verde).
+- 5 Viste E-Paper integrate: Home, Air Quality, Comfort, Detailed e Screensaver (pianta vettoriale).
+- Acquisizione sensori I2C Master ENS160 (TVOC, eCO2, AQI) e AHT21 (Temperatura, Umidita') su connettore FPC 15-pin.
+- Aggiornamento periodico display e refresh immediato su comando I2C dalla Base / App.
+
+## [0.1.100] - Base Module - 2026-09-18
 ### Changed
 - Memorizzazione e ripristino della specifica vista orologio scelta dall'utente (Digitale o Analogico) dopo la fine della riproduzione musicale.
 
@@ -861,6 +868,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
