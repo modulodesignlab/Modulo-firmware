@@ -1,4 +1,10 @@
-﻿## [0.1.89] - Environmental Monitor - 2026-09-18
+﻿## [0.1.90] - Environmental Monitor - 2026-09-21
+### Added
+- Firmware diagnostico: toggling RST (GPIO 16) ogni 2s per verifica multimetro.
+- Scansione I2C master automatica su GPIO 17 (SDA) e GPIO 5 (SCL).
+- Lettura telemetrica in tempo reale dello stato logico di tutti i pin su connettore FPC 15 pin.
+
+## [0.1.89] - Environmental Monitor - 2026-09-18
 ### Fixed
 - Ripristinata mappatura fisica connettore FPC 15 pin (PINOUT_EINK_SENSORI.md): BUSY=18, RST=16, DC=4, CS=15, CLK=23, DIN=22, SDA=17, SCL=5.
 - Risolto spegnimento prematuro (100ms) del display prima del completamento dell'aggiornamento chimico: garantiti 12 secondi continui di booster ad alta tensione.
@@ -886,6 +892,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
