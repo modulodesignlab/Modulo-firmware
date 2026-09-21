@@ -1,4 +1,10 @@
-﻿## [0.1.90] - Environmental Monitor - 2026-09-21
+﻿## [0.1.94] - Environmental Monitor - 2026-09-21
+### Fixed
+- Rimossa la rotazione automatica ogni 60s: il display rimane sulla schermata selezionata.
+- Aggiornamento periodico impostato a 5 minuti (300s) oppure istantaneo al cambio di soglia colore AQI.
+- Risolta lettura dati sensore ENS160 (supporto aria pulita TVOC = 0 ppb, baseline eCO2 400 ppm, recupero STATAS).
+- Stabilizzata compensazione T/H ogni 30s.
+## [0.1.90] - Environmental Monitor - 2026-09-21
 ### Added
 - Firmware diagnostico: toggling RST (GPIO 16) ogni 2s per verifica multimetro.
 - Scansione I2C master automatica su GPIO 17 (SDA) e GPIO 5 (SCL).
@@ -892,6 +898,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
