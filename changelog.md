@@ -1,4 +1,12 @@
-﻿## [0.1.41] - Smart Screen 128 - 2026-09-23
+﻿## [0.1.42] - Smart Screen 128 - 2026-09-23
+### Added
+- Sensore touch capacitivo su GPIO 32 (I2S_SDATA) per accendere/spegnere display e retroilluminazione.
+- Gestione configurabile accensione schermo su notifica con salvataggio in NVS (CMD 0x58).
+- Controllo alimentazione display via I2C (CMD 0x57).
+- Badge e popup Telegram con colore ufficiale #2AABEE e lettera 'T'.
+- Posizionamento popup notifica nella metÃ  inferiore del display circolare.
+
+## [0.1.41] - Smart Screen 128 - 2026-09-23
 ### Added
 - Badge notifiche reali dinamici su Vista 02 (Orologio Digitale + Meteo) e Vista 03 (Orologio Analogico).
 - Supporto al comando di cancellazione notifiche per ripulire i quadranti dai badge.
@@ -903,6 +911,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
