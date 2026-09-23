@@ -1,4 +1,10 @@
-﻿## [0.1.43] - Smart Screen 128 - 2026-09-23
+﻿## [0.1.101] - Base Module - 2026-09-23
+### Added
+- Animazioni LED anello Base per notifiche in arrivo (Blink e Swipe rotante) con colore ed effetto configurabili.
+- Gestione comandi SET_SCREEN_POWER e SET_SCREEN_WAKE_ON_NOTIF con sincronizzazione broadcast WebSocket.
+- Instradamento automatico notifiche allo Smart Screen collegato.
+
+## [0.1.43] - Smart Screen 128 - 2026-09-23
 ### Added
 - Spegnimento display universale da pulsante/touch GPIO 32 e da remoto via CMD_SCREEN_SET_POWER.
 - Popup notifica a pieno quadrante stile Now Playing (sfondo #16161D, bordo accentuato da 5px).
@@ -918,6 +924,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
