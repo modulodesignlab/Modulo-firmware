@@ -1,4 +1,11 @@
-﻿## [0.1.42] - Smart Screen 128 - 2026-09-23
+﻿## [0.1.43] - Smart Screen 128 - 2026-09-23
+### Added
+- Spegnimento display universale da pulsante/touch GPIO 32 e da remoto via CMD_SCREEN_SET_POWER.
+- Popup notifica a pieno quadrante stile Now Playing (sfondo #16161D, bordo accentuato da 5px).
+- Timeout default popup esteso a 9 secondi.
+- Icona TrueColorAlpha ufficiale WhatsApp con fumetto e baffetto distintivo rispetto alla chiamata vocale.
+
+## [0.1.42] - Smart Screen 128 - 2026-09-23
 ### Added
 - Sensore touch capacitivo su GPIO 32 (I2S_SDATA) per accendere/spegnere display e retroilluminazione.
 - Gestione configurabile accensione schermo su notifica con salvataggio in NVS (CMD 0x58).
@@ -911,6 +918,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
