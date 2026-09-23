@@ -1,4 +1,9 @@
-﻿## [0.1.44] - Smart Screen 128 - 2026-09-23
+﻿## [0.1.45] - Smart Screen 128 - 2026-09-23
+### Added
+- Icone grafiche dedicate ad alta risoluzione (TrueColorAlpha 20x20 e 32x32) per tutte le principali applicazioni: WhatsApp, Telegram, Gmail, Instagram, Messenger, Chiamate, SMS e Calendario.
+- Supporto unificato delle icone nei popup a tutto schermo e nei badge sui quadranti orologio digitale e analogico.
+
+## [0.1.44] - Smart Screen 128 - 2026-09-23
 ### Added
 - Animazione in dissolvenza morbida (Fade In / Fade Out a 350ms) per comparsa e scomparsa popup notifiche.
 - Sincronizzazione cancellazione notifiche smartphone: azzeramento istantaneo badge e popup su rimozione notifica da Android.
@@ -933,6 +938,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
