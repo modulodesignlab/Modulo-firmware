@@ -1,4 +1,9 @@
-﻿## [0.1.94] - Environmental Monitor - 2026-09-21
+﻿## [0.1.41] - Smart Screen 128 - 2026-09-23
+### Added
+- Badge notifiche reali dinamici su Vista 02 (Orologio Digitale + Meteo) e Vista 03 (Orologio Analogico).
+- Supporto al comando di cancellazione notifiche per ripulire i quadranti dai badge.
+
+## [0.1.94] - Environmental Monitor - 2026-09-21
 ### Fixed
 - Rimossa la rotazione automatica ogni 60s: il display rimane sulla schermata selezionata.
 - Aggiornamento periodico impostato a 5 minuti (300s) oppure istantaneo al cambio di soglia colore AQI.
@@ -898,6 +903,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
