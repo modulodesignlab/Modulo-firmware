@@ -1,222 +1,3 @@
-﻿## [0.1.45] - Smart Screen 128 - 2026-09-23
-### Added
-- Icone grafiche dedicate ad alta risoluzione (TrueColorAlpha 20x20 e 32x32) per tutte le principali applicazioni: WhatsApp, Telegram, Gmail, Instagram, Messenger, Chiamate, SMS e Calendario.
-- Supporto unificato delle icone nei popup a tutto schermo e nei badge sui quadranti orologio digitale e analogico.
-
-## [0.1.44] - Smart Screen 128 - 2026-09-23
-### Added
-- Animazione in dissolvenza morbida (Fade In / Fade Out a 350ms) per comparsa e scomparsa popup notifiche.
-- Sincronizzazione cancellazione notifiche smartphone: azzeramento istantaneo badge e popup su rimozione notifica da Android.
-
-### Fixed
-- Risolto blocco controller LCD GC9A01 sostituendo disp_on_off con gestione diretta e sicura del Backlight GPIO 21.
-- Filtraggio anti-rumore e cooldown su pulsante/touch fisico.
-
-## [0.1.101] - Base Module - 2026-09-23
-### Added
-- Animazioni LED anello Base per notifiche in arrivo (Blink e Swipe rotante) con colore ed effetto configurabili.
-- Gestione comandi SET_SCREEN_POWER e SET_SCREEN_WAKE_ON_NOTIF con sincronizzazione broadcast WebSocket.
-- Instradamento automatico notifiche allo Smart Screen collegato.
-
-## [0.1.43] - Smart Screen 128 - 2026-09-23
-### Added
-- Spegnimento display universale da pulsante/touch GPIO 32 e da remoto via CMD_SCREEN_SET_POWER.
-- Popup notifica a pieno quadrante stile Now Playing (sfondo #16161D, bordo accentuato da 5px).
-- Timeout default popup esteso a 9 secondi.
-- Icona TrueColorAlpha ufficiale WhatsApp con fumetto e baffetto distintivo rispetto alla chiamata vocale.
-
-## [0.1.42] - Smart Screen 128 - 2026-09-23
-### Added
-- Sensore touch capacitivo su GPIO 32 (I2S_SDATA) per accendere/spegnere display e retroilluminazione.
-- Gestione configurabile accensione schermo su notifica con salvataggio in NVS (CMD 0x58).
-- Controllo alimentazione display via I2C (CMD 0x57).
-- Badge e popup Telegram con colore ufficiale #2AABEE e lettera 'T'.
-- Posizionamento popup notifica nella metÃ  inferiore del display circolare.
-
-## [0.1.41] - Smart Screen 128 - 2026-09-23
-### Added
-- Badge notifiche reali dinamici su Vista 02 (Orologio Digitale + Meteo) e Vista 03 (Orologio Analogico).
-- Supporto al comando di cancellazione notifiche per ripulire i quadranti dai badge.
-
-## [0.1.94] - Environmental Monitor - 2026-09-21
-### Fixed
-- Rimossa la rotazione automatica ogni 60s: il display rimane sulla schermata selezionata.
-- Aggiornamento periodico impostato a 5 minuti (300s) oppure istantaneo al cambio di soglia colore AQI.
-- Risolta lettura dati sensore ENS160 (supporto aria pulita TVOC = 0 ppb, baseline eCO2 400 ppm, recupero STATAS).
-- Stabilizzata compensazione T/H ogni 30s.
-## [0.1.90] - Environmental Monitor - 2026-09-21
-### Added
-- Firmware diagnostico: toggling RST (GPIO 16) ogni 2s per verifica multimetro.
-- Scansione I2C master automatica su GPIO 17 (SDA) e GPIO 5 (SCL).
-- Lettura telemetrica in tempo reale dello stato logico di tutti i pin su connettore FPC 15 pin.
-
-## [0.1.89] - Environmental Monitor - 2026-09-18
-### Fixed
-- Ripristinata mappatura fisica connettore FPC 15 pin (PINOUT_EINK_SENSORI.md): BUSY=18, RST=16, DC=4, CS=15, CLK=23, DIN=22, SDA=17, SCL=5.
-- Risolto spegnimento prematuro (100ms) del display prima del completamento dell'aggiornamento chimico: garantiti 12 secondi continui di booster ad alta tensione.
-- Rimossa configurazione pull-down conflittuale con la resistenza hardware R8 (4.7k) su scheda madre.
-
-## [0.1.88] - Environmental Monitor - 2026-09-18
-### Fixed
-- Risolto conflitto e mappatura pin GPIO per display e-paper e sensori ambientali: ripristinati i pin hardware corretti (BUSY=4, RST=16, DC=17, CS=5, CLK=18, DIN=23, SDA=21, SCL=22).
-- Corretto stato pull-down sul pin BUSY (GPIO 4) eliminando i timeout di refresh.
-- 6 Schermate ufficiali Arduino Test_2in9_G.ino attive e cicliche ogni 60s.
-
-## [0.1.86] - Environmental Monitor - 2026-09-18
-### Fixed
-- Corretta la polarita' del pin BUSY per il pannello Waveshare 2.9" (G) (LOW=Occupato, HIGH=Pronto).
-- Aggiunta la sequenza completa di registri di configurazione hardware e risoluzione 128x296 (comando 0x61).
-- Implementato driver SPI bit-banging con massima forza di pilotaggio (GPIO_DRIVE_CAP_3) attraverso connettore FPC 15 pin.
-
-## [0.1.85] - Environmental Monitor - 2026-09-18
-### Added
-- Driver hardware e-Paper Waveshare 2.9" (G) 4-colori (Nero, Bianco, Giallo, Rosso e retinatura ottica per il verde).
-- 5 Viste E-Paper integrate: Home, Air Quality, Comfort, Detailed e Screensaver (pianta vettoriale).
-- Acquisizione sensori I2C Master ENS160 (TVOC, eCO2, AQI) e AHT21 (Temperatura, Umidita') su connettore FPC 15-pin.
-- Aggiornamento periodico display e refresh immediato su comando I2C dalla Base / App.
-
-## [0.1.100] - Base Module - 2026-09-18
-### Changed
-- Memorizzazione e ripristino della specifica vista orologio scelta dall'utente (Digitale o Analogico) dopo la fine della riproduzione musicale.
-
-## [0.1.39] - Smart Screen 128 - 2026-09-18
-### Changed
-- Rimosso watchdog 30s locale che riportava forzatamente su orologio digitale.
-- Salvataggio vista orologio preferita in NVS (Digitale o Analogico).
-
-## [0.1.99] - Base Module - 2026-09-18
-### Changed
-- Implementata persistenza vista display: quando l'utente seleziona manualmente una vista dall'app, il display rimane stabilmente su quella vista senza forzare il ritorno all'orologio dopo inattivitÃ  audio.
-
-## [0.1.38] - Smart Screen 128 - 2026-09-18
-### Changed
-- Uniformata la schermata di aggiornamento firmware al design brand Modulo (deep blue #002B70).
-- Rimossa logica di auto-revert locale per consentire selezione permanente della vista dall'app.
-
-## [0.1.37] - Smart Screen 128 - 2026-09-18
-### Added
-- Nuova Vista 03: Orologio Analogico Minimal di lusso.
-- Lancetta dei secondi a scorrimento ultra-fluido (40 FPS, sweep continuo).
-- Tacche perimetrali a 60 divisioni senza numeri numerici.
-- Widget data maiuscola, meteo compatto e 3 badge notifiche (WhatsApp, Gmail, Telegram).
-- Posizione GPS in basso e rimozione indicatori di paginazione.
-
-## [0.1.36] - Smart Screen 128 - 2026-09-17
-### Added
-- Watchdog multimediale (20s) per intercettare fine o interruzione streaming.
-- Fallback di sicurezza assoluto (5 min) per ritorno garantito da Vista Musica a Vista Orologio.
-- Ripristino Vista Orologio dopo 30s di assenza comunicazioni master I2C.
-- Preservazione persistente indirizzo I2C e NVS per prevenire disconnessioni dello slave.
-
-## [0.1.98] - Base - 2026-09-17
-### Fixed
-- Recupero automatico moduli slave orfani (Smart Screen) tramite scansione periodica CMD_GET_INFO con PROTO_BROADCAST_ID.
-- Aumentato timeout di offline nel registry a 24h per evitare drop dei moduli dopo reboot della Base.
-- Sincronizzazione timing I2C master/slave con retry read per accomodare la latenza di rendering LVGL.
-- Scansione diagnostica hardware periodica (i2c_master_probe).
-
-## [0.1.97] - Base - 2026-09-17
-### Fixed
-- Recupero automatico moduli slave orfani (Smart Screen) gia presenti sul bus I2C tramite scansione periodica CMD_GET_INFO.
-- Aumentato timeout di offline nel registry a 24h per evitare drop dei moduli dopo reboot della Base.
-- Sincronizzazione timing I2C master/slave per evitare svuotamento anticipato del buffer di trasmissione slave.
-
-## [0.1.96] - Base - 2026-09-17
-### Added
-- Commutazione automatica a Vista Musica all'avvio della riproduzione audio con switch configurabile via App.
-- Ritorno automatico a Vista Orologio dopo 5 minuti di inattivita musicale.
-- Salvataggio impostazione auto_switch_music su NVS.
-
-## [0.1.35] - Smart Screen 128 - 2026-09-17
-### Added
-- Timeout automatico di inattivita 5 minuti per ritorno da Vista Musica a Vista Orologio.
-
-## [0.1.34] - Smart Screen 128 - 2026-09-17
-### Changed
-- Schermata di default impostata su Vista 02 (Orologio + Meteo) all'avvio, al ripristino post-FOTA e come fallback predefinito del sistema.
-
-## [0.1.33] - Smart Screen 128 - 2026-09-17
-### Changed
-- Rimozione totale di qualsiasi etichetta testuale di stato e dicitura dai processi di download FOTA: presente unicamente la corona circolare con percentuale al centro su sfondo #08080E.
-- Reset NVS assigned ID su timeout di comunicazione con il master.
-
-## [0.1.32] - Smart Screen 128 - 2026-09-17
-### Changed
-- Rimozione del testo di stato durante il download FOTA: interfaccia essenziale con sola corona circolare e percentuale centrata.
-
-## [0.1.31] - Smart Screen 128 - 2026-09-17
-### Fixed
-- Risolto problema dello sfondo grigio sulle animazioni meteo grazie al passaggio al formato con canale alpha nativo LV_IMG_CF_TRUE_COLOR_ALPHA.
-- Risolto mancato avanzamento percentuale sullo schermo durante il FOTA del modulo Smart Screen: avanzamento in tempo reale direttamente dal task di download.
-- Ottimizzazione memoria: deallocazione dinamica del buffer copertina (+64.8 KB di heap interno libero).
-
-## [0.1.30] - Smart Screen 128 - 2026-09-17
-### Added
-- Motore di micro-animazioni grafiche per le condizioni meteo (respiro zoom del sole, deriva fluttuante della nuvola, caduta ritmica pioggia, scarica lampo temporale, danza neve).
-- Orologio con respiro d'opacitÃ  del separatore ":" a ritmo di 1s.
-- Standby a respiro perimetrale e avanzamento fluido traccia su Music View.
-- Entrata a molla ("overshoot drop") dei popup di notifica.
-
-## [0.1.29] - Smart Screen 128 - 2026-09-17
-### Added
-- Set completo di icone meteo grafiche standard 24x24 px su LVGL: Sole dorato, Nuvola volumetrica, Pioggia con gocce azzurre, Temporale con fulmine giallo, Neve con fiocchi bianchi.
-- Eliminato il sole colorato di grigio in caso di cielo nuvoloso.
-
-## [0.1.84] - Environmental Monitor - 2026-09-16
-### Added
-- Integrazione completa del nuovo driver nativo Waveshare 2.9" (G) a 4 colori (Nero, Bianco, Giallo, Rosso + Verde con retinatura ottica 75% Giallo / 25% Nero).
-- Supporto connettore FPC Pin 4..15 con segnali contigui: BUSY (GPIO 18), SCL (GPIO 5), SDA (GPIO 17), RST (GPIO 16), DIN (GPIO 22), CLK (GPIO 23), CS (GPIO 15), DC (GPIO 4), 3V3 (Pin 12-13) e GND (Pin 15).
-- Unificazione dinamica della schermata Air Quality (Viste 1 e 3) parametrizzata sui livelli 1 (Excellent - Verde), 2 (Fair/OK - Giallo) e 3 (Poor/Bad - Rosso).
-- Visualizzazione rigorosamente legata ai dati reali dei sensori ENS160 + AHT21 (nessun dato fittizio / mock). Se il sensore non risponde compare "--.-" / "NO SENSOR".
-- Selezione dinamica delle schermate da remoto via bus I2C (CMD_SCREEN_SET_VIEW e CMD_SCREEN_GET_VIEW) con vista predefinita di avvio impostata su Screen 1 (Home).
-
-## [0.1.91] - Base - 2026-09-10
-### Fixed
-- Risolto blocco dello schermo sulla schermata FOTA: ripristino automatico della vista display prima del riavvio Base e auto-recovery su polling.
-- Corretta gestione invio frame CMD_SCREEN_SET_VIEW eliminando l'attesa di risposta non prevista dallo slave.
-
-## [0.1.28] - Smart Screen 128 - 2026-09-10
-### Fixed
-- Timer di sicurezza e auto-revert (4s su completamento 100%, 25s di timeout) sulla Vista 08 (FOTA) per evitare display bloccato.
-- Gestione corretta dell'aggiornamento dinamico di data, ora e meteo in tempo reale su Vista 02.
-- Sostituzione delle notifiche statiche con pop-up overlay temporanei universali su lv_layer_top.
-
-## [0.1.90] - Base - 2026-09-10
-### Fixed
-- Corretto bug del ciclo di sincronizzazione dell'orologio e meteo su Vista 02 del display.
-- Aggiunto comando SET_DISPLAY_DATETIME per sincronizzazione istantanea da smartphone.
-- Cache persistente meteo su Base per aggiornamento display affidabile e continuo.
-
-## [0.1.27] - Smart Screen 128 - 2026-09-10
-### Added
-- Vista 02 Orologio + Meteo con dati reali e sincronizzazione automatica NTP.
-- Pop-up notifiche interattive su overlay (lv_layer_top) con badge applicativi (WhatsApp, Gmail, ecc.).
-- Gestione dedicata Vista 08 per FOTA con avanzamento progressivo e ripristino automatico.
-### Changed
-- Ristrette le schermate selezionabili da utente esclusivamente alle Viste 01 e 02.
-
-## [0.1.89] - Base - 2026-09-10
-### Added
-- SNTP Client con timezone Roma per sincronizzazione orologio schermo in tempo reale.
-- Gestione comandi WebSocket SET_DISPLAY_WEATHER e SEND_POPUP_NOTIFICATION.
-- Coordinamento automatico della Vista 08 (FOTA) su display durante gli aggiornamenti firmware.
-
-## [0.1.26] - Smart Screen 128 - 2026-09-10
-### Fixed
-- Auto-ripristino e riavvio dopo fallimento FOTA per ripristinare la normale schermata display.
-- Integrazione completa viste 02, 06, 08.
-
-## [0.1.88] - Base - 2026-09-10
-### Added
-- Allineamento esatto motore copertine iTunes con Smart Filter dell'App.
-
-## [0.1.25] - Smart Screen 128 - 2026-09-10
-### Added
-- Schermata 02: Orologio + Meteo (Ora 48px, Data, icona Sole #F4C95D, temp 18Ã‚Â°, Soleggiato, 12Ã‚Â°/22Ã‚Â°, Torino).
-- Schermata 06: Notifiche (WhatsApp, Gmail, Calendario con badge colorati, testi, orari e paginazione).
-- Schermata 08: Aggiornamento OTA (Ghiera circolare celeste #4CC9F0, percentuale 68%, info MB e FW version).
-- Supporto a tutte le viste da comando I2C CMD_SCREEN_SET_VIEW.
-
 # Changelog
 
 All notable changes to Modulo firmware will be documented in this file, structured by software component.
@@ -224,6 +5,61 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.101] - 2026-09-23
+### Added
+- Animazioni LED anello Base per notifiche in arrivo (Blink e Swipe rotante) con colore ed effetto configurabili.
+- Gestione comandi SET_SCREEN_POWER e SET_SCREEN_WAKE_ON_NOTIF con sincronizzazione broadcast WebSocket.
+- Instradamento automatico notifiche allo Smart Screen collegato.
+
+### [0.1.100] - 2026-09-18
+### Changed
+- Memorizzazione e ripristino della specifica vista orologio scelta dall'utente (Digitale o Analogico) dopo la fine della riproduzione musicale.
+
+### [0.1.99] - 2026-09-18
+### Changed
+- Implementata persistenza vista display: quando l'utente seleziona manualmente una vista dall'app, il display rimane stabilmente su quella vista senza forzare il ritorno all'orologio dopo inattivitÃ  audio.
+
+### [0.1.98] - 2026-09-17
+### Fixed
+- Recupero automatico moduli slave orfani (Smart Screen) tramite scansione periodica CMD_GET_INFO con PROTO_BROADCAST_ID.
+- Aumentato timeout di offline nel registry a 24h per evitare drop dei moduli dopo reboot della Base.
+- Sincronizzazione timing I2C master/slave con retry read per accomodare la latenza di rendering LVGL.
+- Scansione diagnostica hardware periodica (i2c_master_probe).
+
+### [0.1.97] - 2026-09-17
+### Fixed
+- Recupero automatico moduli slave orfani (Smart Screen) gia presenti sul bus I2C tramite scansione periodica CMD_GET_INFO.
+- Aumentato timeout di offline nel registry a 24h per evitare drop dei moduli dopo reboot della Base.
+- Sincronizzazione timing I2C master/slave per evitare svuotamento anticipato del buffer di trasmissione slave.
+
+### [0.1.96] - 2026-09-17
+### Added
+- Commutazione automatica a Vista Musica all'avvio della riproduzione audio con switch configurabile via App.
+- Ritorno automatico a Vista Orologio dopo 5 minuti di inattivita musicale.
+- Salvataggio impostazione auto_switch_music su NVS.
+
+### [0.1.91] - 2026-09-10
+### Fixed
+- Risolto blocco dello schermo sulla schermata FOTA: ripristino automatico della vista display prima del riavvio Base e auto-recovery su polling.
+- Corretta gestione invio frame CMD_SCREEN_SET_VIEW eliminando l'attesa di risposta non prevista dallo slave.
+
+### [0.1.90] - 2026-09-10
+### Fixed
+- Corretto bug del ciclo di sincronizzazione dell'orologio e meteo su Vista 02 del display.
+- Aggiunto comando SET_DISPLAY_DATETIME per sincronizzazione istantanea da smartphone.
+- Cache persistente meteo su Base per aggiornamento display affidabile e continuo.
+
+### [0.1.89] - 2026-09-10
+### Added
+- SNTP Client con timezone Roma per sincronizzazione orologio schermo in tempo reale.
+- Gestione comandi WebSocket SET_DISPLAY_WEATHER e SEND_POPUP_NOTIFICATION.
+- Coordinamento automatico della Vista 08 (FOTA) su display durante gli aggiornamenti firmware.
+
+### [0.1.88] - 2026-09-10
+### Added
+- Allineamento esatto motore copertine iTunes con Smart Filter dell'App.
+
+
 ### [0.1.93] - Fix I2C Discovery Legacy CRC Fallback & Unknown Module Display Mapping
 - Risolto il blocco della discovery I2C per slave con firmware legacy: la Base ora valida anche frame con CRC calcolato su header (0x69).
 - Modulo slave con ID 0x00 ora mappato correttamente su Display (Smart Screen) per consentire FOTA.
@@ -615,6 +451,53 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Environmental Monitor
+### [0.1.94] - 2026-09-21
+### Fixed
+- Rimossa la rotazione automatica ogni 60s: il display rimane sulla schermata selezionata.
+- Aggiornamento periodico impostato a 5 minuti (300s) oppure istantaneo al cambio di soglia colore AQI.
+- Risolta lettura dati sensore ENS160 (supporto aria pulita TVOC = 0 ppb, baseline eCO2 400 ppm, recupero STATAS).
+- Stabilizzata compensazione T/H ogni 30s.
+
+### [0.1.90] - 2026-09-21
+### Added
+- Firmware diagnostico: toggling RST (GPIO 16) ogni 2s per verifica multimetro.
+- Scansione I2C master automatica su GPIO 17 (SDA) e GPIO 5 (SCL).
+- Lettura telemetrica in tempo reale dello stato logico di tutti i pin su connettore FPC 15 pin.
+
+### [0.1.89] - 2026-09-18
+### Fixed
+- Ripristinata mappatura fisica connettore FPC 15 pin (PINOUT_EINK_SENSORI.md): BUSY=18, RST=16, DC=4, CS=15, CLK=23, DIN=22, SDA=17, SCL=5.
+- Risolto spegnimento prematuro (100ms) del display prima del completamento dell'aggiornamento chimico: garantiti 12 secondi continui di booster ad alta tensione.
+- Rimossa configurazione pull-down conflittuale con la resistenza hardware R8 (4.7k) su scheda madre.
+
+### [0.1.88] - 2026-09-18
+### Fixed
+- Risolto conflitto e mappatura pin GPIO per display e-paper e sensori ambientali: ripristinati i pin hardware corretti (BUSY=4, RST=16, DC=17, CS=5, CLK=18, DIN=23, SDA=21, SCL=22).
+- Corretto stato pull-down sul pin BUSY (GPIO 4) eliminando i timeout di refresh.
+- 6 Schermate ufficiali Arduino Test_2in9_G.ino attive e cicliche ogni 60s.
+
+### [0.1.86] - 2026-09-18
+### Fixed
+- Corretta la polarita' del pin BUSY per il pannello Waveshare 2.9" (G) (LOW=Occupato, HIGH=Pronto).
+- Aggiunta la sequenza completa di registri di configurazione hardware e risoluzione 128x296 (comando 0x61).
+- Implementato driver SPI bit-banging con massima forza di pilotaggio (GPIO_DRIVE_CAP_3) attraverso connettore FPC 15 pin.
+
+### [0.1.85] - 2026-09-18
+### Added
+- Driver hardware e-Paper Waveshare 2.9" (G) 4-colori (Nero, Bianco, Giallo, Rosso e retinatura ottica per il verde).
+- 5 Viste E-Paper integrate: Home, Air Quality, Comfort, Detailed e Screensaver (pianta vettoriale).
+- Acquisizione sensori I2C Master ENS160 (TVOC, eCO2, AQI) e AHT21 (Temperatura, Umidita') su connettore FPC 15-pin.
+- Aggiornamento periodico display e refresh immediato su comando I2C dalla Base / App.
+
+### [0.1.84] - 2026-09-16
+### Added
+- Integrazione completa del nuovo driver nativo Waveshare 2.9" (G) a 4 colori (Nero, Bianco, Giallo, Rosso + Verde con retinatura ottica 75% Giallo / 25% Nero).
+- Supporto connettore FPC Pin 4..15 con segnali contigui: BUSY (GPIO 18), SCL (GPIO 5), SDA (GPIO 17), RST (GPIO 16), DIN (GPIO 22), CLK (GPIO 23), CS (GPIO 15), DC (GPIO 4), 3V3 (Pin 12-13) e GND (Pin 15).
+- Unificazione dinamica della schermata Air Quality (Viste 1 e 3) parametrizzata sui livelli 1 (Excellent - Verde), 2 (Fair/OK - Giallo) e 3 (Poor/Bad - Rosso).
+- Visualizzazione rigorosamente legata ai dati reali dei sensori ENS160 + AHT21 (nessun dato fittizio / mock). Se il sensore non risponde compare "--.-" / "NO SENSOR".
+- Selezione dinamica delle schermate da remoto via bus I2C (CMD_SCREEN_SET_VIEW e CMD_SCREEN_GET_VIEW) con vista predefinita di avvio impostata su Screen 1 (Home).
+
+
 
 ### [0.1.74] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-07-23
 - **Restored HTTPS Certificate Bundle for FOTA**: Restored `.crt_bundle_attach = esp_crt_bundle_attach` in `slave_ota_task`'s HTTP configuration. This was accidentally omitted in `0.1.71` during buffer configurations, which caused HTTPS handshakes with the GitHub release server to fail and abort all FOTA updates.
@@ -788,6 +671,133 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.45] - 2026-09-23
+### Added
+- Icone grafiche dedicate ad alta risoluzione (TrueColorAlpha 20x20 e 32x32) per tutte le principali applicazioni: WhatsApp, Telegram, Gmail, Instagram, Messenger, Chiamate, SMS e Calendario.
+- Supporto unificato delle icone nei popup a tutto schermo e nei badge sui quadranti orologio digitale e analogico.
+
+### [0.1.44] - 2026-09-23
+### Added
+- Animazione in dissolvenza morbida (Fade In / Fade Out a 350ms) per comparsa e scomparsa popup notifiche.
+- Sincronizzazione cancellazione notifiche smartphone: azzeramento istantaneo badge e popup su rimozione notifica da Android.
+
+### Fixed
+- Risolto blocco controller LCD GC9A01 sostituendo disp_on_off con gestione diretta e sicura del Backlight GPIO 21.
+- Filtraggio anti-rumore e cooldown su pulsante/touch fisico.
+
+### [0.1.43] - 2026-09-23
+### Added
+- Spegnimento display universale da pulsante/touch GPIO 32 e da remoto via CMD_SCREEN_SET_POWER.
+- Popup notifica a pieno quadrante stile Now Playing (sfondo #16161D, bordo accentuato da 5px).
+- Timeout default popup esteso a 9 secondi.
+- Icona TrueColorAlpha ufficiale WhatsApp con fumetto e baffetto distintivo rispetto alla chiamata vocale.
+
+### [0.1.42] - 2026-09-23
+### Added
+- Sensore touch capacitivo su GPIO 32 (I2S_SDATA) per accendere/spegnere display e retroilluminazione.
+- Gestione configurabile accensione schermo su notifica con salvataggio in NVS (CMD 0x58).
+- Controllo alimentazione display via I2C (CMD 0x57).
+- Badge e popup Telegram con colore ufficiale #2AABEE e lettera 'T'.
+- Posizionamento popup notifica nella metÃ  inferiore del display circolare.
+
+### [0.1.41] - 2026-09-23
+### Added
+- Badge notifiche reali dinamici su Vista 02 (Orologio Digitale + Meteo) e Vista 03 (Orologio Analogico).
+- Supporto al comando di cancellazione notifiche per ripulire i quadranti dai badge.
+
+### [0.1.39] - 2026-09-18
+### Changed
+- Rimosso watchdog 30s locale che riportava forzatamente su orologio digitale.
+- Salvataggio vista orologio preferita in NVS (Digitale o Analogico).
+
+### [0.1.38] - 2026-09-18
+### Changed
+- Uniformata la schermata di aggiornamento firmware al design brand Modulo (deep blue #002B70).
+- Rimossa logica di auto-revert locale per consentire selezione permanente della vista dall'app.
+
+### [0.1.37] - 2026-09-18
+### Added
+- Nuova Vista 03: Orologio Analogico Minimal di lusso.
+- Lancetta dei secondi a scorrimento ultra-fluido (40 FPS, sweep continuo).
+- Tacche perimetrali a 60 divisioni senza numeri numerici.
+- Widget data maiuscola, meteo compatto e 3 badge notifiche (WhatsApp, Gmail, Telegram).
+- Posizione GPS in basso e rimozione indicatori di paginazione.
+
+### [0.1.36] - 2026-09-17
+### Added
+- Watchdog multimediale (20s) per intercettare fine o interruzione streaming.
+- Fallback di sicurezza assoluto (5 min) per ritorno garantito da Vista Musica a Vista Orologio.
+- Ripristino Vista Orologio dopo 30s di assenza comunicazioni master I2C.
+- Preservazione persistente indirizzo I2C e NVS per prevenire disconnessioni dello slave.
+
+### [0.1.35] - 2026-09-17
+### Added
+- Timeout automatico di inattivita 5 minuti per ritorno da Vista Musica a Vista Orologio.
+
+### [0.1.34] - 2026-09-17
+### Changed
+- Schermata di default impostata su Vista 02 (Orologio + Meteo) all'avvio, al ripristino post-FOTA e come fallback predefinito del sistema.
+
+### [0.1.33] - 2026-09-17
+### Changed
+- Rimozione totale di qualsiasi etichetta testuale di stato e dicitura dai processi di download FOTA: presente unicamente la corona circolare con percentuale al centro su sfondo #08080E.
+- Reset NVS assigned ID su timeout di comunicazione con il master.
+
+### [0.1.32] - 2026-09-17
+### Changed
+- Rimozione del testo di stato durante il download FOTA: interfaccia essenziale con sola corona circolare e percentuale centrata.
+
+### [0.1.31] - 2026-09-17
+### Fixed
+- Risolto problema dello sfondo grigio sulle animazioni meteo grazie al passaggio al formato con canale alpha nativo LV_IMG_CF_TRUE_COLOR_ALPHA.
+- Risolto mancato avanzamento percentuale sullo schermo durante il FOTA del modulo Smart Screen: avanzamento in tempo reale direttamente dal task di download.
+- Ottimizzazione memoria: deallocazione dinamica del buffer copertina (+64.8 KB di heap interno libero).
+
+### [0.1.30] - 2026-09-17
+### Added
+- Motore di micro-animazioni grafiche per le condizioni meteo (respiro zoom del sole, deriva fluttuante della nuvola, caduta ritmica pioggia, scarica lampo temporale, danza neve).
+- Orologio con respiro d'opacitÃ  del separatore ":" a ritmo di 1s.
+- Standby a respiro perimetrale e avanzamento fluido traccia su Music View.
+- Entrata a molla ("overshoot drop") dei popup di notifica.
+
+### [0.1.29] - 2026-09-17
+### Added
+- Set completo di icone meteo grafiche standard 24x24 px su LVGL: Sole dorato, Nuvola volumetrica, Pioggia con gocce azzurre, Temporale con fulmine giallo, Neve con fiocchi bianchi.
+- Eliminato il sole colorato di grigio in caso di cielo nuvoloso.
+
+### [0.1.28] - 2026-09-10
+### Fixed
+- Timer di sicurezza e auto-revert (4s su completamento 100%, 25s di timeout) sulla Vista 08 (FOTA) per evitare display bloccato.
+- Gestione corretta dell'aggiornamento dinamico di data, ora e meteo in tempo reale su Vista 02.
+- Sostituzione delle notifiche statiche con pop-up overlay temporanei universali su lv_layer_top.
+
+### [0.1.27] - 2026-09-10
+### Added
+- Vista 02 Orologio + Meteo con dati reali e sincronizzazione automatica NTP.
+- Pop-up notifiche interattive su overlay (lv_layer_top) con badge applicativi (WhatsApp, Gmail, ecc.).
+- Gestione dedicata Vista 08 per FOTA con avanzamento progressivo e ripristino automatico.
+### Changed
+- Ristrette le schermate selezionabili da utente esclusivamente alle Viste 01 e 02.
+
+### [0.1.26] - 2026-09-10
+### Fixed
+- Auto-ripristino e riavvio dopo fallimento FOTA per ripristinare la normale schermata display.
+- Integrazione completa viste 02, 06, 08.
+
+### [0.1.25] - 2026-09-10
+### Added
+- Schermata 02: Orologio + Meteo (Ora 48px, Data, icona Sole #F4C95D, temp 18Ã‚Â°, Soleggiato, 12Ã‚Â°/22Ã‚Â°, Torino).
+- Schermata 06: Notifiche (WhatsApp, Gmail, Calendario con badge colorati, testi, orari e paginazione).
+- Schermata 08: Aggiornamento OTA (Ghiera circolare celeste #4CC9F0, percentuale 68%, info MB e FW version).
+- Supporto a tutte le viste da comando I2C CMD_SCREEN_SET_VIEW.
+
+# Changelog
+
+All notable changes to Modulo firmware will be documented in this file, structured by software component.
+
+---
+
+
 ### [0.1.24] - Corona a Bordo Display, Schermo Nero Idle e Inversione Play/Pause
 - Posizionata la corona di avanzamento sul perimetro esterno del display circolare (240x240 px).
 - Invertito l'indicatore Play/Pause come visualizzatore di stato (ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¶ in riproduzione, ÃƒÂ¢Ã‚ÂÃ‚Â¸ in pausa).
@@ -938,70 +948,3 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
