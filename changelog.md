@@ -1,4 +1,12 @@
-﻿## v0.1.46 - 2026-09-24
+﻿## v0.1.102 - 2026-09-24
+
+### Base Firmware (v0.1.102)
+- Aggiunti endpoint HTTP POST (/api/notification e /api/command) per ricezione notifiche affidabile da background service Android.
+- Gestione comando CLEAR_NOTIFICATIONS per pulizia badge e popup da display.
+- Timeout ritorno schermata musica ridotto a 1 minuto (60 secondi) di inattivitÃ .
+- Persistenza meteo e localita in NVS per sincronizzazione immediata del modulo Smart Screen.
+- Gestione animazioni LED Base (Blink/Swipe) per notifiche e controllo ON/OFF alimentazione schermo.
+## v0.1.46 - 2026-09-24
 
 ### Smart Screen 128 (v0.1.46)
 - Sanitizzazione automatica del testo con supporto traslitterazione caratteri nordici/accentati ('Ã¥' in Maneskin) ed emoji.
@@ -955,4 +963,5 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
