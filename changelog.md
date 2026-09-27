@@ -1,4 +1,11 @@
-﻿## v0.1.50 - 2026-09-27
+﻿## v0.1.105 - 2026-09-27
+
+### Base Firmware (v0.1.105)
+- Risoluzione crash riavvio Base: incremento stack HTTP/WS server a 10KB e rimozione comando I2C ridondante.
+- Animazione LED dinamica ad anello: fade-out continuo sui 12 LED in parallelo e respiro in pausa solo sui LED attivi.
+- Ripresa automatica della riproduzione musicale sullo speaker al termine o stop del Pomodoro.
+- Supporto a durate personalizzate del Pomodoro via comando.
+## v0.1.50 - 2026-09-27
 
 ### Smart Screen 128 (v0.1.50)
 - Risoluzione blocco FOTA: eliminazione redirect HTTP 302 con passaggio a URL diretto raw.
@@ -1005,6 +1012,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
