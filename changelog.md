@@ -1,4 +1,9 @@
-﻿## v0.1.49 - 2026-09-27
+﻿## v0.1.104 - 2026-09-27
+
+### Base Firmware (v0.1.104)
+- Estensione PROTO_MAX_PAYLOAD a 64 byte nel protocollo I2C.
+- Aumento limiti titolo (24 byte) e messaggio (56 byte) per supportare la visualizzazione su due righe negli schermi slave.
+## v0.1.49 - 2026-09-27
 
 ### Smart Screen 128 (v0.1.49)
 - Supporto visualizzazione notifiche su due righe (LV_LABEL_LONG_WRAP, larghezza 196px).
@@ -992,6 +997,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
