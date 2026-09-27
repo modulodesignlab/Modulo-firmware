@@ -1,4 +1,10 @@
-﻿## [0.1.95] - Environmental Monitor - 2026-09-27
+﻿## v0.1.48 - 2026-09-27
+
+### Smart Screen 128 (v0.1.48)
+- Aggiunta schermata e funzionalita Pomodoro Time (quadrante 2 con timer centrale, progress knob, icona pomodoro, break indicator e session counter).
+- Timer 1Hz autonomo con transizione automatica Focus/Pausa e ritorno a orologio al termine.
+- Sincronizzazione comandi I2C (START/PAUSE/STOP/SYNC) con la Base Station.
+## [0.1.95] - Environmental Monitor - 2026-09-27
 ### Added
 - Boot splash screen con logo ufficiale Modulo su display E-Paper 4-colori visualizzato per 8 secondi ad ogni accensione.
 - Transizione fluida alla schermata Home dopo la fase iniziale di warm-up sensori.
@@ -972,6 +978,7 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
 
