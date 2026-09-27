@@ -1,4 +1,9 @@
-﻿## v0.1.102 - 2026-09-24
+﻿## v0.1.47 - 2026-09-27
+
+### Smart Screen 128 (v0.1.47)
+- Splash screen con logo ufficiale Modulo a 4 colori e testi brand visualizzato per 5 secondi ad ogni accensione.
+- Transizione automatica alla vista orologio preferita dopo il timeout.
+## v0.1.102 - 2026-09-24
 
 ### Base Firmware (v0.1.102)
 - Aggiunti endpoint HTTP POST (/api/notification e /api/command) per ricezione notifiche affidabile da background service Android.
@@ -963,5 +968,6 @@ All notable changes to Modulo firmware will be documented in this file, structur
 
 ### [0.1.2] ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â 2026-06-10
 - Deferred NVS flash writes.
+
 
 
