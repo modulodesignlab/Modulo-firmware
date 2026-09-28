@@ -1,4 +1,8 @@
-﻿## v0.1.112 - 2026-09-28
+﻿## v0.1.113 - 2026-09-28
+
+### Base Firmware (v0.1.113)
+- Nuova Modalità Notte: fascia oraria configurabile da app in cui spegnere LED, schermi e/o silenziare le notifiche (comando SET_NIGHT_MODE).
+## v0.1.112 - 2026-09-28
 
 ### Base Firmware (v0.1.112)
 - Diagnostica: causa dell'ultimo riavvio esposta nel pacchetto di stato (`system.reset_reason`).
