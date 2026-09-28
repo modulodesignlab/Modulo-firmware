@@ -1,4 +1,8 @@
-﻿## v0.1.96 - 2026-09-28
+﻿## v0.1.112 - 2026-09-28
+
+### Base Firmware (v0.1.112)
+- Diagnostica: causa dell'ultimo riavvio esposta nel pacchetto di stato (`system.reset_reason`).
+## v0.1.96 - 2026-09-28
 
 ### Environmental Monitor (v0.1.96)
 - Fix eCO2/TVOC: l'ENS160 non viene più resettato ad ogni lettura (controllo OPMODE invece di STATAS, lettura solo con NEWDAT).
