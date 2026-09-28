@@ -1,4 +1,8 @@
-﻿## v0.1.114 - 2026-09-28
+﻿## v0.1.51 - 2026-09-28
+
+### Smart Screen 128 (v0.1.51)
+- Icona meteo animata (sole, nuvole, pioggia, temporale, neve) anche nella vista Orologio Analogico.
+## v0.1.114 - 2026-09-28
 
 ### Base Firmware (v0.1.114)
 - Copertine Smart Screen: trasferimento ~10x più veloce (chunk 60 B, 3 ms), nessuna ritrasmissione ogni 10 s.
