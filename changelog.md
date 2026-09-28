@@ -1,4 +1,10 @@
-﻿## v0.1.106 - 2026-09-28
+﻿## v0.1.110 - 2026-09-28
+
+### Base Firmware (v0.1.110)
+- Countdown LED Pomodoro sulla mappatura fisica reale delle due file (coppie simmetriche, 6 passi) con dissolvenza a correzione gamma.
+- In pausa e nella pausa tra le sessioni i LED tornano allo stato normale e le notifiche tornano attive (DND solo durante il focus).
+- Animazione notifiche Swipe sul percorso fisico ad anello con scia sfumata.
+## v0.1.106 - 2026-09-28
 
 ### Base Firmware (v0.1.106)
 - Timer Pomodoro basato sul tempo reale (esp_timer) e task broker a periodo fisso (vTaskDelayUntil): elimina il rallentamento del ~5% rispetto allo Smart Screen.
