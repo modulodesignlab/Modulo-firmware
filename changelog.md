@@ -1,4 +1,9 @@
-﻿## v0.1.105 - 2026-09-27
+﻿## v0.1.106 - 2026-09-28
+
+### Base Firmware (v0.1.106)
+- Timer Pomodoro basato sul tempo reale (esp_timer) e task broker a periodo fisso (vTaskDelayUntil): elimina il rallentamento del ~5% rispetto allo Smart Screen.
+- Risincronizzazione periodica (ogni 10 s) del tempo rimanente verso gli Smart Screen via SUB_POMODORO_SYNC, con reinvio di START al cambio fase Focus/Pausa.
+## v0.1.105 - 2026-09-27
 
 ### Base Firmware (v0.1.105)
 - Risoluzione crash riavvio Base: incremento stack HTTP/WS server a 10KB e rimozione comando I2C ridondante.
