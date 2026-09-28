@@ -1,4 +1,8 @@
-﻿## v0.1.110 - 2026-09-28
+﻿## v0.1.111 - 2026-09-28
+
+### Base Firmware (v0.1.111)
+- In pausa manuale del Pomodoro i LED ancora accesi fanno un effetto respiro nel colore Pomodoro; tra le sessioni restano nello stato normale.
+## v0.1.110 - 2026-09-28
 
 ### Base Firmware (v0.1.110)
 - Countdown LED Pomodoro sulla mappatura fisica reale delle due file (coppie simmetriche, 6 passi) con dissolvenza a correzione gamma.
