@@ -1,4 +1,8 @@
-﻿## v0.1.51 - 2026-09-28
+﻿## v0.1.52 - 2026-09-28
+
+### Smart Screen 128 (v0.1.52)
+- Fix Orologio Analogico: la lancetta dei minuti non torna più indietro quando i secondi superano il minuto dopo la sincronizzazione dell'orario.
+## v0.1.51 - 2026-09-28
 
 ### Smart Screen 128 (v0.1.51)
 - Icona meteo animata (sole, nuvole, pioggia, temporale, neve) anche nella vista Orologio Analogico.
