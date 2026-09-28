@@ -1,4 +1,9 @@
-﻿## v0.1.111 - 2026-09-28
+﻿## v0.1.96 - 2026-09-28
+
+### Environmental Monitor (v0.1.96)
+- Fix eCO2/TVOC: l'ENS160 non viene più resettato ad ogni lettura (controllo OPMODE invece di STATAS, lettura solo con NEWDAT).
+- Calibrazione AHT21: offset −1,8 °C e −3 %RH rispetto a sensore di riferimento; compensazione ENS160 con valori calibrati.
+## v0.1.111 - 2026-09-28
 
 ### Base Firmware (v0.1.111)
 - In pausa manuale del Pomodoro i LED ancora accesi fanno un effetto respiro nel colore Pomodoro; tra le sessioni restano nello stato normale.
