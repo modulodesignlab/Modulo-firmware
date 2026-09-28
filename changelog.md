@@ -1,4 +1,9 @@
-﻿## v0.1.113 - 2026-09-28
+﻿## v0.1.114 - 2026-09-28
+
+### Base Firmware (v0.1.114)
+- Copertine Smart Screen: trasferimento ~10x più veloce (chunk 60 B, 3 ms), nessuna ritrasmissione ogni 10 s.
+- Ricerca copertina basata sull'album AVRCP e su punteggio (artista/titolo esatti, album originale), allineata all'app.
+## v0.1.113 - 2026-09-28
 
 ### Base Firmware (v0.1.113)
 - Nuova Modalità Notte: fascia oraria configurabile da app in cui spegnere LED, schermi e/o silenziare le notifiche (comando SET_NIGHT_MODE).
