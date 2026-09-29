@@ -1,4 +1,8 @@
-﻿## v0.1.115 - 2026-09-29
+﻿## v0.1.53 - 2026-09-29
+
+### Smart Screen 128 (v0.1.53)
+- Interfaccia del display in inglese: giorni e mesi, condizioni meteo, Pomodoro (FOCUS/BREAK, sessions), popup notifiche e schermata di aggiornamento.
+## v0.1.115 - 2026-09-29
 
 ### Base Firmware (v0.1.115)
 - Diagnostica crash: causa, task, PC e backtrace dell'ultimo crash salvati e disponibili in `system.last_crash`.
