@@ -1,4 +1,8 @@
-﻿## v0.1.99 - 2026-09-29
+﻿## v0.1.115 - 2026-09-29
+
+### Base Firmware (v0.1.115)
+- Diagnostica crash: causa, task, PC e backtrace dell'ultimo crash salvati e disponibili in `system.last_crash`.
+## v0.1.99 - 2026-09-29
 
 ### Environmental Monitor (v0.1.99)
 - Calibrazione AHT21 (−1,8 °C, −3 %RH) e compensazione ENS160 con valori calibrati.
