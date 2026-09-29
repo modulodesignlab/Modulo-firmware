@@ -1,4 +1,13 @@
-﻿## v0.1.52 - 2026-09-28
+﻿## v0.1.99 - 2026-09-29
+
+### Environmental Monitor (v0.1.99)
+- Calibrazione AHT21 (−1,8 °C, −3 %RH) e compensazione ENS160 con valori calibrati.
+- ENS160: niente più reset ad ogni lettura, avvio minimo IDLE → STANDARD, lettura solo con NEWDAT, diagnostica OPMODE.
+- Versione firmware riportata correttamente alla Base.
+
+### Smart Screen 128 (v0.1.52, rebuild)
+- Il modulo riporta correttamente la propria versione firmware alla Base (0.1.52).
+## v0.1.52 - 2026-09-28
 
 ### Smart Screen 128 (v0.1.52)
 - Fix Orologio Analogico: la lancetta dei minuti non torna più indietro quando i secondi superano il minuto dopo la sincronizzazione dell'orario.

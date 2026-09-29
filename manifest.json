@@ -13,16 +13,16 @@
                                                 "sha256":  "8b21d9642f1811ecf5ec11a73900cca135e4ffbf77f4118ea8ac52dae0ac8545"
                                             },
                       "environmental_monitor":  {
-                                                    "version":  "0.1.96",
+                                                    "version":  "0.1.99",
                                                     "minimum_base_version":  "0.1.56",
-                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.96/environmental_monitor.bin",
-                                                    "sha256":  "64539deee38ead80ce5ee53e52127dab577cc0eabe41490bbd8d4e2ad4e9dedf"
+                                                    "url":  "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.99/environmental_monitor.bin",
+                                                    "sha256":  "1bdbb1328594ac15207075699b7a929208c29ba3479ea42ed22fb27ef2f4bd2e"
                                                 },
                       "smart_screen_128":  {
                                                "version":  "0.1.52",
                                                "minimum_base_version":  "0.1.6",
                                                "url":  "https://raw.githubusercontent.com/modulodesignlab/Modulo-firmware/main/releases/smart_screen_128.bin",
-                                               "sha256":  "ece1dca3ba8a8ef1a567c36b59ef6e8ad4da92c43e5ded6441fc3ccad4852625"
+                                               "sha256":  "ca9ba259b21657516f6795ce07fd30bed90c2b2ead2dd93d774906bfa49027a4"
                                            },
                       "usb_c_charger":  {
                                             "version":  "0.1.6",
