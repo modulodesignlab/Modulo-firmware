@@ -1,4 +1,8 @@
-﻿## v0.1.104 - 2026-10-01
+﻿## v0.1.105 - 2026-10-01
+
+### Environmental Monitor (v0.1.105)
+- Display e-paper: icone delle misurazioni allineate a quelle dell'app (termometro, gocce, nuvola per eCO2, vento per TVOC, foglia per la qualità dell'aria).
+## v0.1.104 - 2026-10-01
 
 ### Environmental Monitor (v0.1.104)
 - Display e-paper: rimossa la barra superiore (logo MODULO e orologio) su tutte le schermate, contenuti ridistribuiti proporzionalmente.

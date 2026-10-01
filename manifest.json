@@ -13,10 +13,10 @@
       "sha256": "8b21d9642f1811ecf5ec11a73900cca135e4ffbf77f4118ea8ac52dae0ac8545"
     },
     "environmental_monitor": {
-      "version": "0.1.104",
+      "version": "0.1.105",
       "minimum_base_version": "0.1.56",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.104/environmental_monitor.bin",
-      "sha256": "759740edbb11a5b76f63bb78eaac578a5f3700c8411015cd471d3f32b9c411f6"
+      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.105/environmental_monitor.bin",
+      "sha256": "1e1ad2f63b6644e7c1eeba7aaac17c029735c49856eebcb06f08dfff51273596"
     },
     "smart_screen_128": {
       "version": "0.1.53",
