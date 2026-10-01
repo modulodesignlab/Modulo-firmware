@@ -1,4 +1,10 @@
-﻿## v0.1.53 - 2026-09-29
+﻿## v0.1.104 - 2026-10-01
+
+### Environmental Monitor (v0.1.104)
+- Display e-paper: rimossa la barra superiore (logo MODULO e orologio) su tutte le schermate, contenuti ridistribuiti proporzionalmente.
+- ENS160: avvio senza comando RESET (IDLE -> STANDARD), riavvio automatico della misura se non arrivano dati per 20 s.
+- Alimentazione 5V della scheda sensori fissa (prima PWM al 99,9%) con ciclo di spegnimento/accensione a ogni avvio del modulo.
+## v0.1.53 - 2026-09-29
 
 ### Smart Screen 128 (v0.1.53)
 - Interfaccia del display in inglese: giorni e mesi, condizioni meteo, Pomodoro (FOCUS/BREAK, sessions), popup notifiche e schermata di aggiornamento.
