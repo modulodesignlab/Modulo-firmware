@@ -1,4 +1,9 @@
-﻿## v0.1.8 - 2026-10-01
+﻿## v0.1.118 - 2026-10-01
+
+### Base Firmware (v0.1.118)
+- USB-PD: la Base richiede sempre 12V (necessari al Wireless Charger) e li verifica leggendo VBUS dai moduli. Una lettura mancante o non valida non fa più scendere la tensione a 9V/5V; il fallback avviene solo se l'alimentatore non fornisce davvero 12V.
+- Nuovi campi `system.pd_request_mv` e `system.pd_12v`: l'app avvisa se l'alimentatore non supporta i 12V.
+## v0.1.8 - 2026-10-01
 
 ### Wireless Charger (v0.1.8)
 - Stato LED letto in analogico (soglia 0,7 V con isteresi): funziona con uscite a 3,3 V, con il LED montato sul pad e con uscite a 5 V tramite partitore 10k/10k nel cablaggio. Tensioni lette riportate nel log ogni 10 s.
