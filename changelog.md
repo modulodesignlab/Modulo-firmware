@@ -1,4 +1,8 @@
-﻿## v0.1.119 - 2026-10-01
+﻿## v0.1.120 - 2026-10-01
+
+### Base Firmware (v0.1.120)
+- USB-PD: la Base mantiene sempre la richiesta a 12V. Rimosso il fallback a 9V/5V introdotto in 0.1.118, che si attivava per letture VBUS dei moduli non affidabili e abbassava il bus a 5V anche con alimentatori 12V.
+## v0.1.119 - 2026-10-01
 
 ### Base Firmware (v0.1.119)
 - Tensione del bus: la Base usa il valore massimo letto dai moduli (prima solo dal primo modulo, che poteva non avere il partitore VBUS e riportare valori bassi). Letture sotto 4,5 V scartate nella verifica dei 12V.
