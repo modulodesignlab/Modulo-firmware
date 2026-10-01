@@ -1,4 +1,9 @@
-﻿## v0.1.107 - 2026-10-01
+﻿## v0.1.119 - 2026-10-01
+
+### Base Firmware (v0.1.119)
+- Tensione del bus: la Base usa il valore massimo letto dai moduli (prima solo dal primo modulo, che poteva non avere il partitore VBUS e riportare valori bassi). Letture sotto 4,5 V scartate nella verifica dei 12V.
+- Nuovo campo `vbus_mv` per ogni modulo, per la diagnostica.
+## v0.1.107 - 2026-10-01
 
 ### Environmental Monitor (v0.1.107)
 - Tre nuove schermate e-paper che usano solo temperatura e umidita: Climate (data, trend 1h, punto di rugiada, barra comfort, min/max 24h, avvisi umido/secco/caldo/freddo), In / Out (confronto con il meteo esterno e consiglio sulle finestre), Last 24 hours (grafici con campione ogni 10 minuti).
