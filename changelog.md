@@ -1,4 +1,8 @@
-﻿## v0.1.106 - 2026-10-01
+﻿## v0.1.116 - 2026-10-01
+
+### Base Firmware (v0.1.116)
+- Corretto lo stack overflow del task I2C (i2c_mgr) che dopo alcune ore riavviava la Base: stack portato a 8 KB, margine minimo esposto in `system.i2c_stack_free`.
+## v0.1.106 - 2026-10-01
 
 ### Environmental Monitor (v0.1.106)
 - Screensaver e-paper selezionabile dall'app: foglia, tramonto alpino, faro di notte, colline toscane, arcade retrò. Le illustrazioni mostrano temperatura e umidità aggiornate; la scelta resta salvata sul modulo.
