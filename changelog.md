@@ -1,4 +1,11 @@
-﻿## v0.1.116 - 2026-10-01
+﻿## v0.1.117 - 2026-10-01
+
+### Base Firmware (v0.1.117)
+- Lettura dello stato del Wireless Charger e invio all'app (`charger.standby`, `charger.charging`).
+
+### Wireless Charger (v0.1.7)
+- Lettura dei due LED di stato della scheda di ricarica: IO32 (AUDIO pin 4) = standby/alimentato, IO33 (AUDIO pin 1) = in carica. Ingressi attivi alti 3,3 V con pull-down, filtro 1,5 s per i LED lampeggianti.
+## v0.1.116 - 2026-10-01
 
 ### Base Firmware (v0.1.116)
 - Corretto lo stack overflow del task I2C (i2c_mgr) che dopo alcune ore riavviava la Base: stack portato a 8 KB, margine minimo esposto in `system.i2c_stack_free`.
