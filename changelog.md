@@ -1,4 +1,8 @@
-﻿## v0.1.117 - 2026-10-01
+﻿## v0.1.8 - 2026-10-01
+
+### Wireless Charger (v0.1.8)
+- Stato LED letto in analogico (soglia 0,7 V con isteresi): funziona con uscite a 3,3 V, con il LED montato sul pad e con uscite a 5 V tramite partitore 10k/10k nel cablaggio. Tensioni lette riportate nel log ogni 10 s.
+## v0.1.117 - 2026-10-01
 
 ### Base Firmware (v0.1.117)
 - Lettura dello stato del Wireless Charger e invio all'app (`charger.standby`, `charger.charging`).

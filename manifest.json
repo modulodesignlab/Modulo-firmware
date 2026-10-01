@@ -31,10 +31,10 @@
       "sha256": "cfe2515acb3ffb5e392b0bf96f5bb1aea801ed157255d1ef7190f752c2a494b0"
     },
     "wireless_charger": {
-      "version": "0.1.7",
+      "version": "0.1.8",
       "minimum_base_version": "0.1.117",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/wcharge-v0.1.7/wireless_charger.bin",
-      "sha256": "d99e9f10ced2743e2d8858337037463ce875ee9f9cb279826ff31fca3365b022"
+      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/wcharge-v0.1.8/wireless_charger.bin",
+      "sha256": "58552a0feefc7e689d7d05389af750aac885f792ec417334958ea65b213ae0da"
     },
     "led_tower": {
       "version": "0.1.34",
