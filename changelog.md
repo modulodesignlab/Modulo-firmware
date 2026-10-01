@@ -1,4 +1,9 @@
-﻿## v0.1.118 - 2026-10-01
+﻿## v0.1.107 - 2026-10-01
+
+### Environmental Monitor (v0.1.107)
+- Tre nuove schermate e-paper che usano solo temperatura e umidita: Climate (data, trend 1h, punto di rugiada, barra comfort, min/max 24h, avvisi umido/secco/caldo/freddo), In / Out (confronto con il meteo esterno e consiglio sulle finestre), Last 24 hours (grafici con campione ogni 10 minuti).
+- Data/ora e meteo esterno ricevuti dall'app tramite la Base.
+## v0.1.118 - 2026-10-01
 
 ### Base Firmware (v0.1.118)
 - USB-PD: la Base richiede sempre 12V (necessari al Wireless Charger) e li verifica leggendo VBUS dai moduli. Una lettura mancante o non valida non fa più scendere la tensione a 9V/5V; il fallback avviene solo se l'alimentatore non fornisce davvero 12V.
