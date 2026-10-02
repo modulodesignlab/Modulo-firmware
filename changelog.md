@@ -5,6 +5,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.125] - 2026-10-02
+- Discovery dei moduli senza collisioni: i moduli non assegnati si annunciano su uno slot I2C temporaneo casuale (0x40-0x5F) che la Base scansiona uno per uno. In I2C due moduli che rispondono sullo stesso indirizzo si corrompono a vicenda: con gli slot casuali più moduli nuovi (es. all'accensione) vengono rilevati tutti. Se due moduli scelgono lo stesso slot, la Base rileva la risposta corrotta e chiede loro di cambiarlo. Resta supportata la discovery su 0x30 per i moduli con firmware precedente.
+- Verifica dell'identità dei moduli: se su un ID risponde un modulo con Chip ID diverso da quello registrato, non viene più confuso con il modulo precedente (tipo e versione sbagliati, modulo non riconosciuto) ma registrato a parte e spostato su un ID libero. Chip ID e tipo vengono riverificati ogni 60 s e subito se il tipo salvato non è valido.
+- Dopo l'aggiornamento FOTA di un modulo la Base lo ritrova anche se si riavvia su uno slot temporaneo.
+
 ### [0.1.124] - 2026-10-02
 - Telemetria Environmental Monitor: rimossi i campi del sensore gas (eCO2, TVOC, AQI).
 
@@ -435,6 +440,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Bluetooth Speaker
+### [0.1.43] - 2026-10-02
+- Il modulo si avvia sempre in discovery su uno slot I2C temporaneo casuale: la Base lo riconosce dal Chip ID e gli riassegna lo stesso ID. Un ID vecchio salvato non può più finire in conflitto con quello di un altro modulo.
+- Se due moduli scelgono lo stesso slot, cambiano slot su richiesta della Base o da soli dopo 10 s senza assegnazione.
+- Senza contatto dalla Base per 60 s il modulo torna in discovery (prima 30 minuti).
+- Richiede Base 0.1.125.
+
 ### [0.1.42] - 2026-10-02
 - Tasti touch TTP223 (come LED Tower e Smart Screen): il livello a riposo di ogni tasto viene letto all'avvio, dopo la calibrazione del sensore, quindi funziona con uscita attiva alta (default) o bassa.
 
@@ -539,6 +550,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Environmental Monitor
+### [0.1.110] - 2026-10-02
+- Il modulo si avvia sempre in discovery su uno slot I2C temporaneo casuale: la Base lo riconosce dal Chip ID e gli riassegna lo stesso ID. Un ID vecchio salvato non può più finire in conflitto con quello di un altro modulo.
+- Se due moduli scelgono lo stesso slot, cambiano slot su richiesta della Base o da soli dopo 10 s senza assegnazione.
+- Senza contatto dalla Base per 60 s il modulo torna in discovery (prima 30 minuti).
+- Richiede Base 0.1.125.
+
 ### [0.1.109] - 2026-10-02
 - Sensore gas ENS160 rimosso: all'avvio viene messo in deep sleep (riscaldatore spento, non scalda più la zona dell'AHT21) e non viene più letto.
 - Eliminate le schermate e-paper della qualità dell'aria (Home, Air quality, Comfort, Detailed, allarme). Restano Climate (predefinita), In / Out, Last 24 hours e lo screensaver; la vista scelta viene ricordata anche dopo un riavvio.
@@ -793,6 +810,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Smart Screen 128
+### [0.1.55] - 2026-10-02
+- Il modulo si avvia sempre in discovery su uno slot I2C temporaneo casuale: la Base lo riconosce dal Chip ID e gli riassegna lo stesso ID. Un ID vecchio salvato non può più finire in conflitto con quello di un altro modulo.
+- Se due moduli scelgono lo stesso slot, cambiano slot su richiesta della Base o da soli dopo 10 s senza assegnazione.
+- Senza contatto dalla Base per 60 s il modulo torna in discovery (prima 30 minuti).
+- Richiede Base 0.1.125.
+
 ### [0.1.54] - 2026-10-02
 - Corretto il fattore del partitore VBUS secondo lo schema (R48 18k, R49 2k: fattore 10, prima 7,67 con R49 2,7k). Le letture erano circa il 24% più basse del reale. Rimossa la compensazione empirica sopra i 12,5V.
 
@@ -1046,6 +1069,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo USB-C Charger
+### [0.1.8] - 2026-10-02
+- Il modulo si avvia sempre in discovery su uno slot I2C temporaneo casuale: la Base lo riconosce dal Chip ID e gli riassegna lo stesso ID. Un ID vecchio salvato non può più finire in conflitto con quello di un altro modulo.
+- Se due moduli scelgono lo stesso slot, cambiano slot su richiesta della Base o da soli dopo 10 s senza assegnazione.
+- Senza contatto dalla Base per 60 s il modulo torna in discovery (prima 30 minuti).
+- Richiede Base 0.1.125.
+
 ### [0.1.7] - 2026-10-02
 - Corretto il fattore del partitore VBUS secondo lo schema (R48 18k, R49 2k: fattore 10, prima 7,67 con R49 2,7k). Le letture erano circa il 24% più basse del reale. Rimossa la compensazione empirica sopra i 12,5V.
 
@@ -1068,6 +1097,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Wireless Charger
+### [0.1.10] - 2026-10-02
+- Il modulo si avvia sempre in discovery su uno slot I2C temporaneo casuale: la Base lo riconosce dal Chip ID e gli riassegna lo stesso ID. Un ID vecchio salvato non può più finire in conflitto con quello di un altro modulo.
+- Se due moduli scelgono lo stesso slot, cambiano slot su richiesta della Base o da soli dopo 10 s senza assegnazione.
+- Senza contatto dalla Base per 60 s il modulo torna in discovery (prima 30 minuti).
+- Richiede Base 0.1.125.
+
 ### [0.1.9] - 2026-10-02
 - Corretto il fattore del partitore VBUS secondo lo schema (R48 18k, R49 2k: fattore 10, prima 7,67 con R49 2,7k). Le letture erano circa il 24% più basse del reale. Rimossa la compensazione empirica sopra i 12,5V.
 
@@ -1096,6 +1131,12 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo LED Tower
+### [0.1.37] - 2026-10-02
+- Il modulo si avvia sempre in discovery su uno slot I2C temporaneo casuale: la Base lo riconosce dal Chip ID e gli riassegna lo stesso ID. Un ID vecchio salvato non può più finire in conflitto con quello di un altro modulo.
+- Se due moduli scelgono lo stesso slot, cambiano slot su richiesta della Base o da soli dopo 10 s senza assegnazione.
+- Senza contatto dalla Base per 60 s il modulo torna in discovery (prima 30 minuti).
+- Richiede Base 0.1.125.
+
 ### [0.1.36] - 2026-10-02
 - Corretto il fattore del partitore VBUS secondo lo schema (R48 18k, R49 2k: fattore 10, prima 7,67 con R49 2,7k). Le letture erano circa il 24% più basse del reale. Rimossa la compensazione empirica sopra i 12,5V.
 
