@@ -1,4 +1,8 @@
-﻿## v0.1.41 - 2026-10-02
+﻿## v0.1.42 - 2026-10-02
+
+### Bluetooth Speaker (v0.1.42)
+- Tasti touch TTP223 (come LED Tower e Smart Screen): il livello a riposo di ogni tasto viene letto all'avvio, dopo la calibrazione del sensore, quindi funziona con uscita attiva alta (default) o bassa.
+## v0.1.41 - 2026-10-02
 
 ### Bluetooth Speaker (v0.1.41)
 - Tre tasti fisici sul connettore FPC (pin 7 GPIO16, pin 4 GPIO18, pin 11 GPIO4, verso GND pin 15): brano precedente, play/pausa, brano successivo. Tenendo premuto precedente/successivo il volume scende/sale del 5% ogni 0,25 s.
