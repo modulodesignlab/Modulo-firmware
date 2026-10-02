@@ -1,4 +1,8 @@
-﻿## v0.1.122 - 2026-10-02
+﻿## v0.1.41 - 2026-10-02
+
+### Bluetooth Speaker (v0.1.41)
+- Tre tasti fisici sul connettore FPC (pin 7 GPIO16, pin 4 GPIO18, pin 11 GPIO4, verso GND pin 15): brano precedente, play/pausa, brano successivo. Tenendo premuto precedente/successivo il volume scende/sale del 5% ogni 0,25 s.
+## v0.1.122 - 2026-10-02
 
 ### Tutti i moduli - lettura tensione del bus
 - Corretto il fattore del partitore VBUS secondo lo schema (R48 18k, R49 2k: fattore 10, prima 7,67 con R49 2,7k). Le letture erano circa il 24% piu basse del reale. Rimossa la compensazione empirica sopra i 12,5V.
