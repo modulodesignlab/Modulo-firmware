@@ -1,4 +1,8 @@
-﻿## v0.1.120 - 2026-10-01
+﻿## v0.1.121 - 2026-10-02
+
+### Base Firmware (v0.1.121)
+- Tensione del bus corretta: le letture VBUS dei moduli erano circa il 24% piu basse del reale (9,5 V letti con 12,6 V misurati). La Base applica ora un fattore di calibrazione.
+## v0.1.120 - 2026-10-01
 
 ### Base Firmware (v0.1.120)
 - USB-PD: la Base mantiene sempre la richiesta a 12V. Rimosso il fallback a 9V/5V introdotto in 0.1.118, che si attivava per letture VBUS dei moduli non affidabili e abbassava il bus a 5V anche con alimentatori 12V.
