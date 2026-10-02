@@ -2,9 +2,9 @@
   "schema_version": 1,
   "firmwares": {
     "base": {
-      "version": "0.1.123",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.123/Modulo.bin",
-      "sha256": "2301e97b7d8fd036b68a76babe15704ce3b7d79632fdb26e0ef72a95d06387f6"
+      "version": "0.1.124",
+      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/base-v0.1.124/Modulo.bin",
+      "sha256": "c8a6bacd50dcf02b87980679d16e22620aea2e553e024e5ec21960c7370100cd"
     },
     "bluetooth_speaker": {
       "version": "0.1.42",
@@ -13,10 +13,10 @@
       "sha256": "f3ee248fab3b2733094c42ff57080e85f8e982cc5cd43e85ddd847df96e68c35"
     },
     "environmental_monitor": {
-      "version": "0.1.108",
+      "version": "0.1.109",
       "minimum_base_version": "0.1.56",
-      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.108/environmental_monitor.bin",
-      "sha256": "b3fdaa6e72ec089028ed3b54f750fe47287cd1674fe758d9b80683e721b9cc2e"
+      "url": "https://github.com/modulodesignlab/Modulo-firmware/releases/download/env-v0.1.109/environmental_monitor.bin",
+      "sha256": "90b11b7d6ea5d0e704ef4aaa54329300f5d5b89101095203e5e1826ca8bfcca0"
     },
     "smart_screen_128": {
       "version": "0.1.54",

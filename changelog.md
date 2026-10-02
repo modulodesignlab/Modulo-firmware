@@ -5,6 +5,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.124] - 2026-10-02
+- Telemetria Environmental Monitor: rimossi i campi del sensore gas (eCO2, TVOC, AQI).
+
+
 ### [0.1.123] - 2026-10-02
 - Conflitti di ID tra moduli: se un modulo ricollegato ha salvato un ID ormai assegnato a un altro modulo, la Base lo sposta su un ID libero (prima restava sullo stesso indirizzo I2C dell'altro modulo e non veniva rilevato).
 - Diagnostica: gli indirizzi presenti sul bus I2C sono riportati in `system.i2c_scan`.
@@ -535,6 +539,13 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Environmental Monitor
+### [0.1.109] - 2026-10-02
+- Sensore gas ENS160 rimosso: all'avvio viene messo in deep sleep (riscaldatore spento, non scalda più la zona dell'AHT21) e non viene più letto.
+- Eliminate le schermate e-paper della qualità dell'aria (Home, Air quality, Comfort, Detailed, allarme). Restano Climate (predefinita), In / Out, Last 24 hours e lo screensaver; la vista scelta viene ricordata anche dopo un riavvio.
+- Screensaver con la foglia: al posto della scritta "Better air. Better days." mostra temperatura e umidità.
+- Nota: la correzione di temperatura (-1,8 °C) era stata misurata con l'ENS160 acceso; ora che non scalda più potrebbe andare ricontrollata.
+
+
 ### [0.1.108] - 2026-10-02
 - Corretto il fattore del partitore VBUS secondo lo schema (R48 18k, R49 2k: fattore 10, prima 7,67 con R49 2,7k). Le letture erano circa il 24% più basse del reale. Rimossa la compensazione empirica sopra i 12,5V.
 
