@@ -1,4 +1,12 @@
-﻿## v0.1.121 - 2026-10-02
+﻿## v0.1.122 - 2026-10-02
+
+### Tutti i moduli - lettura tensione del bus
+- Corretto il fattore del partitore VBUS secondo lo schema (R48 18k, R49 2k: fattore 10, prima 7,67 con R49 2,7k). Le letture erano circa il 24% piu basse del reale. Rimossa la compensazione empirica sopra i 12,5V.
+- Environmental Monitor v0.1.108, Smart Screen 128 v0.1.54, LED Tower v0.1.36, Wireless Charger v0.1.9, Bluetooth Speaker v0.1.40, USB-C Charger v0.1.7.
+
+### Base Firmware (v0.1.122)
+- Rimossa la calibrazione VBUS lato Base introdotta in 0.1.121: la correzione e ora nei moduli.
+## v0.1.121 - 2026-10-02
 
 ### Base Firmware (v0.1.121)
 - Tensione del bus corretta: le letture VBUS dei moduli erano circa il 24% piu basse del reale (9,5 V letti con 12,6 V misurati). La Base applica ora un fattore di calibrazione.
