@@ -5,6 +5,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.123] - 2026-10-02
+- Conflitti di ID tra moduli: se un modulo ricollegato ha salvato un ID ormai assegnato a un altro modulo, la Base lo sposta su un ID libero (prima restava sullo stesso indirizzo I2C dell'altro modulo e non veniva rilevato).
+- Diagnostica: gli indirizzi presenti sul bus I2C sono riportati in `system.i2c_scan`.
 ### [0.1.122] - 2026-10-02
 - Rimossa la calibrazione VBUS lato Base introdotta in 0.1.121: la correzione è ora nei moduli.
 
