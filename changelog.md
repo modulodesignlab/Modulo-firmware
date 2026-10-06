@@ -5,6 +5,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.126] - 2026-10-02
+- Calibrazione dell'Environmental Monitor dall'app: nuovo comando `ENV_CALIBRATE` (lettura, regolazione rispetto a un termometro di riferimento, ripristino dei valori di fabbrica).
+- La città del meteo salvata nella Base è inviata all'app (`system.weather_location`): dopo un riavvio o una reinstallazione dell'app non torna più a Rome.
+
 ### [0.1.125] - 2026-10-02
 - Discovery dei moduli senza collisioni: i moduli non assegnati si annunciano su uno slot I2C temporaneo casuale (0x40-0x5F) che la Base scansiona uno per uno. In I2C due moduli che rispondono sullo stesso indirizzo si corrompono a vicenda: con gli slot casuali più moduli nuovi (es. all'accensione) vengono rilevati tutti. Se due moduli scelgono lo stesso slot, la Base rileva la risposta corrotta e chiede loro di cambiarlo. Resta supportata la discovery su 0x30 per i moduli con firmware precedente.
 - Verifica dell'identità dei moduli: se su un ID risponde un modulo con Chip ID diverso da quello registrato, non viene più confuso con il modulo precedente (tipo e versione sbagliati, modulo non riconosciuto) ma registrato a parte e spostato su un ID libero. Chip ID e tipo vengono riverificati ogni 60 s e subito se il tipo salvato non è valido.
@@ -550,6 +554,11 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Environmental Monitor
+### [0.1.111] - 2026-10-02
+- Calibrazione di temperatura e umidità dall'app: le correzioni sono salvate nel modulo e restano dopo un riavvio o un aggiornamento.
+- Correzione di fabbrica della temperatura portata da −1,8 °C a −0,6 °C: con l'ENS160 spento il modulo non scalda più il sensore.
+- Richiede Base 0.1.126.
+
 ### [0.1.110] - 2026-10-02
 - Il modulo si avvia sempre in discovery su uno slot I2C temporaneo casuale: la Base lo riconosce dal Chip ID e gli riassegna lo stesso ID. Un ID vecchio salvato non può più finire in conflitto con quello di un altro modulo.
 - Se due moduli scelgono lo stesso slot, cambiano slot su richiesta della Base o da soli dopo 10 s senza assegnazione.
