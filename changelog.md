@@ -447,6 +447,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Bluetooth Speaker
+### [0.1.44] - 2026-10-07
+- Protezione per i tasti touch guasti: un tasto che all'avvio risulta già toccato, o che resta premuto per più di 8 s, viene escluso e non cambia più brano né volume. Torna attivo dopo 30 s consecutivi a riposo (es. schedina TTP223 sostituita).
+- Volume dai tasti solo dopo 1 s di pressione (prima 0,5 s), per al massimo 5 s; filtro antirimbalzo più lungo.
+
 ### [0.1.43] - 2026-10-02
 - Il modulo si avvia sempre in discovery su uno slot I2C temporaneo casuale: la Base lo riconosce dal Chip ID e gli riassegna lo stesso ID. Un ID vecchio salvato non può più finire in conflitto con quello di un altro modulo.
 - Se due moduli scelgono lo stesso slot, cambiano slot su richiesta della Base o da soli dopo 10 s senza assegnazione.
