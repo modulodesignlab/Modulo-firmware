@@ -5,6 +5,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.127] - 2026-10-07
+- Environmental Monitor: la vista e-paper mostrata viene letta dal modulo ogni 10 s. Prima la Base conosceva solo l'ultima vista inviata da lei, quindi dopo un riavvio o un cambio di ID l'app indicava "Climate" anche se il display era sullo screensaver.
+
 ### [0.1.126] - 2026-10-02
 - Calibrazione dell'Environmental Monitor dall'app: nuovo comando `ENV_CALIBRATE` (lettura, regolazione rispetto a un termometro di riferimento, ripristino dei valori di fabbrica).
 - La città del meteo salvata nella Base è inviata all'app (`system.weather_location`): dopo un riavvio o una reinstallazione dell'app non torna più a Rome.
