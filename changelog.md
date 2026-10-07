@@ -5,6 +5,10 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.128] - 2026-10-07
+- Wi-Fi: se la rete salvata non risponde per circa un minuto, la Base si riavvia con il pairing Bluetooth aperto ma continua a riprovare la rete salvata ogni 30 s; quando la rete torna (es. router riavviato) si ricollega da sola e chiude il pairing. Prima restava offline fino a un riavvio manuale, e il pairing "al volo" non poteva partire perché la memoria Bluetooth era già stata liberata.
+- Identificativo stabile della Base (`system.base_id`, dal MAC) e nuovo endpoint `GET /api/info`: l'app ritrova la Base quando cambia indirizzo IP.
+
 ### [0.1.127] - 2026-10-07
 - Environmental Monitor: la vista e-paper mostrata viene letta dal modulo ogni 10 s. Prima la Base conosceva solo l'ultima vista inviata da lei, quindi dopo un riavvio o un cambio di ID l'app indicava "Climate" anche se il display era sullo screensaver.
 
