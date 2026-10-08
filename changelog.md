@@ -5,6 +5,9 @@ All notable changes to Modulo firmware will be documented in this file, structur
 ---
 
 ## Modulo Base
+### [0.1.130] - 2026-10-08
+- Notifiche: se il telefono indica un modulo che non è (più) uno Smart Screen, ad esempio perché dopo un riavvio della Base gli ID dei moduli sono cambiati, la Base invia il popup allo Smart Screen collegato.
+
 ### [0.1.129] - 2026-10-08
 - Pairing Bluetooth: l'anello LED fa un "respiro" blu lento e regolare (circa 3 s), al posto del lampeggio veloce. Durante il pairing non partono più i lampeggi di discovery dei moduli, che coprivano il blu.
 
